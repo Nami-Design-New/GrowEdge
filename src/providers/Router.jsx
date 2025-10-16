@@ -1,0 +1,38 @@
+import { createBrowserRouter } from "react-router";
+// import ProtectionProvider from "./ProtectionProvider";
+import RootLayout from "../layout/RootLayout";
+import Error from "../routes/Error";
+import Home from "../routes/Home";
+import Login from "../routes/Login";
+import Register from "../routes/Register";
+import ResetPassword from "../routes/ResetPassword";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+       {
+        path: "signin",
+        element: <Login />,
+      },
+        {
+        path: "signup",
+        element: <Register />,
+      },
+        {
+        path: "signup",
+        element: <Register />,
+      },
+          {
+        path: "reset-password",
+        element: <ResetPassword />,
+      },
+    ],
+  },
+]);

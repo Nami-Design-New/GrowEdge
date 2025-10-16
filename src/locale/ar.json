@@ -1,0 +1,132 @@
+{
+  "header": {
+    "home": "الرئيسية",
+    "careerCoaching": "تدريب مهني",
+    "startupInternships": "تدريبات للشركات الناشئة",
+    "mvpLabs": "مختبرات MVP",
+    "blog": "المدونة",
+    "faq": "الأسئلة الشائعة",
+    "login": "تسجيل الدخول",
+    "howWeWork": "كيف نعمل",
+    "notifications": "الإشعارات",
+    "myShipments": "شحناتي",
+    "logout": "تسجيل الخروج",
+    "myTransactions": "معاملاتي",
+    "myAddresses": "عناويني",
+    "dashboard": "لوحة التحكم",
+    "newPackages": "شحنات جديدة",
+    "myAccount": "حسابي"
+  },
+  "errorPage": {
+    "pageNotFoundTitle": "الصفحة غير موجودة",
+    "pageNotFoundMessage": "لم نتمكن من العثور على الصفحة التي تبحث عنها. ربما تم نقلها أو حذفها أو لم تكن موجودة من الأساس.",
+    "errorTitle": "خطأ",
+    "applicationErrorTitle": "خطأ في التطبيق",
+    "applicationErrorMessage": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى لاحقاً.",
+    "unexpectedErrorTitle": "خطأ غير متوقع",
+    "unexpectedErrorMessage": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى لاحقاً.",
+    "oops": "عذراً!",
+    "returnToHome": "العودة إلى الصفحة الرئيسية"
+  },
+  "auth": {
+    "loginTitle": "مرحبًا بعودتك!",
+    "loginSubtitle": "يرجى تسجيل الدخول إلى حسابك",
+    "email": "البريد الإلكتروني",
+    "enterEmail": "أدخل بريدك الإلكتروني",
+    "password": "كلمة المرور",
+    "enterPassword": "أدخل كلمة المرور",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "signIn": "تسجيل الدخول",
+    "dontHaveAnAccount": "ليس لديك حساب؟",
+    "signUp": "إنشاء حساب",
+    "signUpTitle": "أنشئ حسابك الآن",
+    "signUpSubtitle": "انضم إلى منصتنا وابدأ رحلتك المهنية",
+    "fullName": "الاسم الكامل",
+    "enterFullName": "أدخل اسمك الكامل",
+    "phone": "رقم الهاتف",
+    "enterPhone": "أدخل رقم الهاتف",
+    "optional": "اختياري",
+    "iam": "أنا",
+    "selectRole": "اختر دورك",
+    "student": "طالب",
+    "graduate": "خريج (يبحث عن فرص)",
+    "careerCoach": "مدرب مهني",
+    "startup": "شركة ناشئة (تقدم فرص تدريب)",
+    "industryMentor": "مرشد صناعي",
+    "country": "الدولة",
+    "selectCountry": "اختر دولتك",
+    "newPassword": "كلمة مرور جديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "alreadyHaveAnAccount": "لديك حساب بالفعل؟",
+    "resetPasswordTitle": "إعادة تعيين كلمة المرور",
+    "resetPasswordSubtitle": "أدخلي بريدك الإلكتروني المسجّل لإرسال رمز استعادة كلمة المرور.",
+    "resetPasswordTitle2": "أدخلي رمز التحقق",
+    "resetPasswordSubtitle2": "تم إرسال رمز مكوّن من 4 أرقام إلى {{email}}، يُرجى إدخاله للتحقق من الحساب.",
+    "resetPasswordTitle3": "إنشاء كلمة مرور جديدة",
+    "resetPasswordSubtitle3": "أنشئي كلمة مرور قوية جديدة لتأمين حسابك.",
+    "send": "إرسال",
+    "confirm": "تأكيد",
+    "didnotReceiveCode": "لم يصلك الرمز؟ ",
+    "resendCode": "إعادة الإرسال",
+    "resetLinkSent": "تم إرسال رمز الاستعادة إلى {{email}}",
+    "emailNotFound": "البريد الإلكتروني غير موجود، يرجى التحقق والمحاولة مرة أخرى.",
+    "codeVerified": "تم تأكيد رمز التحقق للبريد {{email}}",
+    "wrongCode": "الرمز غير صحيح، يُرجى المحاولة مرة أخرى.",
+    "passwordChangedSuccess": "تم تغيير كلمة المرور بنجاح!"
+
+  },
+  "hero": {
+  "coachingTitle": "الإرشاد المهني",
+  "coachingText": "طوّري مسارك المهني بدعم مخصص من خبراء الصناعة. يقدّم لك المدربون استراتيجيات موجهة، وتطوير مهارات، وفرص تواصل لتحقيق أهدافك المهنية.",
+  "coachingButton": "ابحث عن مدربك",
+
+  "internshipTitle": "التدريبات العملية",
+  "internshipText": "اكتسبي خبرة حقيقية من خلال تدريبات عملية تساعدك على النجاح في مجالك.",
+  "internshipButton": "عرض التدريبات",
+
+  "mvpTitle": "مختبرات MVP",
+  "mvpText": "اعملي على مشاريع حقيقية لشركات ناشئة، وابني منتجك الأول، وتعلمي كيف تحوّلين أفكارك إلى منتجات قابلة للتوسع.",
+  "mvpButton": "انضم إلى مختبرات MVP"
+},
+  "about": {
+    "kicker": "مقدمة عنّا",
+    "title": "طوّر مهاراتك وحقّق تأثيراً أكبر مع Grow Edge",
+    "description": "تدريب مخصص، تدريب عملي داخل شركات حقيقية، وفرص تمويل للأفكار المبتكرة — كل ذلك لتسريع مسارك المهني والانتقال من طالب إلى محترف.",
+    "features": {
+      "goalOrientedTitle": "عمل موجه نحو الهدف",
+      "goalOrientedDesc": "مسارات تعلم مهيكلة لترتقي بمؤهلاتك بسرعة.",
+      "projectSuccessTitle": "ضمان نجاح المشروع",
+      "projectSuccessDesc": "إرشاد عملي وشراكات مع شركات توظيف وتدريب."
+    },
+    "actions": {
+      "joinNow": "اِنضم الآن",
+      "learnMore": "المزيد عنّا"
+    },
+    "collage": {
+      "like": {
+        "name": "قام برايان بـ",
+        "action": "الإعجاب"
+      },
+      "follow": {
+        "name": "قامت مونيكا بـ",
+        "action": "المتابعة"
+      },
+      "alt": {
+        "work": "شاب يحمل لابتوب ويبتسم",
+        "team": "فريق يعمل معاً"
+      }
+    }
+  },
+  "stats": {
+    "students": "طالب تم توظيفه",
+    "partners": "شركة ناشئة شريكة",
+    "coaches": "مدرّب خبير",
+    "success": "نسبة النجاح"
+  
+}
+
+
+
+
+
+}

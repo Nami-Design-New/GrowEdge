@@ -1,0 +1,61 @@
+@import "./scss/config";
+
+body {
+  position: relative;
+  direction: rtl;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  font-family: "Cairo", sans-serif;
+
+  @import "./scss/layout";
+  @import "./scss/form_ui";
+  @import "./scss/error-page";
+  @import "./scss/home";
+  @import "./scss/auth_section";
+
+  main {
+    min-height: calc(100dvh - 300px);
+  }
+
+  &.en {
+    font-family: "Poppins", sans-serif;
+    direction: ltr;
+
+    .form_ui .input-field .pass-group {
+      input {
+        border-radius: 12px 0 0 12px !important;
+        border-right: 0 !important;
+        border-left: 1px solid $input_stroke !important;
+      }
+      .show-pass {
+        border-radius: 0 12px 12px 0 !important;
+        border-left: 0 !important;
+        border-right: 1px solid $input_stroke !important;
+      }
+    }
+
+    header nav .nav_links {
+      @media screen and (max-width: 1200px) {
+        right: initial;
+        left: -100%;
+        &.open {
+          left: 0;
+        }
+      }
+    }
+
+    .back_btn i {
+      transform: scale(-1);
+    }
+     .about-section .about-content .features-list li{
+      border-right: none;
+     border-left: 4px solid $main;
+    }
+  }
+  &.ar{
+ .hero__panel .hero__overlay .hero_title .arrow {
+  left: 0;
+  transform: rotate(180deg);
+ }
+  }
+}

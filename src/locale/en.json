@@ -1,0 +1,130 @@
+{
+  "header": {
+    "home": "Home",
+    "careerCoaching": "Career Coaching",
+    "startupInternships": "Startup Internships",
+    "mvpLabs": "MVP Labs",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "login": "Login",
+    "howWeWork": "How It Works",
+    "notifications": "Notifications",
+    "myShipments": "My Shipments",
+    "logout": "Sing Out",
+    "myTransactions": "My Transactions",
+    "myAddresses": "My Addresses",
+    "dashboard": "Dashboard",
+    "newPackages": "New Packages",
+    "myAccount": "My Account"
+  },
+  "errorPage": {
+    "pageNotFoundTitle": "Page Not Found",
+    "pageNotFoundMessage": "We couldn't find the page you're looking for. The page might have been moved, deleted, or never existed.",
+    "errorTitle": "Error",
+    "applicationErrorTitle": "Application Error",
+    "applicationErrorMessage": "An unexpected error occurred. Please try again later.",
+    "unexpectedErrorTitle": "Unexpected Error",
+    "unexpectedErrorMessage": "An unexpected error occurred. Please try again later.",
+    "oops": "Oops!",
+    "returnToHome": "Return To Home"
+  },
+  "auth": {
+    "loginTitle": "Welcome Back!",
+    "loginSubtitle": "Please sign in to your account",
+    "email": "Email Address",
+    "enterEmail": "Enter your email",
+    "password": "Password",
+    "enterPassword": "Enter your password",
+    "forgotPassword": "Forgot your password?",
+    "signIn": "Sign In",
+    "dontHaveAnAccount": "Don’t have an account?",
+    "signUp": "Sign Up",
+    "signUpTitle": "Create Your Account",
+    "signUpSubtitle": "Join our platform to start your journey",
+    "fullName": "Full Name",
+    "enterFullName": "Enter your full name",
+    "phone": "Phone",
+    "enterPhone": "Enter your phone number",
+    "optional": "optional",
+    "iam": "I am a",
+    "selectRole": "Select your role",
+    "student": "Student",
+    "graduate": "Graduate (looking for opportunities)",
+    "careerCoach": "Career Coach",
+    "startup": "Startup (offering internships)",
+    "industryMentor": "Industry Mentor",
+    "country": "Country",
+    "selectCountry": "Select your country",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "resetPasswordTitle": "Reset Your Password",
+    "resetPasswordSubtitle": "Enter your registered email address to receive a reset code.",
+    "resetPasswordTitle2": "Enter Verification Code",
+    "resetPasswordSubtitle2": "We’ve sent a 4-digit code to {{email}}. Please enter it below to verify your account.",
+    "resetPasswordTitle3": "Set a New Password",
+    "resetPasswordSubtitle3": "Create a strong new password to secure your account.",
+    "send": "Send",
+    "confirm": "Confirm",
+    "didnotReceiveCode": "Didn’t receive the code? ",
+    "resendCode": "Resend Code",
+    "resetLinkSent": "A reset code has been sent to {{email}}",
+    "emailNotFound": "Email not found, please check and try again.",
+    "codeVerified": "Verification code confirmed for {{email}}",
+    "wrongCode": "Incorrect code, please try again.",
+    "passwordChangedSuccess": "Your password has been successfully changed!"
+
+  },
+  "hero": {
+  "coachingTitle": "Coaching",
+  "coachingText": "Accelerate your career growth with personalized guidance from industry experts. Our coaches provide tailored strategies, skill development, and networking opportunities to help you reach your professional goals.",
+  "coachingButton": "Find Your Coach",
+
+  "internshipTitle": "Internships",
+  "internshipText": "Gain real-world experience with hands-on internships designed to prepare you for success in your field.",
+  "internshipButton": "View Internships",
+
+  "mvpTitle": "MVP Labs",
+  "mvpText": "Work on real startup projects, build your MVP, and learn how to turn ideas into scalable products.",
+  "mvpButton": "Join MVP Labs"
+},
+
+  "about": {
+    "kicker": "About Us",
+    "title": "Develop your skills and make a bigger impact with Grow Edge",
+    "description": "Customized training, hands-on internships in real companies, and funding opportunities for innovative ideas — all to accelerate your career path and move from student to professional.",
+    "features": {
+      "goalOrientedTitle": "Goal-Oriented Work",
+      "goalOrientedDesc": "Structured learning paths to quickly enhance your qualifications.",
+      "projectSuccessTitle": "Project Success Guarantee",
+      "projectSuccessDesc": "Practical mentorship and partnerships with training and hiring companies."
+    },
+    "actions": {
+      "joinNow": "Join Now",
+      "learnMore": "Learn More"
+    },
+    "collage": {
+      "like": {
+        "name": "Bryan has",
+        "action": "liked"
+      },
+      "follow": {
+        "name": "Monica has",
+        "action": "followed"
+      },
+      "alt": {
+        "work": "A young man holding a laptop and smiling",
+        "team": "A team working together"
+      }
+    }
+  },
+  "stats": {
+    "students": "Students Placed",
+    "partners": "Partner Startups",
+    "coaches": "Expert Coaches",
+    "success": "Success Rate"
+  }
+
+
+
+}
