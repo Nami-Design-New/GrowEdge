@@ -95,7 +95,7 @@ button {
 }
 
 .main_section {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .modal-header {
@@ -1966,6 +1966,9 @@ body .faqs_section.ar {
 }
 body .faqs_section.ar .accordion-header button {
   text-align: right;
+}
+body .auth_section {
+  padding: 50px 0;
 }
 body .auth_section .img {
   width: 100%;

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router";
 
 const HeroSection = () => {
   const [active, setActive] = useState(null);
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const sections = [
     {
@@ -11,20 +13,24 @@ const HeroSection = () => {
       text: t("hero.coachingText"),
       button: t("hero.coachingButton"),
       image: "/images/coaching.webp",
+      path: "/career-coaching",
     },
     {
       title: t("hero.internshipTitle"),
       text: t("hero.internshipText"),
       button: t("hero.internshipButton"),
       image: "/images/internship.avif",
+      path: "/startup-internships",
     },
     {
       title: t("hero.mvpTitle"),
       text: t("hero.mvpText"),
       button: t("hero.mvpButton"),
       image: "/images/mvp.webp",
+      path: "/mvpLabs",
     },
   ];
+
 
   return (
     <div className="hero">
@@ -48,9 +54,8 @@ const HeroSection = () => {
               {[0, 1, 2].map((bulletIndex) => (
                 <span
                   key={bulletIndex}
-                  className={`bullet ${
-                    active === index && bulletIndex === index ? "active" : ""
-                  }`}
+                  className={`bullet ${active === index && bulletIndex === index ? "active" : ""
+                    }`}
                 ></span>
               ))}
             </div>
@@ -58,7 +63,9 @@ const HeroSection = () => {
             {active === index && (
               <div className="hero__content">
                 <p>{section.text}</p>
-                <button>{section.button}</button>
+                <button onClick={() => navigate(section.path)}>
+                  {section.button}
+                </button>
               </div>
             )}
           </div>
