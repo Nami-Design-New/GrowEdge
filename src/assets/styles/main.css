@@ -98,6 +98,51 @@ button {
   margin-top: 100px;
 }
 
+.modal-header {
+  border-bottom: 0;
+}
+.modal-header .btn-close {
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  margin-inline-end: 0 !important;
+  margin-inline-start: auto !important;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: relative;
+  opacity: 1;
+}
+.modal-header .btn-close::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 6 Pro";
+  content: "\f00d";
+  font-size: 14px;
+  color: #000;
+}
+.modal-header .btn-close:hover {
+  background: #f4f4f4 !important;
+}
+.modal-header h6 {
+  color: #000;
+  margin-bottom: 0;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.modal .modal-xl {
+  max-width: unset;
+  margin: 20px auto;
+  justify-content: center;
+}
+
 body {
   position: relative;
   direction: rtl;
@@ -359,6 +404,138 @@ body .small_menu .menu_item .center {
 body .small_menu .menu_item .center i {
   color: #fff;
 }
+body .footer_section {
+  background: linear-gradient(180deg, #0f172a, #111827);
+  color: #cfd2dc;
+  padding: 4rem 0 2rem;
+}
+body .footer_section .brand_info img {
+  height: 40px;
+  margin-bottom: 1rem;
+}
+body .footer_section .brand_info .brand_desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #a3a6b1;
+}
+body .footer_section .brand_info .contact_info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+body .footer_section .brand_info .contact_info li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+body .footer_section .brand_info .contact_info li i {
+  color: #4F39F6;
+  font-size: 0.9rem;
+}
+body .footer_section .brand_info .contact_info li a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+body .footer_section .brand_info .contact_info li a:hover {
+  color: #4F39F6;
+}
+body .footer_section .brand_info .social_links h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+}
+body .footer_section .brand_info .social_links .icons {
+  display: flex;
+  gap: 0.6rem;
+}
+body .footer_section .brand_info .social_links .icons a {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2a2f3f;
+  border-radius: 8px;
+  color: #cfd2dc;
+  transition: all 0.3s ease;
+}
+body .footer_section .brand_info .social_links .icons a:hover {
+  background: #4F39F6;
+  color: #fff;
+  border-color: transparent;
+}
+body .footer_section .footer_col {
+  margin-top: 1.5rem;
+}
+body .footer_section .footer_col h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+body .footer_section .footer_col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body .footer_section .footer_col ul li {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+body .footer_section .footer_col ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+body .footer_section .footer_col ul li a:hover {
+  color: #4F39F6;
+  text-decoration: underline;
+}
+body .footer_section .footer_content {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 2rem;
+}
+body .footer_section .footer_bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+body .footer_section .footer_bottom p {
+  margin: 0;
+}
+body .footer_section .footer_bottom span {
+  color: #4F39F6;
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  body .footer_section .footer_content .brand_info {
+    margin-bottom: 2rem;
+  }
+  body .footer_section .footer_content .brand_info .social_links {
+    justify-content: center;
+  }
+  body .footer_section .footer_content .footer_col {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  body .footer_section {
+    padding: 3rem 0 1rem;
+  }
+  body .footer_section .brand_info img {
+    height: 36px;
+  }
+  body .footer_section .footer_bottom {
+    font-size: 0.8rem;
+  }
+}
 body .form_ui {
   width: 100%;
 }
@@ -589,6 +766,84 @@ body .resend-code .timer {
 }
 body .resend-code .timer span {
   color: #4F39F6;
+}
+body .booking-modal .modal-content {
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+}
+body .booking-modal .modal-header {
+  border-bottom: none;
+}
+body .booking-modal .modal-header .modal-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #222;
+}
+body .booking-modal .modal-body {
+  padding-top: 0;
+}
+body .booking-modal .btn {
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+body .booking-modal .btn.btn-outline-secondary {
+  color: #555;
+  border-color: #ccc;
+  background: #fff;
+}
+body .booking-modal .btn.btn-outline-secondary:hover {
+  background-color: #f5f5f5;
+  border-color: #aaa;
+}
+body .booking-modal .btn.btn-dark {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+body .booking-modal .btn.btn-dark:hover {
+  background-color: #222;
+}
+body .booking-modal h6 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.6rem;
+}
+body .booking-modal .duration-section {
+  margin-bottom: 1.5rem;
+}
+body .booking-modal .duration-section .btn {
+  min-width: 150px;
+  text-align: center;
+}
+body .booking-modal .time-section .btn {
+  min-width: 100px;
+  text-align: center;
+}
+body .booking-modal .time-section .btn.btn-dark {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+body .booking-modal .time-section .btn.btn-outline-secondary:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+body .booking-modal .form-group,
+body .booking-modal .form-control {
+  border-radius: 8px !important;
+}
+body .booking-modal .submit-btn {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
+  transition: all 0.3s ease;
+}
+body .booking-modal .submit-btn:hover {
+  background-color: #333;
 }
 body .error-page {
   background-color: #f8f9fa;
@@ -1060,7 +1315,7 @@ body .about-section.revealed .about-inner {
 }
 body .stats-section {
   padding: 4rem 0;
-  background: #f7fafc;
+  background: #F7FAFC;
   color: #0f172a;
 }
 body .stats-section .stats-grid {
@@ -1282,7 +1537,7 @@ body .career-path .cards .card .btn:hover {
 }
 body .why-choose {
   padding: 4rem 0rem;
-  background: #f9fafb;
+  background: #F7FAFC;
   text-align: center;
 }
 body .why-choose .section-title {
@@ -1347,7 +1602,7 @@ body .why-choose .reasons .reason-card p {
 }
 body .howitwork-section {
   padding: 4rem 0rem;
-  background: #f9fafb;
+  background: #F7FAFC;
 }
 body .howitwork-section .howitwork-inner {
   max-width: 1120px;
@@ -1508,23 +1763,29 @@ body .success-section {
   text-align: center;
   padding: 4rem 0;
   background: #fff;
+  /* ===== Progress Bar ===== */
 }
 body .success-section .section-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 body .success-section .section-header .section-title {
   font-size: 2rem;
   font-weight: 700;
   color: #071026;
 }
-body .success-section .section-header .carousel-controls {
+body .success-section .controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  padding: 0 1rem;
+}
+body .success-section .controls-row .nav-btns {
   display: flex;
   gap: 0.75rem;
 }
-body .success-section .section-header .carousel-controls .nav-btn {
+body .success-section .controls-row .nav-btns .nav-btn {
   border: none;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -1533,12 +1794,31 @@ body .success-section .section-header .carousel-controls .nav-btn {
   border-radius: 50%;
   cursor: pointer;
   font-size: 1rem;
-  color: #4f39f6;
+  color: #4F39F6;
   transition: all 0.3s ease;
 }
-body .success-section .section-header .carousel-controls .nav-btn:hover {
-  background: #4f39f6;
+body .success-section .controls-row .nav-btns .nav-btn:hover {
+  background: #4F39F6;
   color: #fff;
+}
+body .success-section .controls-row .custom-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+}
+body .success-section .controls-row .custom-pagination .swiper-pagination-bullet {
+  background: #d1d5db;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+body .success-section .controls-row .custom-pagination .swiper-pagination-bullet-active {
+  background: #4F39F6;
+  width: 22px;
+  border-radius: 8px;
 }
 body .success-section .section-subtitle {
   color: #6b7280;
@@ -1548,15 +1828,23 @@ body .success-section .stories-slider {
   padding-bottom: 3rem;
 }
 body .success-section .stories-slider .story-card {
-  background: #fafbff;
+  background: #F7FAFC;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
   text-align: left;
   transition: transform 0.3s ease;
+  min-height: 100%;
 }
 body .success-section .stories-slider .story-card:hover {
   transform: translateY(-6px);
+}
+body .success-section .stories-slider .story-card .story-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
 }
 body .success-section .stories-slider .story-card .story-tag {
   display: inline-block;
@@ -1603,17 +1891,6 @@ body .success-section .stories-slider .story-card .story-author .story-avatar {
   font-weight: 700;
   color: #4F39F6;
 }
-body .success-section .custom-pagination {
-  margin-top: 1rem;
-}
-body .success-section .custom-pagination .swiper-pagination-bullet {
-  background: #d1d5db;
-  opacity: 1;
-  margin: 0 4px;
-}
-body .success-section .custom-pagination .swiper-pagination-bullet-active {
-  background: #4F39F6;
-}
 body .success-section .progress-bar-wrapper {
   width: 100%;
   height: 6px;
@@ -1634,6 +1911,61 @@ body .success-section .legend {
   gap: 2rem;
   margin-top: 1.2rem;
   font-size: 0.9rem;
+}
+body .faqs_section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+  margin-top: 60px;
+}
+body .faqs_section .section_header {
+  margin-bottom: 2rem;
+}
+body .faqs_section .section_header .section_hint {
+  color: #4F39F6;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+body .faqs_section .section_header .section_title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+body .faqs_section .section_header .section_desc {
+  color: #555;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+}
+body .faqs_section .accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+body .faqs_section .accordion .accordion-item {
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+body .faqs_section .accordion .accordion-item .accordion-header button {
+  font-weight: 600;
+  background-color: #fff;
+  padding: 1rem 1.25rem;
+}
+body .faqs_section .accordion .accordion-item .accordion-header button:focus {
+  box-shadow: none;
+}
+body .faqs_section .accordion .accordion-item .accordion-body {
+  background-color: #fff;
+  color: #555;
+  line-height: 1.6;
+  padding: 1rem 1.25rem;
+}
+body .faqs_section.ar {
+  direction: rtl;
+  text-align: right;
+}
+body .faqs_section.ar .accordion-header button {
+  text-align: right;
 }
 body .auth_section .img {
   width: 100%;
@@ -1689,6 +2021,226 @@ body .back_btn:hover {
 }
 body .back_btn i {
   font-size: 18px;
+}
+body .section-head {
+  width: 100%;
+  height: 150px;
+  background: #F7FAFC;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+@media (max-width: 576px) {
+  body .section-head {
+    height: 100px;
+  }
+}
+body .section-head .container {
+  position: relative;
+  height: 100%;
+}
+body .section-head .text-wrap {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+body .section-head .text-wrap a {
+  color: #4F39F6;
+  font-weight: bold;
+}
+body .section-head .text-wrap h6 {
+  color: #000;
+  font-weight: 400;
+}
+body .section-head h1 {
+  color: #4F39F6;
+  font-weight: bold;
+}
+body .section-head p {
+  color: #777;
+  font-size: 0.9rem;
+}
+body .section-head .img {
+  width: 100%;
+}
+body .section-head .img img {
+  max-height: 160px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .career-coaching .container {
+  max-width: 1200px;
+}
+body .career-coaching .search-bar {
+  margin-top: 3rem;
+}
+body .career-coaching .search-bar .search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+body .career-coaching .search-bar .search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.2rem 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+body .career-coaching .search-bar .search-box:focus-within {
+  border-color: #000;
+}
+body .career-coaching .search-bar .search-box i {
+  color: #666;
+  margin-right: 0.6rem;
+  font-size: 1rem;
+}
+body .career-coaching .search-bar .search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 0.95rem;
+  box-shadow: none;
+}
+body .career-coaching .search-bar .category-select {
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 0.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+body .career-coaching .search-bar .category-select:focus {
+  border-color: #000;
+}
+body .career-coaching .search-bar .category-select option {
+  background-color: #F7FAFC;
+}
+@media (max-width: 768px) {
+  body .career-coaching .search-bar .category-select {
+    width: 100%;
+  }
+}
+body .career-coaching .career-cards {
+  padding: 2rem 0;
+}
+body .career-coaching .session-card {
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+}
+body .career-coaching .session-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body .career-coaching .session-card .card-header p {
+  font-size: 16px;
+  color: #000;
+  line-height: 1.4;
+  flex: 1;
+  margin-right: 1rem;
+}
+body .career-coaching .session-card .card-header .category {
+  background: #f2f4f7;
+  color: #333;
+  padding: 0.25rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+body .career-coaching .session-card .coach-info {
+  display: flex;
+  align-items: center;
+}
+body .career-coaching .session-card .coach-info .avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #6a67ff, #6a5acd);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  font-weight: 600;
+}
+body .career-coaching .session-card .coach-info h6 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #000;
+}
+body .career-coaching .session-card .coach-info .role {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #777;
+}
+body .career-coaching .session-card .details {
+  margin-top: 1rem;
+}
+body .career-coaching .session-card .details .info-line {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.6rem;
+}
+body .career-coaching .session-card .details .info-line .fa-star {
+  color: #f7b500;
+}
+body .career-coaching .session-card .details .info-line i {
+  color: #777;
+  font-size: 0.8rem;
+}
+body .career-coaching .session-card .details .desc {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.5;
+}
+body .career-coaching .session-card .tags {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+body .career-coaching .session-card .tags span {
+  background: #f6f6f6;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  color: #333;
+}
+body .career-coaching .session-card .footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+body .career-coaching .session-card .footer p {
+  margin-bottom: 0.2rem;
+  font-size: 13px;
+}
+body .career-coaching .session-card .footer .book-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  margin-top: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+body .career-coaching .session-card .footer .book-btn:hover {
+  background: #333;
 }
 body main {
   min-height: calc(100dvh - 300px);

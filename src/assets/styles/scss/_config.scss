@@ -40,7 +40,7 @@
 }
 
 $main: #4F39F6;
-// $main: #d8250f;
+$bg:#F7FAFC;
 $black: #000;
 $white: #fff;
 $gray: #777;
@@ -133,4 +133,45 @@ button {
 
 .main_section{
   margin-top: 100px;
+}
+.modal-header {
+  border-bottom: 0;
+  .btn-close {
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    margin-inline-end: 0 !important;
+    margin-inline-start: auto !important;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    position: relative;
+    opacity: 1;
+    &::before {
+      @include centerAbsolute();
+      font-family: "Font Awesome 6 Pro";
+      content: "\f00d";
+      font-size: 14px;
+      color: $black;
+    }
+    &:hover {
+      background: $input_stroke !important;
+    }
+  }
+  h6 {
+    color: $black;
+    margin-bottom: 0;
+  }
+}
+
+.modal-content {
+  background: $white;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.modal .modal-xl {
+  max-width: unset;
+  margin: 20px auto;
+  justify-content: center;
 }

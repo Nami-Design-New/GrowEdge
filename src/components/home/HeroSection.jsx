@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
-  const [active, setActive] = useState(null); // ✅ شيلنا :number | null
+  const [active, setActive] = useState(null);
   const { t } = useTranslation();
 
   const sections = [

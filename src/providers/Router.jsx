@@ -6,6 +6,8 @@ import Home from "../routes/Home";
 import Login from "../routes/Login";
 import Register from "../routes/Register";
 import ResetPassword from "../routes/ResetPassword";
+import Faqs from "../routes/Faqs";
+import CareerCoaching from "../routes/CareerCoaching";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +34,15 @@ export const router = createBrowserRouter([
           {
         path: "reset-password",
         element: <ResetPassword />,
+      },
+      ,
+          {
+        path: "faqs",
+        element: <Faqs />,
+      },
+          {
+        path: "career-coaching",
+        element: <CareerCoaching />,
       },
     ],
   },

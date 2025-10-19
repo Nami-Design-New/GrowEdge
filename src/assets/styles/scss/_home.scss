@@ -478,7 +478,7 @@
 /////statistics////
 .stats-section {
   padding: 4rem 0;
-  background: #f7fafc;
+  background: $bg;
   color: #0f172a;
 
   .stats-grid {
@@ -740,7 +740,7 @@
 //////////
 .why-choose {
   padding: 4rem 0rem;
-  background: #f9fafb;
+  background: $bg;
   text-align: center;
 
   .section-title {
@@ -818,7 +818,7 @@
 
 .howitwork-section {
   padding: 4rem 0rem;
-  background: #f9fafb;
+  background: $bg;
 
   .howitwork-inner {
     max-width: 1120px;
@@ -1005,18 +1005,24 @@
   background: #fff;
 
   .section-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
     .section-title {
       font-size: 2rem;
       font-weight: 700;
       color: #071026;
     }
+  }
 
-    .carousel-controls {
+  .controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0 1.5rem;
+    padding: 0 1rem;
+
+    .nav-btns {
       display: flex;
       gap: 0.75rem;
 
@@ -1029,13 +1035,35 @@
         border-radius: 50%;
         cursor: pointer;
         font-size: 1rem;
-        color: #4f39f6;
+        color: $main;
         transition: all 0.3s ease;
 
         &:hover {
-          background: #4f39f6;
+          background: $main;
           color: #fff;
         }
+      }
+    }
+
+    .custom-pagination {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
+
+      .swiper-pagination-bullet {
+        background: #d1d5db;
+        opacity: 1;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: $main;
+        width: 22px;
+        border-radius: 8px;
       }
     }
   }
@@ -1049,17 +1077,21 @@
     padding-bottom: 3rem;
 
     .story-card {
-      background: #fafbff;
+  background: $bg;
       border-radius: 1rem;
       padding: 1.5rem;
       box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
       text-align: left;
       transition: transform 0.3s ease;
-
+      min-height: 100%;
       &:hover {
         transform: translateY(-6px);
       }
-
+      .story-top {
+        @include space-between;
+        margin-bottom: 0.75rem;
+        gap: 1rem;
+      }
       .story-tag {
         display: inline-block;
         border: 1px solid;
@@ -1114,20 +1146,7 @@
     }
   }
 
-  .custom-pagination {
-    margin-top: 1rem;
-
-    .swiper-pagination-bullet {
-      background: #d1d5db;
-      opacity: 1;
-      margin: 0 4px;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: $main;
-    }
-  }
-
+  /* ===== Progress Bar ===== */
   .progress-bar-wrapper {
     width: 100%;
     height: 6px;
@@ -1150,5 +1169,72 @@
     gap: 2rem;
     margin-top: 1.2rem;
     font-size: 0.9rem;
+  }
+}
+////
+.faqs_section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+margin-top: 60px;
+  .section_header {
+    margin-bottom: 2rem;
+
+    .section_hint {
+      color: $main;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .section_title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+
+    .section_desc {
+      color: #555;
+      margin-top: 0.75rem;
+      font-size: 1rem;
+    }
+  }
+
+  .accordion {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .accordion-item {
+      border: none;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      .accordion-header {
+        button {
+          font-weight: 600;
+          background-color: #fff;
+          padding: 1rem 1.25rem;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+
+      .accordion-body {
+        background-color: #fff;
+        color: #555;
+        line-height: 1.6;
+        padding: 1rem 1.25rem;
+      }
+    }
+  }
+
+  &.ar {
+    direction: rtl;
+    text-align: right;
+
+    .accordion-header button {
+      text-align: right;
+    }
   }
 }

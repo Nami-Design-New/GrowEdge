@@ -1,0 +1,246 @@
+// section_header
+.section-head {
+  width: 100%;
+  height: 150px;
+  background: $bg;
+  padding: 30px 0;
+  margin-top: 60px;
+  @media (max-width: 576px) {
+    height: 100px;
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+  }
+
+  .text-wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+
+    a {
+      color: $main;
+      font-weight: bold;
+    }
+
+    h6 {
+      color: $black;
+
+      font-weight: 400;
+    }
+  }
+  h1 {
+    color: $main;
+    font-weight: bold;
+  }
+
+  p {
+    color: $gray;
+    font-size: 0.9rem;
+  }
+
+  .img {
+    width: 100%;
+
+    img {
+      max-height: 160px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.career-coaching {
+  .container {
+    max-width: 1200px;
+  }
+  .search-bar {
+    margin-top: 3rem;
+
+    .search-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 0.2rem 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+
+      &:focus-within {
+        border-color: #000;
+      }
+
+      i {
+        color: #666;
+        margin-right: 0.6rem;
+        font-size: 1rem;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        flex: 1;
+        font-size: 0.95rem;
+        box-shadow: none;
+      }
+    }
+
+    .category-select {
+      width: 250px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      padding: 0.6rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
+      transition: 0.3s;
+
+      &:focus {
+        border-color: #000;
+      }
+      option {
+        background-color: $bg;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+  .career-cards {
+    padding: 2rem 0;
+  }
+  .session-card {
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+min-height: 100%;
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      p {
+        font-size: 16px;
+        color: $black;
+        line-height: 1.4;
+        flex: 1;
+        margin-right: 1rem;
+      }
+
+      .category {
+        background: #f2f4f7;
+        color: #333;
+        padding: 0.25rem 0.7rem;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+    }
+
+    .coach-info {
+      display: flex;
+      align-items: center;
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #6a67ff, #6a5acd);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 0.8rem;
+        font-weight: 600;
+      }
+
+      h6 {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $black;
+      }
+
+      .role {
+        margin: 0;
+        font-size: 0.7rem;
+        color: $gray;
+      }
+    }
+
+    .details {
+      margin-top: 1rem;
+      .info-line {
+        font-size: 0.8rem;
+        color: $gray;
+        margin-bottom: 0.6rem;
+        .fa-star {
+          color: $warning;
+        }
+        i {
+          color: $gray;
+          font-size: 0.8rem;
+        }
+      }
+
+      .desc {
+        font-size: 0.8rem;
+        color: #555;
+        line-height: 1.5;
+      }
+    }
+
+    .tags {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+
+      span {
+        background: #f6f6f6;
+        padding: 0.3rem 0.6rem;
+        border-radius: 8px;
+        font-size: 0.7rem;
+        color: #333;
+      }
+    }
+
+    .footer {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+p{
+    margin-bottom: 0.2rem;
+    font-size: 13px;
+}
+      .book-btn {
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 0.6rem 1rem;
+        width: 100%;
+        margin-top: 0.9rem;
+        font-weight: 500;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #333;
+        }
+      }
+    }
+  }
+}

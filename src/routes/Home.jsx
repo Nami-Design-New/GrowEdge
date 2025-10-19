@@ -15,8 +15,8 @@ export default function Home() {
      <StatsSection />
      <CareerSection/>
      <Why/>
-     <HowItWork/>
      <ReviewsSection/>
+          <HowItWork/>
 </>
   )
 }

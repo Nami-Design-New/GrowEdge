@@ -123,6 +123,71 @@
     "partners": "Partner Startups",
     "coaches": "Expert Coaches",
     "success": "Success Rate"
+  },
+  "footer": {
+  "brandDesc": "Connecting talent with opportunity. We bridge the gap between ambition and achievement through career coaching and internships.",
+  "phone": "+966 11 123 4567",
+  "email": "support@Grow Edge.com",
+  "location": "Riyadh, Saudi Arabia",
+  "follow": "Follow Us",
+  "copy": "© 2025 Grow Edge. All rights reserved. Made with ❤️ by Grow Digital",
+
+  "platform": {
+    "title": "Platform",
+    "links": [
+      "Career Coaching",
+      "Startup Internships",
+      "MVP Labs",
+      "Success Stories",
+      "Become a Coach"
+    ]
+  },
+  "resources": {
+    "title": "Resources",
+    "links": ["Blog", "FAQ", "Help Center", "Career Guides", "Startup Resources"]
+  },
+  "company": {
+    "title": "Company",
+    "links": ["About Us", "Careers", "Press", "Partnerships", "Contact"]
+  },
+  "legal": {
+    "title": "Legal",
+    "links": ["Privacy Policy", "Terms of Service", "Cookie Policy", "Accessibility", "Data Protection"]
+  }
+},
+"faqs": {
+  "hint": "FAQ",
+  "title": "Frequently Asked Questions",
+  "subtitle": "Find answers to common questions about our platform, services, and process.",
+  "items": [
+    {
+      "question": "What is Grow Edge?",
+      "answer": "Grow Edge connects students and professionals with career coaches and startup internships to help them gain real-world experience."
+    },
+    {
+      "question": "How can I apply for an internship?",
+      "answer": "Simply visit our Internships page, browse available opportunities, and submit your application directly through the platform."
+    },
+    {
+      "question": "Are the coaching sessions online or in-person?",
+      "answer": "Most of our coaching sessions are conducted online for flexibility, but some mentors also offer in-person meetings."
+    },
+    {
+      "question": "Do I receive a certificate after completing an internship?",
+      "answer": "Yes, Grow Edge provides an official certificate of completion for all verified internship programs."
+    },
+    {
+      "question": "Can companies partner with Grow Edge?",
+      "answer": "Absolutely! We welcome partnerships with startups and organizations looking to mentor or host talented individuals."
+    }
+  ]
+},
+ "routes": {
+    "home": "Home"
+  },
+   "careerCoaching": {
+    "title": "Career Coaching",
+    "subtitle": "Explore one-on-one guidance to help you build a successful career."
   }
 
 

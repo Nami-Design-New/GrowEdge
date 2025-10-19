@@ -104,7 +104,7 @@ export default function Header() {
           <NavLink to="/blog" onClick={handleNavLinkClick}>
             {t("header.blog")}
           </NavLink>
-          <NavLink to="/faq" onClick={handleNavLinkClick}>
+          <NavLink to="/faqs" onClick={handleNavLinkClick}>
             {t("header.faq")}
           </NavLink>
         </div>
