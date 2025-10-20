@@ -1,8 +1,10 @@
 import { useState } from "react";
 import InternshipDetailsModal from "../modals/InternshipDetailsModal";
 import ApplyInternshipModal from "../modals/ApplyInternshipModal";
+import { useTranslation } from "react-i18next";
 
 export default function InternshipCard({
+  
   title,
   company,
   funding,
@@ -18,6 +20,7 @@ export default function InternshipCard({
 }) {
   const [showDetailsModal, setShowDetailsModal] = useState(false);
   const [showApplyModal, setShowApplyModal] = useState(false);
+    const { t } = useTranslation();
 
   const internship = {
     title,
@@ -113,10 +116,10 @@ export default function InternshipCard({
 
         <div className="btn-group">
           <button className="btn-outline" onClick={() => setShowDetailsModal(true)}>
-            <i className="fa-regular fa-eye"></i> View Details
+            <i className="fa-regular fa-eye"></i>{t("startupInternships.details_btn")} 
           </button>
           <button className="btn-dark" onClick={() => setShowApplyModal(true)}>
-            Apply Now
+            {t("startupInternships.apply_btn")} 
           </button>
         </div>
       </div>

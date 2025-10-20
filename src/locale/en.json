@@ -187,12 +187,49 @@
   },
    "careerCoaching": {
     "title": "Career Coaching",
-    "subtitle": "Explore one-on-one guidance to help you build a successful career."
+    "subtitle": "Explore one-on-one guidance to help you build a successful career.",
+   "apply_btn": "Book Session"
+   
   },
   "startupInternships": {
     "title": "Startup Internships",
-    "subtitle": "Gain hands-on experience through internships at innovative startups."
-  }
+    "subtitle": "Gain hands-on experience through internships at innovative startups.",
+     "details_btn": "View Details",
+    "apply_btn": "Apply Now"
+  },
+    "MvpLabs": {
+    "title": "MVP Labs Application",
+    "subtitle": "Work on real startup projects and learn how to build a successful MVP",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "ideaTitle": "Idea Title",
+      "ideaTitlePlaceholder": "Give your startup idea a name",
+      "problem": "Problem Statement",
+      "problemPlaceholder": "What problem does your idea solve?",
+      "solution": "Solution Description",
+      "solutionPlaceholder": "Describe your proposed solution",
+      "targetMarket": "Target Market",
+      "targetMarketPlaceholder": "Who is your target audience and market size?",
+      "uniqueness": "Competitive Advantage",
+      "uniquenessPlaceholder": "What makes your solution unique and better?",
+      "monetization": "Revenue Model",
+      "monetizationPlaceholder": "How do you plan to make money?",
+      "fundingAmount": "Funding Needed",
+      "fundingAmountPlaceholder": "Select amount",
+      "timeline": "Development Timeline",
+      "timelinePlaceholder": "Select timeline",
+      "teamSize": "Team Size",
+      "teamSizePlaceholder": "Select team size",
+      "background": "Technical Background",
+      "backgroundPlaceholder": "Select background",
+      "experience": "Previous Experience",
+      "experiencePlaceholder": "Tell us about your relevant experience",
+      "cancel": "Cancel",
+      "submit": "Submit Application"
+    }}
 
 
 

@@ -118,9 +118,11 @@ export default function Header() {
           {/* {isAuthed ? (
             <UserDropDown />
           ) : ( */}
-          <Link to="/signin" className="login">
+                      <UserDropDown />
+
+          {/* <Link to="/signin" className="login">
             {t("header.login")}
-          </Link>
+          </Link> */}
           {/* )} */}
 
           <button className="toggle_menu" onClick={handleToggleMenu}>

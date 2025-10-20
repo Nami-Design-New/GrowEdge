@@ -163,35 +163,222 @@ header {
 }
 
 .user_dropdown {
-  border: 1px solid $input_stroke;
-  background: $white;
-  border-radius: 120px;
-  padding: 8px 20px;
-  transition: $transition;
-  color: $black;
-  cursor: pointer;
+  background: $main !important;
+  border-radius: 999px;
+  padding: 8px 14px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   font-weight: 600;
   font-size: 14px;
-  @media screen and (max-width: 991px) {
-    display: none;
-  }
-  @media screen and (max-width: 450px) {
-    padding: 5px 10px;
-    font-size: 12px;
-  }
+  color: $white !important;
+  cursor: pointer;
   i {
     font-size: 12px;
+    color: $white;
   }
 
-  &.show,
-  &:active,
-  &:hover {
-    border-color: $input_stroke !important;
-    color: $black !important;
-    background: $white !important;
+  &:hover,
+  &.show {
+    box-shadow: $shadow;
+  }
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.custom-dropdown-menu {
+  min-width: 260px;
+  max-width: 320px;
+  padding: 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  box-shadow: 0 8px 30px rgba(3, 10, 24, 0.12);
+  border: 1px solid $input_hint;
+  color: #0b1320;
+
+  .dd-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 6px 12px 6px;
+    border-radius: 10px;
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, $main, darken($main, 6%));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .user-meta {
+      flex: 1;
+
+      .name {
+        font-weight: 700;
+        font-size: 15px;
+        color: #071026;
+        margin-bottom: 3px;
+      }
+
+      .email {
+        font-size: 12px;
+        color: $gray;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 170px;
+      }
+
+      .role-badge {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 700;
+        background: $bg;
+        color: #006840;
+      }
+    }
+  }
+  .divider {
+    height: 1px;
+    background: $input_hint;
+    margin: 10px 0;
+    border-radius: 2px;
+  }
+
+  // ===== menu links =====
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: #071026;
+      font-weight: 600;
+      font-size: 14px;
+
+      i {
+        color: $main;
+        width: 18px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background: #f5f6fb;
+      }
+    }
+  }
+
+  // ===== switch demo user section title =====
+  .switch-title {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: $input_hint;
+    font-weight: 700;
+  }
+
+  // ===== demo users list =====
+  .demo-users {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .user-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.18s ease;
+
+      &:hover {
+        background: #fafbff;
+      }
+
+      .icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: $bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $main;
+        font-weight: 700;
+      }
+
+      .meta {
+        flex: 1;
+
+        .u-name {
+          font-weight: 700;
+          font-size: 14px;
+        }
+
+        .u-role {
+          font-size: 12px;
+          color: $input_hint;
+        }
+      }
+
+      .badge-current {
+        background: $main;
+        color: $white;
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // ===== logout button =====
+  .logout {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: $danger;
+    font-weight: 700;
+    cursor: pointer;
+
+    i {
+      color: $danger;
+    }
+
+    &:hover {
+      background: #fff5f5;
+    }
+  }
+
+  // small responsive tweak
+  @media (max-width: 480px) {
+    max-width: 260px;
+    padding: 10px;
+    .dd-header .user-meta .email {
+      max-width: 120px;
+    }
   }
 }
 

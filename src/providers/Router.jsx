@@ -9,6 +9,7 @@ import ResetPassword from "../routes/ResetPassword";
 import Faqs from "../routes/Faqs";
 import CareerCoaching from "../routes/CareerCoaching";
 import StartupInternships from "../routes/StartupInternships";
+import MvpLabs from "../routes/MvpLabs";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
           {
         path: "startup-internships",
         element: <StartupInternships />,
+      },
+          {
+        path: "mvp-labs",
+        element: <MvpLabs />,
       },
     ],
   },

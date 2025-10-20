@@ -185,18 +185,48 @@
     "home": "الرئيسية"},
   "careerCoaching": {
     "title": "الإرشاد المهني",
-    "subtitle": "استكشف جلسات إرشاد فردية تساعدك على بناء مسارك المهني بنجاح."
+    "subtitle": "استكشف جلسات إرشاد فردية تساعدك على بناء مسارك المهني بنجاح.",
+    "apply_btn": " حجز الآن"
   },
   "startupInternships": {
     "title": "التدريبات الناشئة",
-    "subtitle": "اكتسب خبرة عملية من خلال التدريبات في شركات ناشئة مبتكرة."
-
-  }
-
-
-
-
-
+    "subtitle": "اكتسب خبرة عملية من خلال التدريبات في شركات ناشئة مبتكرة.",
+       "details_btn": "عرض التفاصيل",
+    "apply_btn": "قدّم الآن"
+  },
+  "MvpLabs": {
+    "title": "مختبرات MVP للتقديم",
+    "subtitle": "اعمل على مشاريع حقيقية لشركات ناشئة وتعلم كيفية بناء منتج أولي ناجح",
+    "form": {
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "ideaTitle": "اسم الفكرة",
+      "ideaTitlePlaceholder": "اختر اسمًا لفكرة شركتك الناشئة",
+      "problem": "المشكلة",
+      "problemPlaceholder": "ما المشكلة التي تحلها فكرتك؟",
+      "solution": "الحل المقترح",
+      "solutionPlaceholder": "اشرح الحل الذي تقترحه بالتفصيل",
+      "targetMarket": "السوق المستهدف",
+      "targetMarketPlaceholder": "من هو جمهورك المستهدف وما حجم السوق؟",
+      "uniqueness": "الميزة التنافسية",
+      "uniquenessPlaceholder": "ما الذي يجعل فكرتك فريدة عن المنافسين؟",
+      "monetization": "نموذج الإيرادات",
+      "monetizationPlaceholder": "كيف تخطط لتحقيق الأرباح؟",
+      "fundingAmount": "التمويل المطلوب",
+      "fundingAmountPlaceholder": "اختر المبلغ",
+      "timeline": "المدة الزمنية للتطوير",
+      "timelinePlaceholder": "اختر المدة",
+      "teamSize": "حجم الفريق",
+      "teamSizePlaceholder": "اختر حجم الفريق",
+      "background": "الخلفية التقنية أو المهنية",
+      "backgroundPlaceholder": "اختر الخلفية",
+      "experience": "الخبرة السابقة",
+      "experiencePlaceholder": "حدثنا عن خبراتك التقنية أو الريادية السابقة",
+      "cancel": "إلغاء",
+      "submit": "إرسال الطلب"
+    }}
 
 
 }

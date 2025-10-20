@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BookingModal from "../modals/BookingModal";
+import { useTranslation } from "react-i18next";
 
 export default function SessionCard({
   title,
@@ -17,6 +18,7 @@ export default function SessionCard({
   spots,
 }) {
   const [showModal, setShowModal] = useState(false);
+    const { t } = useTranslation();
 
   return (
     <>
@@ -55,7 +57,6 @@ export default function SessionCard({
           ))}
         </div>
 
-        {/* ===== Footer ===== */}
         <div className="footer">
           <p className="mode">
             <i className="fa-solid fa-location-dot"></i> {mode}
@@ -63,7 +64,7 @@ export default function SessionCard({
           <p className="next">Next available: {next}</p>
           <p className="spots">{spots} spots left</p>
           <button className="book-btn" onClick={() => setShowModal(true)}>
-            Book Session
+            {t("careerCoaching.apply_btn")} 
           </button>
         </div>
       </div>
