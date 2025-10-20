@@ -24,7 +24,7 @@ header {
     }
 
     .logo {
-      flex: 1;
+      // flex: 1;
       img {
         height: 36px;
         @media screen and (max-width: 450px) {
@@ -397,7 +397,6 @@ header {
 
   @media (max-width: 992px) {
     .footer_content {
-
       .brand_info {
         margin-bottom: 2rem;
 

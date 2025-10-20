@@ -8,6 +8,7 @@ import Register from "../routes/Register";
 import ResetPassword from "../routes/ResetPassword";
 import Faqs from "../routes/Faqs";
 import CareerCoaching from "../routes/CareerCoaching";
+import StartupInternships from "../routes/StartupInternships";
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +36,6 @@ export const router = createBrowserRouter([
         path: "reset-password",
         element: <ResetPassword />,
       },
-      ,
           {
         path: "faqs",
         element: <Faqs />,
@@ -43,6 +43,10 @@ export const router = createBrowserRouter([
           {
         path: "career-coaching",
         element: <CareerCoaching />,
+      },
+          {
+        path: "startup-internships",
+        element: <StartupInternships />,
       },
     ],
   },

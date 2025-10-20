@@ -12,7 +12,9 @@ body {
   @import "./scss/error-page";
   @import "./scss/home";
   @import "./scss/auth_section";
-@import "./scss/career";
+  @import "./scss/career";
+  @import "./scss/startup";
+
   main {
     min-height: calc(100dvh - 300px);
   }
@@ -47,15 +49,15 @@ body {
     .back_btn i {
       transform: scale(-1);
     }
-     .about-section .about-content .features-list li{
+    .about-section .about-content .features-list li {
       border-right: none;
-     border-left: 4px solid $main;
+      border-left: 4px solid $main;
     }
   }
-  &.ar{
- .hero__panel .hero__overlay .hero_title .arrow {
-  left: 0;
-  transform: rotate(180deg);
- }
+  &.ar {
+    .hero__panel .hero__overlay .hero_title .arrow {
+      left: 0;
+      transform: rotate(180deg);
+    }
   }
 }

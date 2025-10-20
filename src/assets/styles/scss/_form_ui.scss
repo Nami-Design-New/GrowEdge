@@ -91,19 +91,7 @@
     }
   }
 
-  button {
-    width: 100%;
-    height: 48px;
-    border: 1px solid $main;
-    color: $white;
-    border-radius: 12px;
-    background-color: $main;
 
-    &.success {
-      border-color: #44b50c;
-      background-color: #44b50c;
-    }
-  }
 }
 
 .otp-container {

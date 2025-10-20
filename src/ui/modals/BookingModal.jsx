@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import InputField from "../../ui/forms/InputField";
 import SelectField from "../forms/SelectField";
@@ -38,7 +38,7 @@ export default function BookingModal({ show, setShow }) {
                     Schedule your coaching session with <strong>Michael Chen</strong>
                 </p>
 
-                <form onSubmit={handleConfirm}  >
+                <form onSubmit={handleConfirm}  className="form_ui">
                     {/* ===== Duration & Date ===== */}
                     <SessionDurationDate
                         selectedDuration={selectedDuration}

@@ -5,9 +5,6 @@
   background: $bg;
   padding: 30px 0;
   margin-top: 60px;
-  @media (max-width: 576px) {
-    height: 100px;
-  }
 
   .container {
     position: relative;
@@ -51,6 +48,10 @@
       position: absolute;
       top: 0;
       left: 0;
+      @media (max-width: 576px) {
+        max-height: 110px;
+        top: 20px;
+      }
     }
   }
 }
@@ -59,13 +60,14 @@
     max-width: 1200px;
   }
   .search-bar {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
 
     .search-wrapper {
       display: flex;
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
+      padding: 0 10px;
     }
 
     .search-box {
@@ -119,14 +121,14 @@
     }
   }
   .career-cards {
-    padding: 2rem 0;
+    padding-bottom: 2rem;
   }
   .session-card {
     border: 1px solid #eee;
     border-radius: 15px;
     padding: 1.5rem;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-min-height: 100%;
+    min-height: 100%;
     .card-header {
       display: flex;
       justify-content: space-between;
@@ -222,10 +224,10 @@ min-height: 100%;
       margin-top: 1rem;
       font-size: 0.9rem;
       color: #555;
-p{
-    margin-bottom: 0.2rem;
-    font-size: 13px;
-}
+      p {
+        margin-bottom: 0.2rem;
+        font-size: 13px;
+      }
       .book-btn {
         background: #000;
         color: #fff;

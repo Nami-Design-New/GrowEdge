@@ -1,4 +1,3 @@
-import React from "react";
 import SectionHeader from "../ui/SectionHeader";
 import SearchBar from "../ui/SearchBar";
 import SessionCard from "../ui/cards/SessionCard";

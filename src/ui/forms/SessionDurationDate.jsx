@@ -1,4 +1,3 @@
-import React from "react";
 import InputField from "../../ui/forms/InputField";
 
 export default function SessionDurationDate({
