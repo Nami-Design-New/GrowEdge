@@ -39,7 +39,8 @@
   }
 }
 
-$main: #4F39F6;
+$main: #23254e;
+$main2: #50b04d;
 $bg:#F7FAFC;
 $black: #000;
 $white: #fff;
@@ -196,9 +197,9 @@ button {
     }
 
     .btn-outline {
-      border: 1.5px solid #000;
+      border: 1.5px solid $main2;
       background-color: #fff;
-      color: #000;
+      color: $main2;
 
       i {
         margin-right: 6px;

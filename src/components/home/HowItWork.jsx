@@ -62,7 +62,7 @@ export default function HowItWork() {
             <path
               d="M 60 40 C 160 80, 320 120, 360 220 C 400 320, 120 420, 320 520 C 520 620, 180 700, 240 760"
               fill="none"
-              stroke="#4F39F6"
+              stroke="#23254e"
               strokeWidth="6"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -71,7 +71,7 @@ export default function HowItWork() {
             <path
               d="M 60 40 C 160 80, 320 120, 360 220 C 400 320, 120 420, 320 520 C 520 620, 180 700, 240 760"
               fill="none"
-              stroke="#4F39F6"
+              stroke="#23254e"
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"

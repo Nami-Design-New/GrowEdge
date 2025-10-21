@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 // import ProtectionProvider from "./ProtectionProvider";
 import RootLayout from "../layout/RootLayout";
+import DashboardLayout from "../ui/layout/DashboardLayout"; 
 import Error from "../routes/Error";
 import Home from "../routes/Home";
 import Login from "../routes/Login";
@@ -10,7 +11,8 @@ import Faqs from "../routes/Faqs";
 import CareerCoaching from "../routes/CareerCoaching";
 import StartupInternships from "../routes/StartupInternships";
 import MvpLabs from "../routes/MvpLabs";
-
+import ParticipantOverview from "../pages/participant/ParticipantOverview";
+import Coaching from "../pages/participant/Coaching";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -55,4 +57,14 @@ export const router = createBrowserRouter([
       },
     ],
   },
+   {
+  path: "/dashboard",
+  element: <DashboardLayout />,
+  children: [
+    { index:true , element: <ParticipantOverview  /> },
+    { path: "coaching", element: <Coaching/> },
+  ],
+}
+
+
 ]);

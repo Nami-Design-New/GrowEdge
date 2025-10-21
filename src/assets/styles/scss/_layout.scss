@@ -163,7 +163,7 @@ header {
 }
 
 .user_dropdown {
-  background: $main !important;
+  background: $main2 !important;
   border-radius: 999px;
   padding: 8px 14px;
   display: flex;
@@ -482,7 +482,7 @@ header {
         margin-bottom: 0.5rem;
 
         i {
-          color: $main;
+          color: $main2;
           font-size: 0.9rem;
         }
 
@@ -492,7 +492,7 @@ header {
           transition: 0.3s;
 
           &:hover {
-            color: $main;
+            color: $main2;
           }
         }
       }
@@ -503,7 +503,7 @@ header {
         margin-bottom: 0.5rem;
         font-weight: 600;
         font-size: 0.95rem;
-        color: #fff;
+        color: $white;
       }
 
       .icons {
@@ -522,8 +522,8 @@ header {
           transition: all 0.3s ease;
 
           &:hover {
-            background: $main;
-            color: #fff;
+            background: $main2;
+            color: $white;
             border-color: transparent;
           }
         }
@@ -536,7 +536,7 @@ header {
     h6 {
       font-weight: 700;
       margin-bottom: 1rem;
-      color: #fff;
+      color: $white;
       font-size: 1rem;
     }
 
@@ -555,7 +555,7 @@ header {
           transition: 0.3s ease;
 
           &:hover {
-            color: $main;
+            color: $main2;
             text-decoration: underline;
           }
         }

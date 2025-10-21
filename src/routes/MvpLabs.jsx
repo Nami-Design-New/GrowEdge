@@ -84,7 +84,7 @@ export default function MvpLabs() {
             </div>
           </div>
 
-          <div className="col-md-12 mb-3 mx-2">
+          <div className="col-md-12 mb-3 ">
             <InputField
               label={t("MvpLabs.form.ideaTitle")}
               name="ideaTitle"
@@ -95,7 +95,7 @@ export default function MvpLabs() {
             />
           </div>
 
-          <div className="col-md-12 mb-3 mx-2">
+          <div className="col-md-12 mb-3 ">
             <InputField
               as="textarea"
               rows={3}
@@ -107,7 +107,7 @@ export default function MvpLabs() {
             />
           </div>
 
-          <div className="col-md-12 mb-3 mx-2">
+          <div className="col-md-12 mb-3 ">
             <InputField
               as="textarea"
               rows={3}
@@ -119,7 +119,7 @@ export default function MvpLabs() {
             />
           </div>
 
-          <div className="col-md-12 mb-3 mx-2">
+          <div className="col-md-12 mb-3 ">
             <InputField
               as="textarea"
               rows={3}
@@ -131,7 +131,7 @@ export default function MvpLabs() {
             />
           </div>
 
-          <div className="col-md-12 mb-3 mx-2">
+          <div className="col-md-12 mb-3 ">
             <InputField
               as="textarea"
               rows={3}
@@ -144,7 +144,7 @@ export default function MvpLabs() {
             />
           </div>
 
-          <div className="col-md-12 mb-3 mx-2">
+          <div className="col-md-12 mb-3 ">
             <InputField
               as="textarea"
               rows={3}
@@ -219,7 +219,7 @@ export default function MvpLabs() {
             </div>
           </div>
 
-          <div className="col-md-12 mb-3 mx-2">
+          <div className="col-md-12 mb-3 ">
             <InputField
               as="textarea"
               rows={4}
