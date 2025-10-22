@@ -13,6 +13,8 @@ import StartupInternships from "../routes/StartupInternships";
 import MvpLabs from "../routes/MvpLabs";
 import ParticipantOverview from "../pages/participant/ParticipantOverview";
 import Coaching from "../pages/participant/Coaching";
+import SessionDetails from "../routes/SessionDetails";
+import Internships from "../pages/participant/Interships";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -55,6 +57,8 @@ export const router = createBrowserRouter([
         path: "mvp-labs",
         element: <MvpLabs />,
       },
+      { path: "/session-details", element: <SessionDetails/> }
+
     ],
   },
    {
@@ -63,6 +67,8 @@ export const router = createBrowserRouter([
   children: [
     { index:true , element: <ParticipantOverview  /> },
     { path: "coaching", element: <Coaching/> },
+    { path: "internships", element: <Internships/> },
+
   ],
 }
 

@@ -2573,6 +2573,11 @@ body .dashboard-layout .main-content {
   flex-direction: column;
   background: #f9f9f9;
 }
+@media (max-width: 768px) {
+  body .dashboard-layout .main-content {
+    padding: 1rem;
+  }
+}
 body .dashboard-layout .content-wrapper {
   flex: 1;
 }
@@ -2605,6 +2610,12 @@ body .dashboard-layout .tabs-container .tab-btn.active {
   background: #23254e;
   color: #fff;
   box-shadow: 0 3px 6px rgba(76, 63, 255, 0.2);
+}
+@media (max-width: 768px) {
+  body .dashboard-layout .tabs-container .tab-btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
 }
 body .dashboard-layout .session-empty-card {
   text-align: center;
@@ -2766,8 +2777,7 @@ body .overview-header h5 {
   margin: 0;
 }
 body .overview-header .sidebar-toggle-btn {
-  background: #6c63ff;
-  color: #fff;
+  color: #000;
   border: none;
   padding: 0.6rem 0.8rem;
   border-radius: 8px;
@@ -2813,27 +2823,26 @@ body .overview-header .sidebar-toggle-btn i {
   }
 }
 body .welcome-card {
-  background: linear-gradient(135deg, #23254e, #3a3c6e);
+  background-color: #F7FAFC;
   border-radius: 16px;
   padding: 1rem;
-  box-shadow: 0 4px 20px rgba(35, 37, 78, 0.3);
-  margin: 2rem 0;
+  box-shadow: 0 4px 20px rgba(35, 37, 78, 0.13);
+  margin: 2rem 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 body .welcome-card:hover {
-  transform: translateY(-3px);
   box-shadow: 0 6px 25px rgba(35, 37, 78, 0.45);
 }
 body .welcome-card .welcome-title {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: #23254e;
 }
 body .welcome-card .welcome-message {
   font-size: 0.9rem;
   opacity: 0.9;
-  color: #ececff;
+  color: #777;
 }
 body .statistics-section .stat-card {
   background: #fff;
@@ -2882,7 +2891,7 @@ body .empty-state-card {
   flex-direction: column;
   gap: 1rem;
   transition: all 0.3s ease;
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
 }
 body .empty-state-card:hover {
   transform: translateY(-4px);
@@ -2911,8 +2920,7 @@ body .empty-state-card .empty-state {
   gap: 1rem;
 }
 body .empty-state-card .empty-state .empty-icon {
-  background: rgba(108, 99, 255, 0.1254901961);
-  color: #23254e;
+  color: #777;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -2939,6 +2947,177 @@ body .empty-state-card .empty-state .btn-outline:hover {
   background: transparent;
   color: #50b04d;
   border: 1px solid #50b04d;
+}
+body .booked-session-card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+body .booked-session-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+body .booked-session-card .session-info {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+body .booked-session-card .session-info .coach-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(35, 37, 78, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #23254e;
+  font-size: 1.2rem;
+}
+body .booked-session-card .session-info .coach-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+body .booked-session-card .session-info .tags {
+  margin: 0.4rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+body .booked-session-card .session-info .tags .status {
+  background: rgba(80, 176, 77, 0.1);
+  color: #50b04d;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+body .booked-session-card .session-info .tags .type {
+  background: rgba(35, 37, 78, 0.1);
+  color: #23254e;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+body .booked-session-card .session-info .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+body .booked-session-card .session-info .meta i {
+  margin-right: 5px;
+  color: #666;
+}
+body .booked-session-card .session-info .topic {
+  font-size: 0.9rem;
+  color: #23254e;
+  margin-top: 0.5rem;
+}
+body .booked-session-card .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body .booked-session-card .actions .btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s;
+}
+body .booked-session-card .actions .btn.view {
+  background: #f8f9fa;
+  color: #23254e;
+}
+body .booked-session-card .actions .btn.join {
+  background: #23254e;
+  color: #fff;
+}
+body .booked-session-card .actions .btn.reschedule {
+  background: #fff;
+  color: #23254e;
+  border: 1px solid #ccc;
+}
+body .booked-session-card .actions .btn.cancel {
+  background: #e74c3c;
+  color: #fff;
+}
+body .booked-session-card .actions .btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+body .session-details {
+  padding: 2rem 0;
+}
+body .session-details .container {
+  max-width: 1200px;
+}
+body .session-details .session-hed {
+  padding-top: 4rem;
+}
+body .session-details .session-hed button {
+  color: #23254e;
+}
+body .session-details .session-hed button:hover, body .session-details .session-hed button:active {
+  color: #50b04d;
+}
+body .session-details .session-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+body .session-details .session-card .coach-avatar {
+  background: #212529;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .session-details .session-card .status-badge {
+  background: #cff4fc;
+  color: #055160;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+body .session-details .session-card .expertise-badge {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #212529;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+@media (max-width: 768px) {
+  body .session-details .session-card {
+    padding: 1.2rem;
+  }
+  body .session-details .session-card .row {
+    flex-direction: column;
+  }
+  body .session-details .session-card .row .col-6 {
+    width: 100%;
+  }
 }
 body main {
   min-height: calc(100dvh - 300px);
