@@ -15,6 +15,9 @@ import ParticipantOverview from "../pages/participant/ParticipantOverview";
 import Coaching from "../pages/participant/Coaching";
 import SessionDetails from "../routes/SessionDetails";
 import Internships from "../pages/participant/Interships";
+import MVP from "../pages/participant/MvpLabs";
+import EditProfile from "../pages/participant/EditProfile";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -68,7 +71,10 @@ export const router = createBrowserRouter([
     { index:true , element: <ParticipantOverview  /> },
     { path: "coaching", element: <Coaching/> },
     { path: "internships", element: <Internships/> },
+    { path: "mvp-labs", element: <MVP/> },
+    { path: "profile", element: <EditProfile/> },
 
+    
   ],
 }
 

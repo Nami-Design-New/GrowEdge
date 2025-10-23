@@ -102,7 +102,9 @@ export default function Coaching() {
         </div>
 
         {/* Creative Tabs */}
-        <div className="tabs-container mt-4">
+        {/* <div className="tabs-container mt-4"> */}
+        <div className="tabs-common mt-4">
+
           <button
             className={`tab-btn ${activeTab === "upcoming" ? "active" : ""}`}
             onClick={() => setActiveTab("upcoming")}

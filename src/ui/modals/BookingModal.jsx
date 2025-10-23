@@ -38,7 +38,7 @@ export default function BookingModal({ show, setShow }) {
                     Schedule your coaching session with <strong>Michael Chen</strong>
                 </p>
 
-                <form onSubmit={handleConfirm}  className="form_ui">
+                <form onSubmit={handleConfirm} className="form_ui">
                     {/* ===== Duration & Date ===== */}
                     <SessionDurationDate
                         selectedDuration={selectedDuration}
@@ -94,7 +94,10 @@ export default function BookingModal({ show, setShow }) {
                     </div>
 
                     {/* ===== Confirm Button ===== */}
-                  <div className="text-center"> <button className="btn btn-dark px-5 py-2" onClick={handleConfirm}> Confirm Booking - ${selectedDuration === "30" ? "75" : "150"} </button> </div>
+                    <div className="text-center">
+                         <button className="btn btn-dark px-5 py-2"
+                          onClick={handleConfirm}> Confirm Booking - ${selectedDuration === "30" ? "75" : "150"}
+                         </button> </div>
                 </form>
             </Modal.Body>
         </Modal>

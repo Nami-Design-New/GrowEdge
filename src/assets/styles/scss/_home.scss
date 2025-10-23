@@ -259,9 +259,10 @@
         border: 6px solid #fff;
 
         @media (max-width: 920px) {
-          width: 200px;
-          height: 200px;
+          width: 180px;
+          height: 180px;
           bottom: -60%;
+           left: 0%;
         }
       }
     }
@@ -563,7 +564,8 @@
   }
 
   @media (max-width: 600px) {
-    padding: 2.5rem 0;
+    // padding: 2.5rem 0;
+    margin-top: 4rem;
     .stats-grid {
       flex-direction: column;
       gap: 1rem;

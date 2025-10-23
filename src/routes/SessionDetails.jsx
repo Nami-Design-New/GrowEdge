@@ -36,8 +36,7 @@ export default function SessionDetails() {
             className="btn btn-link text-decoration-none me-3"
             onClick={() => navigate(-1)}
           >
-            <i className="fa-solid fa-arrow-left me-2"></i> Back to session
-            details
+            <i className="fa-solid fa-arrow-left me-2"></i> Back to my sessions
           </button>
         </div>
 
@@ -46,7 +45,7 @@ export default function SessionDetails() {
           <div className="col-lg-7">
             <div className="session-card p-4">
               <div className="d-flex align-items-center gap-3 mb-3">
-                <div className="coach-avatar">{session.coachInitials}</div>
+                {/* <div className="coach-avatar">{session.coachInitials}</div> */}
                 <div className="flex-grow-1">
                   <div className="d-flex align-items-center justify-content-between flex-wrap">
                     <h5 className="mb-1">

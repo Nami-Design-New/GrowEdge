@@ -1,19 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "../../ui/layout/Sidebar";
 import EmptyStateCard from "../../ui/cards/EmptyStateCard";
+import BookedInternship from "../../ui/cards/BookedInternshipCard";
+import SkeletonCard from "../../ui/cards/SkeletonCard";
 
 export default function Internships() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [internships, setInternships] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const internships = []; 
+  //save internships from localStorage
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      const saved = JSON.parse(localStorage.getItem("myInternships")) || [];
+      setInternships(saved);
+      setLoading(false);
+    }, 1000); 
+  }, []);
 
   return (
     <div className="dashboard-layout">
+      {/* ===== Sidebar ===== */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       <div className="main-content p-0 p-md-4">
-        <div className="overview-header">
-          <h5>Internships</h5>
+        {/* ===== Header ===== */}
+        <div className="overview-header d-flex justify-content-between align-items-center mb-4">
+          <h5 className="mb-0">Internships</h5>
           <button
             className="sidebar-toggle-btn"
             onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -22,6 +36,7 @@ export default function Internships() {
           </button>
         </div>
 
+        {/* ===== Subheader ===== */}
         <div className="d-flex justify-content-between align-items-center mb-4">
           <div>
             <h5 className="mb-0">Startup Internships</h5>
@@ -31,7 +46,16 @@ export default function Internships() {
           </div>
         </div>
 
-        {internships.length === 0 ? (
+        {/* ===== Handling states ===== */}
+        {loading ? (
+          <div className="row">
+            {Array.from({ length: 2 }).map((_, idx) => (
+              <div key={idx} className="col-md-6 col-12 mb-4">
+                <SkeletonCard />
+              </div>
+            ))}
+          </div>
+        ) : internships.length === 0 ? (
           <EmptyStateCard
             title="Startup Internships"
             subtitle="Explore hands-on experience at emerging companies"
@@ -42,7 +66,13 @@ export default function Internships() {
             link="/startup-internships"
           />
         ) : (
-          <div>  </div>
+          <div className="row">
+            {internships.map((intern, idx) => (
+              <div key={idx} className="col-md-6 col-12 mb-4">
+                <BookedInternship {...intern} />
+              </div>
+            ))}
+          </div>
         )}
       </div>
     </div>

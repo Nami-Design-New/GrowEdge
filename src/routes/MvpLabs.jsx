@@ -4,10 +4,11 @@ import { useNavigate } from "react-router";
 import SectionHeader from "../ui/SectionHeader";
 import InputField from "../ui/forms/InputField";
 import SelectField from "../ui/forms/SelectField";
+import SuccessModal from "../ui/modals/SuccessModal";
 
 export default function MvpLabs() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+ const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -27,9 +28,19 @@ export default function MvpLabs() {
     experience: "",
   });
 
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const storedIdeas = JSON.parse(localStorage.getItem("mvpIdeas")) || [];
+    const updatedIdeas = [...storedIdeas, formData];
+    localStorage.setItem("mvpIdeas", JSON.stringify(updatedIdeas));
+    setShowSuccessModal(true);
   };
 
   return (
@@ -40,7 +51,7 @@ export default function MvpLabs() {
       />
 
       <div className="container">
-        <form className="form_ui">
+        <form className="form_ui" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-6 mb-3">
               <InputField
@@ -84,7 +95,7 @@ export default function MvpLabs() {
             </div>
           </div>
 
-          <div className="col-md-12 mb-3 ">
+          <div className="col-md-12 mb-3 px-3">
             <InputField
               label={t("MvpLabs.form.ideaTitle")}
               name="ideaTitle"
@@ -95,65 +106,81 @@ export default function MvpLabs() {
             />
           </div>
 
-          <div className="col-md-12 mb-3 ">
-            <InputField
-              as="textarea"
-              rows={3}
-              label={t("MvpLabs.form.problem")}
-              placeholder={t("MvpLabs.form.problemPlaceholder")}
-              name="problem"
-              value={formData.problem}
-              onChange={handleChange}
-            />
+          <div className="row">
+            <div className="col-md-6 mb-3">
+              <InputField
+                as="textarea"
+                rows={3}
+                label={t("MvpLabs.form.problem")}
+                placeholder={t("MvpLabs.form.problemPlaceholder")}
+                name="problem"
+                value={formData.problem}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="col-md-6 mb-3">
+              <InputField
+                as="textarea"
+                rows={3}
+                label={t("MvpLabs.form.solution")}
+                placeholder={t("MvpLabs.form.solutionPlaceholder")}
+                name="solution"
+                value={formData.solution}
+                onChange={handleChange}
+              />
+            </div>
           </div>
 
-          <div className="col-md-12 mb-3 ">
-            <InputField
-              as="textarea"
-              rows={3}
-              label={t("MvpLabs.form.solution")}
-              placeholder={t("MvpLabs.form.solutionPlaceholder")}
-              name="solution"
-              value={formData.solution}
-              onChange={handleChange}
-            />
+          <div className="row">
+            <div className="col-md-6 mb-3">
+              <InputField
+                as="textarea"
+                rows={3}
+                label={t("MvpLabs.form.targetMarket")}
+                placeholder={t("MvpLabs.form.targetMarketPlaceholder")}
+                name="targetMarket"
+                value={formData.targetMarket}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="col-md-6 mb-3">
+              <InputField
+                as="textarea"
+                rows={3}
+                label={t("MvpLabs.form.uniqueness")}
+                placeholder={t("MvpLabs.form.uniquenessPlaceholder")}
+                name="uniqueness"
+                value={formData.uniqueness}
+                onChange={handleChange}
+              />
+            </div>
           </div>
 
-          <div className="col-md-12 mb-3 ">
-            <InputField
-              as="textarea"
-              rows={3}
-              label={t("MvpLabs.form.targetMarket")}
-              placeholder={t("MvpLabs.form.targetMarketPlaceholder")}
-              name="targetMarket"
-              value={formData.targetMarket}
-              onChange={handleChange}
-            />
-          </div>
+          <div className="row">
+            <div className="col-md-6 mb-3">
+              <InputField
+                as="textarea"
+                rows={3}
+                label={t("MvpLabs.form.monetization")}
+                placeholder={t("MvpLabs.form.monetizationPlaceholder")}
+                name="monetization"
+                value={formData.monetization}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className="col-md-12 mb-3 ">
-            <InputField
-              as="textarea"
-              rows={3}
-              label={t("MvpLabs.form.uniqueness")}
-              placeholder={t("MvpLabs.form.uniquenessPlaceholder")}
-
-              name="uniqueness"
-              value={formData.uniqueness}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div className="col-md-12 mb-3 ">
-            <InputField
-              as="textarea"
-              rows={3}
-              label={t("MvpLabs.form.monetization")}
-              placeholder={t("MvpLabs.form.monetizationPlaceholder")}
-              name="monetization"
-              value={formData.monetization}
-              onChange={handleChange}
-            />
+            <div className="col-md-6 mb-3">
+              <InputField
+                as="textarea"
+                rows={4}
+                label={t("MvpLabs.form.experience")}
+                placeholder={t("MvpLabs.form.experiencePlaceholder")}
+                name="experience"
+                value={formData.experience}
+                onChange={handleChange}
+              />
+            </div>
           </div>
 
           <div className="row">
@@ -219,23 +246,10 @@ export default function MvpLabs() {
             </div>
           </div>
 
-          <div className="col-md-12 mb-3 ">
-            <InputField
-              as="textarea"
-              rows={4}
-              label={t("MvpLabs.form.experience")}
-              placeholder={t("MvpLabs.form.experiencePlaceholder")}
-              name="experience"
-              value={formData.experience}
-              onChange={handleChange}
-            />
-          </div>
-
-          {/* ===== Buttons ===== */}
-          <div className="btn-group">
+          <div className="btn-group px-3">
             <button
               type="button"
-              className="btn-outline"
+              className="btn-danger"
               onClick={() => navigate("/")}
             >
               {t("MvpLabs.form.cancel")}
@@ -246,6 +260,19 @@ export default function MvpLabs() {
           </div>
         </form>
       </div>
+
+      {/* Success Modal */}
+
+      <SuccessModal
+        show={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+        title="Idea Submitted Successfully!"
+        message="Your startup idea has been submitted to MVP Labs for review. We’ll contact you soon!"
+        buttonText="Back to MVP Labs"
+        onButtonClick={() => {
+          setShowSuccessModal(false);
+          navigate("/dashboard/mvp-labs");
+        }} />
     </div>
   );
 }

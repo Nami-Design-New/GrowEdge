@@ -104,7 +104,7 @@ export default function InternshipDetailsModal({ show, setShow, internship }) {
           </div>
 
           <div className="btn-group">
-            <button className="btn-outline" onClick={() => setShow(false)}>
+            <button className="btn-danger" onClick={() => setShow(false)}>
               Close
             </button>
             <button className="btn-dark" onClick={handleApplyClick}>

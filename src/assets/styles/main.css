@@ -173,14 +173,23 @@ button {
 .btn-group .btn-outline:hover {
   background-color: #000;
   color: #fff;
+  border: 1px solid #000;
 }
 .btn-group .btn-dark {
-  background-color: #000;
+  background-color: #23254e;
   color: #fff;
   border: none;
 }
 .btn-group .btn-dark:hover {
-  background-color: #333;
+  background-color: #50537e;
+}
+.btn-group .btn-danger {
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+.btn-group .btn-danger:hover {
+  background-color: #ef4444;
+  color: #fff;
 }
 
 body {
@@ -1229,9 +1238,10 @@ body .about-section .collage__card-large-circle {
 }
 @media (max-width: 920px) {
   body .about-section .collage__card-large-circle {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     bottom: -60%;
+    left: 0%;
   }
 }
 body .about-section .collage__badge {
@@ -1496,7 +1506,7 @@ body .stats-section .stat-card .stat-note {
 }
 @media (max-width: 600px) {
   body .stats-section {
-    padding: 2.5rem 0;
+    margin-top: 4rem;
   }
   body .stats-section .stats-grid {
     flex-direction: column;
@@ -2396,7 +2406,7 @@ body .startup-page .search-box input {
 body .startup-page .search-box input:focus {
   outline: none;
   border-color: #23254e;
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 0 6px rgba(43, 62, 82, 0.103);
 }
 body .startup-page .search-box input::-moz-placeholder {
   color: #aaa;
@@ -2405,100 +2415,10 @@ body .startup-page .search-box input::placeholder {
   color: #aaa;
 }
 body .startup-page .search-box:hover i {
-  color: #007bff;
+  color: #23254e;
 }
 body .startup-page .startup-cards {
   padding-bottom: 2rem;
-}
-body .internship-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  border: 1px solid #eee;
-  height: 100%;
-}
-body .internship-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
-}
-body .internship-card__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-body .internship-card__header h5 {
-  font-size: 1.1rem;
-}
-body .internship-card__header .badge {
-  padding: 0.35rem 0.7rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  text-transform: capitalize;
-}
-body .internship-card__header .badge.full {
-  background: #000;
-  color: #fff;
-}
-body .internship-card__header .badge.part {
-  background: #f2f2f2;
-  color: #333;
-}
-body .internship-card__company {
-  margin-top: 0.4rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-body .internship-card__company strong {
-  color: #222;
-}
-body .internship-card__company .funding {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 0.15rem 0.5rem;
-  font-size: 0.75rem;
-}
-body .internship-card__details {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  color: #666;
-  margin: 0.7rem 0;
-}
-body .internship-card__details span {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.9rem;
-}
-body .internship-card__desc {
-  font-size: 0.95rem;
-  color: #444;
-  margin-bottom: 1rem;
-}
-body .internship-card__skills h6 {
-  font-size: 0.9rem;
-  color: #111;
-  margin-bottom: 0.5rem;
-}
-body .internship-card__skills .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-body .internship-card__skills .tags .tag {
-  background: #f5f5f5;
-  border-radius: 8px;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.8rem;
-  color: #333;
-}
-body .internship-card__footer {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: #555;
 }
 body .internship-modal h6 {
   font-weight: 600;
@@ -2586,57 +2506,41 @@ body .dashboard-layout .content-wrapper {
     padding: 1.5rem;
   }
 }
-body .dashboard-layout .tabs-container {
+body .dashboard-layout .tabs-common {
   display: flex;
   gap: 0.5rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: #e7eaf0;
+  border-radius: 12px;
 }
-body .dashboard-layout .tabs-container .tab-btn {
-  background: #f8f9fc;
-  border: none;
-  padding: 0.5rem 1rem;
+body .dashboard-layout .tabs-common .tab-btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.6rem 1rem;
   border-radius: 10px;
-  font-weight: 500;
+  border: none;
+  font-weight: 600;
   color: #555;
-  transition: all 0.3s ease;
+  background: transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-body .dashboard-layout .tabs-container .tab-btn:hover {
-  background: #ececff;
+body .dashboard-layout .tabs-common .tab-btn:hover {
+  background: rgba(91, 82, 216, 0.103);
   color: #23254e;
+  transform: translateY(-2px);
 }
-body .dashboard-layout .tabs-container .tab-btn.active {
+body .dashboard-layout .tabs-common .tab-btn.active {
   background: #23254e;
   color: #fff;
-  box-shadow: 0 3px 6px rgba(76, 63, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(76, 63, 255, 0.3);
+  transform: translateY(-2px);
 }
 @media (max-width: 768px) {
-  body .dashboard-layout .tabs-container .tab-btn {
-    padding: 0.5rem;
-    font-size: 1rem;
+  body .dashboard-layout .tabs-common .tab-btn {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
   }
-}
-body .dashboard-layout .session-empty-card {
-  text-align: center;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 16px;
-  padding: 3rem 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-}
-body .dashboard-layout .session-empty-card .browse-btn {
-  background: #50b04d;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-body .dashboard-layout .session-empty-card .browse-btn:hover {
-  background: #222;
-  transform: translateY(-1px);
 }
 body .sidebar {
   width: 260px;
@@ -2822,28 +2726,6 @@ body .overview-header .sidebar-toggle-btn i {
     display: block;
   }
 }
-body .welcome-card {
-  background-color: #F7FAFC;
-  border-radius: 16px;
-  padding: 1rem;
-  box-shadow: 0 4px 20px rgba(35, 37, 78, 0.13);
-  margin: 2rem 0.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-body .welcome-card:hover {
-  box-shadow: 0 6px 25px rgba(35, 37, 78, 0.45);
-}
-body .welcome-card .welcome-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #23254e;
-}
-body .welcome-card .welcome-message {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  color: #777;
-}
 body .statistics-section .stat-card {
   background: #fff;
   border: 1px solid #eee;
@@ -2881,6 +2763,292 @@ body .statistics-section .stat-card .stat-info p {
   font-size: 1.2rem;
   color: #222;
   font-weight: 600;
+}
+body .session-details {
+  padding: 2rem 0;
+}
+body .session-details .container {
+  max-width: 1200px;
+}
+body .session-details .session-hed {
+  padding-top: 4rem;
+}
+body .session-details .session-hed button {
+  color: #23254e;
+}
+body .session-details .session-hed button:hover, body .session-details .session-hed button:active {
+  color: #50b04d;
+}
+body .session-details .session-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+body .session-details .session-card .coach-avatar {
+  background: #212529;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+body .session-details .session-card .status-badge {
+  background: #cff4fc;
+  color: #055160;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+body .session-details .session-card .expertise-badge {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #212529;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+@media (max-width: 768px) {
+  body .session-details .session-card {
+    padding: 1.2rem;
+  }
+  body .session-details .session-card .row {
+    flex-direction: column;
+  }
+  body .session-details .session-card .row .col-6 {
+    width: 100%;
+  }
+}
+body .success-modal .modal-content {
+  border: none;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+body .success-modal .modal-content .modal-body {
+  padding: 2rem 1rem;
+}
+body .success-modal .modal-content .modal-body i {
+  font-size: 3rem;
+  color: #50b04d;
+  margin-bottom: 1rem;
+}
+body .success-modal .modal-content .modal-body h5 {
+  font-weight: 600;
+  color: #23254e;
+  margin-bottom: 0.5rem;
+}
+body .success-modal .modal-content .modal-body p {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+body .success-modal .modal-content .modal-body .btn-outline {
+  display: inline-block;
+  border: 1.5px solid #23254e;
+  color: #23254e;
+  background: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+body .success-modal .modal-content .modal-body .btn-outline:hover {
+  background-color: #23254e;
+  color: #fff;
+}
+body .success-modal.fade .modal-dialog {
+  transform: scale(0.95);
+  transition: transform 0.3s ease-out;
+}
+body .success-modal.fade .modal-dialog.show {
+  transform: scale(1);
+}
+body .profile-header .avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+body .profile-header .avatar-wrapper .avatar {
+  width: 90px;
+  height: 90px;
+  background: #50b04d;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+body .profile-header .avatar-wrapper .avatar .avatar-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+body .profile-header .avatar-wrapper .upload-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+body .profile-header .avatar-wrapper .upload-btn i {
+  font-size: 0.9rem;
+  color: #23254e;
+}
+body .profile-header .avatar-wrapper .upload-btn:hover {
+  background: #23254e;
+}
+body .profile-header .avatar-wrapper .upload-btn:hover i {
+  color: #fff;
+}
+body .basic-info-form {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+body .basic-info-form .section-title {
+  font-weight: 600;
+  color: #23254e;
+}
+body .basic-info-form .form-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+body .basic-info-form .form-control,
+body .basic-info-form .form-select {
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+body .internship-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  height: 100%;
+}
+body .internship-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+body .internship-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .internship-card__header h5 {
+  font-size: 1.1rem;
+}
+body .internship-card__header .badge {
+  padding: 0.35rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+body .internship-card__header .badge.full {
+  background: #000;
+  color: #fff;
+}
+body .internship-card__header .badge.part {
+  background: #f2f2f2;
+  color: #333;
+}
+body .internship-card__company {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+body .internship-card__company strong {
+  color: #222;
+}
+body .internship-card__company .funding {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+}
+body .internship-card__details {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: #666;
+  margin: 0.7rem 0;
+}
+body .internship-card__details span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+body .internship-card__desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+body .internship-card__skills h6 {
+  font-size: 0.9rem;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+body .internship-card__skills .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+body .internship-card__skills .tags .tag {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  color: #333;
+}
+body .internship-card__footer {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+body .welcome-card {
+  background-color: #F7FAFC;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(35, 37, 78, 0.13);
+  margin: 2rem 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body .welcome-card:hover {
+  box-shadow: 0 6px 25px rgba(35, 37, 78, 0.45);
+}
+body .welcome-card .welcome-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #23254e;
+}
+body .welcome-card .welcome-message {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: #777;
 }
 body .empty-state-card {
   background: #fff;
@@ -2923,6 +3091,7 @@ body .empty-state-card .empty-state .empty-icon {
   color: #777;
   width: 60px;
   height: 60px;
+  background-color: rgba(80, 83, 126, 0.1450980392);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -2958,6 +3127,8 @@ body .booked-session-card {
   align-items: flex-start;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
+  flex-wrap: wrap;
+  /* ========== Responsive Design ========== */
 }
 body .booked-session-card:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
@@ -2966,6 +3137,7 @@ body .booked-session-card .session-info {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  flex: 1;
 }
 body .booked-session-card .session-info .coach-avatar {
   width: 45px;
@@ -2977,6 +3149,7 @@ body .booked-session-card .session-info .coach-avatar {
   justify-content: center;
   color: #23254e;
   font-size: 1.2rem;
+  flex-shrink: 0;
 }
 body .booked-session-card .session-info .coach-name {
   font-weight: 600;
@@ -2987,6 +3160,7 @@ body .booked-session-card .session-info .tags {
   margin: 0.4rem 0;
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 body .booked-session-card .session-info .tags .status {
   background: rgba(80, 176, 77, 0.1);
@@ -3025,6 +3199,7 @@ body .booked-session-card .actions {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-left: 1rem;
 }
 body .booked-session-card .actions .btn {
   border: none;
@@ -3059,65 +3234,186 @@ body .booked-session-card .actions .btn:hover {
   opacity: 0.85;
   transform: translateY(-1px);
 }
-body .session-details {
-  padding: 2rem 0;
-}
-body .session-details .container {
-  max-width: 1200px;
-}
-body .session-details .session-hed {
-  padding-top: 4rem;
-}
-body .session-details .session-hed button {
-  color: #23254e;
-}
-body .session-details .session-hed button:hover, body .session-details .session-hed button:active {
-  color: #50b04d;
-}
-body .session-details .session-card {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
-}
-body .session-details .session-card .coach-avatar {
-  background: #212529;
-  color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-weight: 700;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body .session-details .session-card .status-badge {
-  background: #cff4fc;
-  color: #055160;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-body .session-details .session-card .expertise-badge {
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
-  color: #212529;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-}
-@media (max-width: 768px) {
-  body .session-details .session-card {
-    padding: 1.2rem;
-  }
-  body .session-details .session-card .row {
+@media (max-width: 992px) {
+  body .booked-session-card {
     flex-direction: column;
+    padding: 1rem;
+    margin-left: 0rem;
   }
-  body .session-details .session-card .row .col-6 {
+  body .booked-session-card .session-info {
+    flex-direction: row;
     width: 100%;
   }
+  body .booked-session-card .session-info .meta {
+    gap: 0.6rem;
+  }
+  body .booked-session-card .actions {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  body .booked-session-card .actions .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
+@media (max-width: 576px) {
+  body .booked-session-card .session-info {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  body .booked-session-card .session-info .coach-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  body .booked-session-card .session-info .meta {
+    font-size: 0.85rem;
+  }
+  body .booked-session-card .session-info .topic {
+    font-size: 0.85rem;
+  }
+  body .booked-session-card .actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.4rem;
+    margin-left: 0rem;
+  }
+  body .booked-session-card .actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+body .booked-internship-card {
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+body .booked-internship-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+body .booked-internship-card h5 {
+  font-weight: 600;
+  color: #333;
+}
+body .booked-internship-card .badge {
+  font-size: 0.8rem;
+  padding: 0.4em 0.7em;
+  border-radius: 12px;
+}
+body .skeleton-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+body .skeleton-card .skeleton-text {
+  height: 18px;
+  background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+  background-size: 400% 100%;
+  animation: shimmer 1.2s infinite;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+body .mvp-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+body .mvp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+body .mvp-card .idea-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #222;
+}
+body .mvp-card .founder {
+  font-size: 0.9rem;
+}
+body .mvp-card .funding-tag {
+  background: #e8f5e9;
+  color: #50b04d;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 0.3em 0.8em;
+  font-size: 0.85rem;
+}
+body .mvp-card .idea-summary p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+body .mvp-card .extra-info {
+  border-top: 1px solid #f1f1f1;
+  padding-top: 0.6rem;
+}
+body .mvp-card .extra-info div i {
+  color: #23254e;
+  margin-right: 4px;
+}
+body .mvp-card .extra-info div strong {
+  font-weight: 600;
+}
+body .mvp-card .btn-edit,
+body .mvp-card .btn-delete {
+  padding: 0.45em 1.2em;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+body .mvp-card .btn-edit i,
+body .mvp-card .btn-delete i {
+  margin-right: 6px;
+}
+body .mvp-card .btn-edit {
+  background: #23254e;
+  color: #fff;
+}
+body .mvp-card .btn-edit:hover {
+  opacity: 0.85;
+}
+body .mvp-card .btn-delete {
+  background: #f8d7da;
+  color: #a71d2a;
+}
+body .mvp-card .btn-delete:hover {
+  background: #f1b0b7;
+}
+body .session-empty-card {
+  text-align: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 3rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+body .session-empty-card .browse-btn {
+  background: #50b04d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+body .session-empty-card .browse-btn:hover {
+  background: #222;
+  transform: translateY(-1px);
 }
 body main {
   min-height: calc(100dvh - 300px);
