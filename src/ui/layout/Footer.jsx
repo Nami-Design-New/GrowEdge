@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer_content row">
           <div className="brand_info col-lg-4 col-md-6">
             <Link to="/" className="logo">
-              <img src="/images/logo.svg" alt="logo" />
+              <img src="/images/light-logo.svg" alt="logo" />
             </Link>
             <p className="brand_desc">{t("footer.brandDesc")}</p>
 

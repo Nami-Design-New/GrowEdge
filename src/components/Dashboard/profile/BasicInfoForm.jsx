@@ -31,7 +31,7 @@ export default function BasicInfoForm() {
   };
 
   return (
-    <div className="basic-info-form p-4">
+    <div className="info-form p-4">
       <h6 className="section-title mb-3">
         <i className="fa-regular fa-user me-2"></i> Basic Information
       </h6>
@@ -141,7 +141,7 @@ export default function BasicInfoForm() {
         </div>
 
         <div className="btn-group px-2">
-          <button type="button" className="btn-outline" onClick={handleCancel}>
+          <button type="button" className="btn-danger" onClick={handleCancel}>
             Cancel
           </button>
           <button type="button" className="btn-dark" onClick={handleSave}>

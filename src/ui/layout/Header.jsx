@@ -123,7 +123,9 @@ export default function Header() {
             {t("header.login")}
           </Link> */}
           {/* )} */}
-
+ <Link to="/signin" className="login">
+            {t("header.login")}
+          </Link>
           <button className="toggle_menu" onClick={handleToggleMenu}>
             <i className="fa-regular fa-bars"></i>
           </button>

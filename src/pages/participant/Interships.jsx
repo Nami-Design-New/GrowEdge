@@ -16,7 +16,7 @@ export default function Internships() {
       const saved = JSON.parse(localStorage.getItem("myInternships")) || [];
       setInternships(saved);
       setLoading(false);
-    }, 1000); 
+    }, 1000);
   }, []);
 
   return (
@@ -49,7 +49,7 @@ export default function Internships() {
         {/* ===== Handling states ===== */}
         {loading ? (
           <div className="row">
-            {Array.from({ length: 2 }).map((_, idx) => (
+            {Array.from({ length: internships.length || 1 }).map((_, idx) => (
               <div key={idx} className="col-md-6 col-12 mb-4">
                 <SkeletonCard />
               </div>

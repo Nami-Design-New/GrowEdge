@@ -2,8 +2,8 @@ export default function ProfileTabs({ activeTab, setActiveTab }) {
   const tabs = [
     { id: "basic", label: "Basic Info" },
     { id: "professional", label: "Professional" },
-    { id: "role", label: "Role Details" },
-    { id: "social", label: "Social Links" },
+    // { id: "role", label: "Role Details" },
+    // { id: "social", label: "Social Links" },
     { id: "preferences", label: "Preferences" },
   ];
 

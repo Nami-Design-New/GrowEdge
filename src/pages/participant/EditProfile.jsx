@@ -2,6 +2,8 @@ import { useState } from "react";
 import Sidebar from "../../ui/layout/Sidebar";
 import ProfileTabs from "../../components/Dashboard/profile/ProfileTabs";
 import BasicInfoForm from "../../components/Dashboard/profile/BasicInfoForm";
+import ProfessionalInfoForm from "../../components/Dashboard/profile/ProfessionalInfo";
+import Preferences from "../../components/Dashboard/profile/Preferences";
 
 export default function EditProfile() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -72,9 +74,9 @@ export default function EditProfile() {
         {/* ===== Tab Content ===== */}
         <div className="tab-content mt-4">
           {activeTab === "basic" && <BasicInfoForm />}
-          {activeTab === "professional" && (
-            <div className="text-center text-muted">Coming soon...</div>
-          )}
+          {activeTab === "professional" && <ProfessionalInfoForm/>}
+         {activeTab === "preferences" && <Preferences/>}
+
         </div>
       </div>
     </div>
