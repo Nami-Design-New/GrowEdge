@@ -1,42 +1,149 @@
+import { useEffect, useState } from "react";
 import MessageBubble from "./MessageBubble";
 
-export default function ChatWindow() {
-  const messages = [
-    { sender: "Sarah Johnson", time: "07:09 AM", text: "Hi! I've reviewed your profile and I'm excited to work with you on your career goals.", isUser: false },
-    { sender: "You", time: "08:24 AM", text: "Thank you! I'm looking forward to improving my interview skills and updating my resume.", isUser: true },
-    { sender: "Sarah Johnson", time: "08:39 AM", text: "I've attached a resume template and some interview preparation materials. Take a look and let me know if you have any questions.", isUser: false },
-    { sender: "Sarah Johnson", time: "08:54 AM", text: "Great progress on your resume! Let’s schedule a mock interview for next week.", isUser: false },
-  ];
+export default function ChatWindow({ selectedChat }) {
+  const [messages, setMessages] = useState(selectedChat?.messages || []);
+  const [inputValue, setInputValue] = useState("");
+  const [attachment, setAttachment] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMessages(selectedChat?.messages || []);
+  }, [selectedChat]);
+
+  const handleMenu = () => setMenuOpen((prev) => !prev);
+
+  const handleAttach = (e) => {
+    const file = e.target.files[0];
+    if (file) setAttachment(file);
+  };
+
+  const handleSend = () => {
+    if (!inputValue.trim() && !attachment) return;
+
+    let newMsg = {
+      sender: "You",
+      time: new Date().toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
+      text: "",
+      isUser: true,
+    };
+
+    if (attachment) {
+      const fileType = attachment.type;
+      if (fileType.startsWith("image/")) {
+        const imageUrl = URL.createObjectURL(attachment);
+        newMsg = { ...newMsg, image: imageUrl };
+      } else {
+        newMsg = { ...newMsg, file: attachment.name };
+      }
+    } else {
+      newMsg.text = inputValue;
+    }
+
+    setMessages((prev) => [...prev, newMsg]);
+    setInputValue("");
+    setAttachment(null);
+  };
+
+  // delete messg
+  const handleDeleteMessage = (indexToDelete) => {
+    const updated = messages.filter((_, i) => i !== indexToDelete);
+    setMessages(updated);
+  };
+
+  if (!selectedChat) {
+    return (
+      <div className="chat-window empty">
+        <p>Select a conversation to start chatting</p>
+      </div>
+    );
+  }
 
   return (
     <div className="chat-window">
+      {/* ===== Header ===== */}
       <div className="chat-header">
         <div className="user">
-          <div className="avatar">SJ</div>
+          <div className="avatar">{selectedChat.initials}</div>
           <div>
-            <h6>Sarah Johnson</h6>
-            <span className="status online">Online</span>
+            <h6>{selectedChat.name}</h6>
+            <span
+              className={`status ${selectedChat.online ? "online" : "offline"}`}
+            >
+              {selectedChat.online ? "Online" : "Offline"}
+            </span>
           </div>
         </div>
+
         <div className="actions">
-          <i className="fa-solid fa-phone"></i>
-          <i className="fa-solid fa-video"></i>
-          <i className="fa-solid fa-ellipsis-vertical"></i>
+          <div className="menu-wrapper">
+            <i
+              className="fa-solid fa-ellipsis-vertical"
+              title="More Options"
+              onClick={handleMenu}
+            ></i>
+            {menuOpen && (
+              <div className="dropdown-menu">
+                <button>
+                  <i className="fa-regular fa-user"></i> View Profile
+                </button>
+                <button>
+                  <i className="fa-solid fa-ban"></i> Block User
+                </button>
+                <button>
+                  <i className="fa-regular fa-trash-can"></i> Delete Chat
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
+      {/* ===== Messages ===== */}
       <div className="chat-body">
-        {messages.map((m, index) => (
-          <MessageBubble key={index} message={m} />
+        {(messages || []).map((m, i) => (
+          <MessageBubble
+            key={i}
+            message={m}
+            onDelete={() => handleDeleteMessage(i)} 
+          />
         ))}
       </div>
 
+      {/* ===== Input Section ===== */}
       <div className="chat-input">
-        <input type="text" placeholder="Type your message..." />
+        <input
+          type="text"
+          placeholder="Type your message..."
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+
+        {attachment && (
+          <div className="attached-file">
+            <i className="fa-solid fa-paperclip"></i> {attachment.name}
+          </div>
+        )}
+
         <div className="icons">
-          <i className="fa-solid fa-paperclip"></i>
-          <i className="fa-regular fa-face-smile"></i>
-          <i className="fa-solid fa-paper-plane send"></i>
+          <label htmlFor="fileInput">
+            <i className="fa-solid fa-paperclip" title="Attach File"></i>
+          </label>
+          <input
+            id="fileInput"
+            type="file"
+            style={{ display: "none" }}
+            onChange={handleAttach}
+          />
+
+          <i
+            className="fa-solid fa-paper-plane send"
+            title="Send Message"
+            onClick={handleSend}
+          ></i>
         </div>
       </div>
     </div>

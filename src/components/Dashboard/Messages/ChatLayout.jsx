@@ -1,12 +1,9 @@
 import { useState } from "react";
-import Sidebar from "../../ui/layout/Sidebar";
-import ChatSidebar from "../../components/Dashboard/Messages/ChatSidebar";
-import ChatWindow from "../../components/Dashboard/Messages/ChatWindow";
+import ChatSidebar from "./ChatSidebar";
+import ChatWindow from "./ChatWindow";
 
-export default function Messages() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  //  all chats
+export default function ChatLayout() {
+  // all chats
   const allConversations = [
     {
       id: 1,
@@ -34,7 +31,7 @@ export default function Messages() {
     {
       id: 2,
       name: "Tech Innovators",
-      message: "Please send your updated portfolio.",
+      message: "Thank you for considering my application.",
       online: false,
       pinned: false,
       unread: true,
@@ -70,29 +67,13 @@ export default function Messages() {
   const [selectedChat, setSelectedChat] = useState(allConversations[0]);
 
   return (
-    <div className="dashboard-layout">
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-
-      <div className="messg-content">
-        <div className="overview-header p-0 p-md-4 mb-md-0">
-          <h5>Messages</h5>
-          <button
-            className="sidebar-toggle-btn"
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-          >
-            <i className="fa-solid fa-bars"></i>
-          </button>
-        </div>
-
-        <div className="messages-page d-flex" style={{ height: "100vh" }}>
-          <ChatSidebar
-            conversations={allConversations}
-            onSelectChat={(chat) => setSelectedChat(chat)}
-            selectedChatId={selectedChat?.id}
-          />
-          <ChatWindow selectedChat={selectedChat} />
-        </div>
-      </div>
+    <div className="chat-layout" style={{ display: "flex", height: "100vh" }}>
+      <ChatSidebar
+        conversations={allConversations}
+        onSelectChat={(chat) => setSelectedChat(chat)}
+        selectedChatId={selectedChat?.id}
+      />
+      <ChatWindow selectedChat={selectedChat} />
     </div>
   );
 }

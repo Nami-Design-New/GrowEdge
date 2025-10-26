@@ -18,6 +18,7 @@ import Internships from "../pages/participant/Interships";
 import MVP from "../pages/participant/MvpLabs";
 import EditProfile from "../pages/participant/EditProfile";
 import Messages from "../pages/participant/Messages";
+import Notifications from "../pages/participant/Notifications";
 
 export const router = createBrowserRouter([
   {
@@ -75,7 +76,8 @@ export const router = createBrowserRouter([
     { path: "mvp-labs", element: <MVP/> },
     { path: "profile", element: <EditProfile/> },
     { path: "messages", element: <Messages/> },
-    
+    { path: "notifications", element: <Notifications/> },
+
 
     
   ],
