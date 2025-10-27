@@ -13,7 +13,7 @@ export default function Sidebar({ isOpen, onClose }) {
           <div className="avatar">U</div>
           <div>
             <h4 className="username">User</h4>
-            <span className="role">Startup</span>
+            <span className="role">Participant</span>
           </div>
         </div>
 

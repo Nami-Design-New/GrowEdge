@@ -58,6 +58,9 @@ body {
       border-right: none;
       border-left: 4px solid $main;
     }
+    .success-section .controls-row .nav-btns .nav-btn i {
+      transform: rotate(180deg);
+    }
   }
   &.ar {
     .hero__panel .hero__overlay .hero_title .arrow {

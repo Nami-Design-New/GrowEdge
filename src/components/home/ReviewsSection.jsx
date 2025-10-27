@@ -116,10 +116,10 @@ const ReviewsSection = () => {
         <div className="controls-row">
           <div className="nav-btns">
             <button className="nav-btn" ref={prevRef}>
-              <i className="fas fa-chevron-left"></i>
+              <i className="fas fa-chevron-right"></i>
             </button>
             <button className="nav-btn" ref={nextRef}>
-              <i className="fas fa-chevron-right"></i>
+              <i className="fas fa-chevron-left"></i>
             </button>
           </div>
 

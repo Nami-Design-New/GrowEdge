@@ -3443,6 +3443,130 @@ body .tabs .tab-btn.active .count {
   background: #23254e;
   color: #fff;
 }
+body .account-settings-page .section-title {
+  font-weight: 600;
+  color: #212529;
+}
+body .account-settings-page .account-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body .account-settings-page .account-settings .setting-card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: 0.2s;
+}
+body .account-settings-page .account-settings .setting-card:hover {
+  background: #f8f9fa;
+}
+body .account-settings-page .account-settings .setting-card .setting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+body .account-settings-page .account-settings .setting-card .setting-header .title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+body .account-settings-page .account-settings .setting-card .setting-header .muted {
+  color: #777;
+  font-size: 0.85rem;
+  display: block;
+}
+body .account-settings-page .account-settings .setting-card .setting-header .badge {
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+body .account-settings-page .account-settings .setting-card .side-btn {
+  border: 1px solid #23254e;
+  color: #23254e;
+  padding: 6px 14px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+  background: transparent;
+}
+body .account-settings-page .account-settings .setting-card .side-btn:hover {
+  background: #23254e;
+  color: #fff;
+}
+body .account-settings-page .account-settings .setting-card .side-btn.outline {
+  border-color: #212529;
+  color: #212529;
+}
+body .account-settings-page .account-settings .setting-card .side-btn.outline:hover {
+  background: #212529;
+  color: #fff;
+}
+body .account-settings-page .account-settings .setting-card .password-form {
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+}
+body .account-settings-page .account-settings .setting-card .password-form .input-group {
+  margin-bottom: 0.75rem;
+}
+body .account-settings-page .account-settings .setting-card .password-form .input-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: #495057;
+  margin-bottom: 4px;
+}
+body .account-settings-page .account-settings .setting-card .password-form .input-group input {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  outline: none;
+}
+body .account-settings-page .account-settings .setting-card .password-form .input-group input:focus {
+  border-color: #23254e;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.1);
+}
+body .account-settings-page .account-settings .setting-card .password-form .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+body .account-settings-page .account-settings .setting-card .password-form .actions .btn {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+body .account-settings-page .account-settings .danger-title {
+  color: #ef4444;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+body .account-settings-page .account-settings .danger-zone {
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  background: #fff5f5;
+  padding: 1rem;
+}
+body .account-settings-page .account-settings .danger-zone .setting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+body .account-settings-page .account-settings .danger-zone .setting-header strong,
+body .account-settings-page .account-settings .danger-zone .setting-header small {
+  display: block;
+  color: #ad1424;
+}
+body .account-settings-page .account-settings .danger-zone .setting-header small {
+  font-size: 0.85rem;
+  color: #ef4444;
+}
 body .internship-card {
   background: #fff;
   border-radius: 12px;
@@ -3537,12 +3661,12 @@ body .welcome-card {
   background-color: #F7FAFC;
   border-radius: 16px;
   padding: 1rem;
-  box-shadow: 0 4px 20px rgba(35, 37, 78, 0.13);
+  box-shadow: 0 2px 15px rgba(35, 37, 78, 0.13);
   margin: 2rem 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 body .welcome-card:hover {
-  box-shadow: 0 6px 25px rgba(35, 37, 78, 0.45);
+  box-shadow: 0 4px 16px rgba(35, 37, 78, 0.45);
 }
 body .welcome-card .welcome-title {
   font-size: 1.3rem;
@@ -3921,6 +4045,11 @@ body .session-empty-card .browse-btn:hover {
   transform: translateY(-1px);
 }
 body .notification-empty-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   background: #f9fafb;
   border: 1px dashed #d1d5db;
   border-radius: 12px;
@@ -3947,23 +4076,47 @@ body .notification-card {
   margin-top: 15px;
   background: #fdfdfd;
   transition: box-shadow 0.3s;
+  /* Type-based colors */
 }
 body .notification-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 body .notification-card .icon-box {
-  background: #f1f3f5;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 15px;
+  transition: 0.3s;
 }
 body .notification-card .icon-box i {
-  color: #777;
   font-size: 1.1rem;
+}
+body .notification-card.type-messages .icon-box {
+  background: #e3f2fd;
+  color: #2196f3;
+}
+body .notification-card.type-sessions .icon-box {
+  background: #e8f5e9;
+  color: #4caf50;
+}
+body .notification-card.type-system .icon-box {
+  background: #f5f5f5;
+  color: #616161;
+}
+body .notification-card.type-applications .icon-box {
+  background: #f5d0f7;
+  color: #f700ff;
+}
+body .notification-card.type-achievements .icon-box {
+  background: #fff8e1;
+  color: #fbc02d;
+}
+body .notification-card.type-default .icon-box {
+  background: #f1f3f5;
+  color: #6c757d;
 }
 body .notification-card .content {
   flex: 1;
@@ -3977,11 +4130,6 @@ body .notification-card .content .message {
   color: #555;
   font-size: 0.9rem;
   margin-bottom: 6px;
-}
-body .notification-card .content .meta {
-  display: block;
-  font-size: 0.8rem;
-  color: #888;
 }
 body .notification-card .content .action-btn {
   background: #f8f9fa;
@@ -4048,6 +4196,9 @@ body.en .back_btn i {
 body.en .about-section .about-content .features-list li {
   border-right: none;
   border-left: 4px solid #23254e;
+}
+body.en .success-section .controls-row .nav-btns .nav-btn i {
+  transform: rotate(180deg);
 }
 body.ar .hero__panel .hero__overlay .hero_title .arrow {
   left: 0;

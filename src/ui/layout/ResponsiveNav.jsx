@@ -1,8 +1,8 @@
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
 
 function ResponsiveNav() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className="small_menu">

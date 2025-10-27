@@ -3,9 +3,10 @@ import { useNavigate } from "react-router";
 export default function NotificationCard({ data, empty = false }) {
   const navigate = useNavigate();
 
+  // ✅ Empty State
   if (empty) {
     return (
-      <div className="notification-empty-card d-flex flex-column align-items-center justify-content-center text-center p-5">
+      <div className="notification-empty-card p-5 text-center">
         <i className="fa-regular fa-bell fa-3x mb-3 text-muted"></i>
         <h6 className="mb-1">No notifications</h6>
         <p className="text-muted mb-0">
@@ -17,8 +18,11 @@ export default function NotificationCard({ data, empty = false }) {
 
   if (!data) return null;
 
+  // ✅ Add a class based on notification type (for SCSS styling)
+  const typeClass = `type-${data.type?.toLowerCase() || "default"}`;
+
   return (
-    <div className="notification-card d-flex align-items-start justify-content-between p-3 mb-3 border rounded">
+    <div className={`notification-card ${typeClass}`}>
       <div className="d-flex align-items-start">
         <div className="icon-box me-3">
           <i className={`${data.icon} fa-lg`}></i>
