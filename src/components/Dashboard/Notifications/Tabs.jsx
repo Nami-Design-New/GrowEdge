@@ -1,6 +1,6 @@
 export default function Tabs({ activeTab, setActiveTab }) {
   const tabs = [
-    { id: "All", label: "All", count: 6 },
+    { id: "All", label: "All", count: 3 },
     { id: "Unread", label: "Unread", count: 2 },
     { id: "Important", label: "Important", count: 2 },
   ];

@@ -19,6 +19,7 @@ import MVP from "../pages/participant/MvpLabs";
 import EditProfile from "../pages/participant/EditProfile";
 import Messages from "../pages/participant/Messages";
 import Notifications from "../pages/participant/Notifications";
+import Setting from "../pages/participant/Setting";
 
 export const router = createBrowserRouter([
   {
@@ -77,8 +78,7 @@ export const router = createBrowserRouter([
     { path: "profile", element: <EditProfile/> },
     { path: "messages", element: <Messages/> },
     { path: "notifications", element: <Notifications/> },
-
-
+    { path: "settings", element: <Setting/> },
     
   ],
 }

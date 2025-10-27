@@ -6,45 +6,64 @@ import NotificationCard from "../../ui/cards/NotificationCard";
 
 export default function Notifications() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("Unread");
+  const [activeTab, setActiveTab] = useState("All");
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const notifications = [
-    {
-      id: 1,
-      title: "New message from Sarah Johnson",
-      message:
-        "Great progress on your resume! Let's schedule a mock interview for next week.",
-      time: "15m ago",
-      sender: "Sarah Johnson",
-      role: "Career Coach",
-      type: "message",
-      unread: true,
-      important: true,
-      button: "Reply",
-      icon: "fa-regular fa-message",
-    },
-    {
-      id: 2,
-      title: "Coaching session reminder",
-      message:
-        "Your career coaching session with Sarah Johnson starts in 30 minutes.",
-      time: "30m ago",
-      sender: "Sarah Johnson",
-      role: "Career Coach",
-      type: "session",
-      unread: true,
-      important: true,
-      button: "Join Session",
-      icon: "fa-regular fa-calendar",
-    },
-  ];
+const notifications = [
+  {
+    id: 1,
+    title: "New message from Sarah Johnson",
+    message:
+      "Great progress on your resume! Let's schedule a mock interview for next week.",
+    time: "15m ago",
+    sender: "Sarah Johnson",
+    role: "Career Coach",
+    type: "Messages",
+    unread: true,
+    important: true,
+    button: "Reply",
+    icon: "fa-regular fa-message",
+    link: "/dashboard/messages", 
+  },
+  {
+    id: 2,
+    title: "Coaching session reminder",
+    message:
+      "Your career coaching session with Sarah Johnson starts in 30 minutes.",
+    time: "30m ago",
+    sender: "Sarah Johnson",
+    role: "Career Coach",
+    type: "Sessions",
+    unread: true,
+    important: true,
+    button: "Join Session",
+    icon: "fa-regular fa-calendar",
+    link: "/dashboard/sessions", 
+  },
+  {
+    id: 3,
+    title: "System update completed",
+    message: "All systems are running smoothly after the latest update.",
+    time: "1h ago",
+    sender: "System",
+    role: "Platform",
+    type: "System",
+    unread: false,
+    important: false,
+    icon: "fa-solid fa-gear",
+    link: "/dashboard/system-updates", 
+  },
+];
 
-  const filtered = notifications.filter((n) => {
+  let filtered = notifications.filter((n) => {
     if (activeTab === "Unread") return n.unread;
     if (activeTab === "Important") return n.important;
-    return true;
+    return true; 
   });
+
+  if (activeCategory !== "All") {
+    filtered = filtered.filter((n) => n.type === activeCategory);
+  }
 
   return (
     <div className="dashboard-layout">
@@ -75,9 +94,11 @@ export default function Notifications() {
 
         {/* Notification Cards */}
         <div className="notifications-list mt-3">
-          {filtered.map((n) => (
-            <NotificationCard key={n.id} data={n} />
-          ))}
+          {filtered.length > 0 ? (
+            filtered.map((n) => <NotificationCard key={n.id} data={n} />)
+          ) : (
+            <NotificationCard empty />
+          )}
         </div>
       </div>
     </div>

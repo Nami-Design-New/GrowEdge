@@ -9,11 +9,11 @@ export default function CategoryTabs({ activeCategory, setActiveCategory }) {
   ];
 
   return (
-    <div className="category-tabs d-flex gap-2 mt-3 overflow-auto">
+    <div className="tabs-common mt-3">
       {categories.map((cat) => (
         <button
           key={cat}
-          className={`category-tab ${activeCategory === cat ? "active" : ""}`}
+          className={`tab-btn ${activeCategory === cat ? "active" : ""}`}
           onClick={() => setActiveCategory(cat)}
         >
           {cat}

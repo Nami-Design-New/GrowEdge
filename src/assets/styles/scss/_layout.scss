@@ -613,3 +613,18 @@ margin-right: 0px;
     }
   }
 }
+
+//dashboard footer
+.dashboard-footer {
+  background-color: $main; 
+  color: $white;
+  padding: 1rem 2rem;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+
