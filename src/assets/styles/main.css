@@ -2570,7 +2570,7 @@ body .sidebar {
   height: 100vh;
   flex-shrink: 0;
   overflow-y: auto;
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
   border-right: 1px solid #e9ecef;
   display: flex;
   flex-direction: column;
@@ -2748,41 +2748,36 @@ body .overview-header .sidebar-toggle-btn i {
 }
 body .statistics-section .stat-card {
   background: #fff;
-  border: 1px solid #eee;
   border-radius: 12px;
-  padding: 1.2rem;
+  padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  min-height: 100%;
+  align-items: center;
+  transition: box-shadow 0.3s;
+  border: 1px solid #eee;
 }
 body .statistics-section .stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-body .statistics-section .stat-card .icon-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-}
-body .statistics-section .stat-card .stat-info h4 {
-  margin: 0;
-  font-size: 0.9rem;
-  font-weight: 600;
+body .statistics-section .stat-card .stat-info .title {
+  font-size: 0.95rem;
   color: #666;
 }
-body .statistics-section .stat-card .stat-info p {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #222;
+body .statistics-section .stat-card .stat-info .value {
   font-weight: 600;
+  font-size: 1.4rem;
+  margin: 5px 0;
+}
+body .statistics-section .stat-card .stat-info .change {
+  font-size: 0.85rem;
+}
+body .statistics-section .stat-card .icon-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body .session-details {
   padding: 2rem 0;
@@ -3567,6 +3562,107 @@ body .account-settings-page .account-settings .danger-zone .setting-header small
   font-size: 0.85rem;
   color: #ef4444;
 }
+body .quick-actions {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 992px) {
+  body .quick-actions {
+    margin-top: 1rem;
+  }
+}
+body .quick-actions .header {
+  margin-bottom: 1rem;
+}
+body .quick-actions .header h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+body .quick-actions .header p {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin: 0;
+}
+body .quick-actions .actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+body .quick-actions .actions-list .action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #f9fafb;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+body .quick-actions .actions-list .action-btn i {
+  font-size: 1rem;
+  color: #23254e;
+}
+body .quick-actions .actions-list .action-btn:hover {
+  background: #23254e;
+  color: #fff;
+}
+body .quick-actions .actions-list .action-btn:hover i {
+  color: #fff;
+}
+body .sessions-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+body .sessions-card .header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+body .sessions-card .header i {
+  font-size: 1.2rem;
+  color: #23254e;
+  margin-top: 2px;
+}
+body .sessions-card .header h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+body .sessions-card .header p {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin: 0;
+}
+body .sessions-card .session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+body .sessions-card .footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+body .sessions-card .footer .view-all {
+  border: none;
+  background: #f1f3f5;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+body .sessions-card .footer .view-all:hover {
+  background: #23254e;
+  color: #fff;
+}
 body .internship-card {
   background: #fff;
   border-radius: 12px;
@@ -4159,6 +4255,267 @@ body .notification-card .right-section .star {
   color: #f9c74f;
   font-size: 1rem;
   cursor: pointer;
+}
+body .session-item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: 0.2s ease;
+  gap: 0.75rem;
+}
+body .session-item-card:hover {
+  background: #f3f4f6;
+}
+body .session-item-card .avatar {
+  background: #e9ecef;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-weight: 600;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+body .session-item-card .details {
+  flex: 1;
+  margin-left: 0.8rem;
+}
+body .session-item-card .details h6 {
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 600;
+}
+body .session-item-card .details small {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+body .session-item-card .time-info {
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 10px;
+}
+body .session-item-card .time-info .time {
+  display: block;
+  font-weight: 500;
+}
+body .session-item-card .time-info .duration {
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+body .session-item-card .time-info .status {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+body .session-item-card .time-info .status.confirmed {
+  background: #e6f4ea;
+  color: #50b04d;
+}
+body .session-item-card .time-info .status.pending {
+  background: #f5f5f5;
+  color: #616161;
+}
+body .session-item-card .actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+body .session-item-card .actions .join-btn {
+  border: 1px solid #dee2e6;
+  background: #fff;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+body .session-item-card .actions .join-btn i {
+  margin-right: 4px;
+  color: #23254e;
+}
+body .session-item-card .actions .join-btn:hover {
+  background: #23254e;
+  color: #fff;
+}
+body .session-item-card .actions .join-btn:hover i {
+  color: #fff;
+}
+@media (max-width: 992px) {
+  body .session-item-card {
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  body .session-item-card .details {
+    margin-left: 0;
+    width: 100%;
+  }
+  body .session-item-card .time-info {
+    align-items: flex-start;
+    padding: 0;
+  }
+  body .session-item-card .actions {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  body .session-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  body .session-item-card .avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+  body .session-item-card .details h6 {
+    font-size: 0.9rem;
+  }
+  body .session-item-card .time-info {
+    font-size: 0.8rem;
+    align-items: flex-start;
+  }
+  body .session-item-card .actions .join-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
+body .performance-card {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+body .performance-card .header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+body .performance-card .header i {
+  font-size: 1.2rem;
+  color: #23254e;
+}
+body .performance-card .header h6 {
+  margin: 0;
+  font-weight: 600;
+}
+body .performance-card .header p {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+body .performance-card .stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body .performance-card .stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+body .performance-card .stats .stat-item .stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .performance-card .stats .stat-item .stat-header span {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+body .performance-card .stats .stat-item .stat-header strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+body .performance-card .stats .stat-item .progress-bar-wrapper {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+body .performance-card .stats .stat-item .progress-bar-wrapper .progress-bar-fill {
+  height: 100%;
+  background: #23254e;
+  transition: width 0.4s ease;
+}
+body .performance-card .achievements {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #eee;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+}
+body .performance-card .achievements .achievement {
+  text-align: center;
+}
+body .performance-card .achievements .achievement h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #50b04d;
+}
+body .performance-card .achievements .achievement p {
+  font-size: 0.9rem;
+  color: #777;
+}
+body .recent-card {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 992px) {
+  body .recent-card {
+    margin-top: 1rem;
+  }
+}
+body .recent-card .header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+body .recent-card .header i {
+  font-size: 1.4rem;
+  color: #23254e;
+}
+body .recent-card .header h6 {
+  margin: 0;
+  font-weight: 600;
+}
+body .recent-card .header p {
+  font-size: 0.85rem;
+  color: #777;
+}
+body .recent-card .activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+body .recent-card .activity-list .activity-item {
+  border-left: 3px solid #23254e;
+  padding-left: 0.75rem;
+}
+body .recent-card .activity-list .activity-item p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+body .recent-card .activity-list .activity-item small {
+  color: #6c757d;
+  font-size: 0.8rem;
 }
 body main {
   min-height: calc(100dvh - 300px);

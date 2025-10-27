@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sidebar from "../../ui/layout/Sidebar";
+import Sidebar from "../../components/Dashboard/ParticipantSidebar";
 import Tabs from "../../components/Dashboard/Notifications/Tabs";
 import CategoryTabs from "../../components/Dashboard/Notifications/CategoryTabs";
 import NotificationCard from "../../ui/cards/NotificationCard";

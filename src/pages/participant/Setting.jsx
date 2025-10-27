@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sidebar from "../../ui/layout/Sidebar";
+import Sidebar from "../../components/Dashboard/ParticipantSidebar";
 import SettingsTabs from "../../components/Dashboard/Settings/SettingsTabs";
 import PrivacySettings from "../../components/Dashboard/profile/Preferences";
 import BasicInfoForm from "../../components/Dashboard/profile/BasicInfoForm";

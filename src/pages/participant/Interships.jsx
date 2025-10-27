@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Sidebar from "../../ui/layout/Sidebar";
+import Sidebar from "../../components/Dashboard/ParticipantSidebar";
 import EmptyStateCard from "../../ui/cards/EmptyStateCard";
 import BookedInternship from "../../ui/cards/BookedInternshipCard";
 import SkeletonCard from "../../ui/cards/SkeletonCard";

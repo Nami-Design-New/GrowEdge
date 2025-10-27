@@ -10,9 +10,9 @@ export default function Sidebar({ isOpen, onClose }) {
       {/* Sidebar container */}
       <aside className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="user-info">
-          <div className="avatar">U</div>
+          <div className="avatar">A</div>
           <div>
-            <h4 className="username">User</h4>
+            <h4 className="username">Ahmed hassan</h4>
             <span className="role">Participant</span>
           </div>
         </div>

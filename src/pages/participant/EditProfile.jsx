@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sidebar from "../../ui/layout/Sidebar";
+import Sidebar from "../../components/Dashboard/ParticipantSidebar";
 import ProfileTabs from "../../components/Dashboard/profile/ProfileTabs";
 import BasicInfoForm from "../../components/Dashboard/profile/BasicInfoForm";
 import ProfessionalInfoForm from "../../components/Dashboard/profile/ProfessionalInfo";

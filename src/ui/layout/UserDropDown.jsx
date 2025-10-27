@@ -51,7 +51,15 @@ export default function UserDropDown() {
           <div className="u-role">Participant</div>
         </div>
       </div>
+  <div className="user-item"       
+        onClick={() => navigate("/coach-dashboard")} >
 
+        <div className="icon">م</div>
+        <div className="meta">
+          <div className="u-name"> مريم سمير</div>
+          <div className="u-role">Coach</div>
+        </div>
+      </div>
       <div className="user-item">
         <div className="icon">س</div>
         <div className="meta">
@@ -59,13 +67,7 @@ export default function UserDropDown() {
           <div className="u-role">Startup</div>
         </div>
       </div>
-       <div className="user-item">
-        <div className="icon">م</div>
-        <div className="meta">
-          <div className="u-name"> مريم سمير</div>
-          <div className="u-role">Coach</div>
-        </div>
-      </div>
+     
 
     </div>
 

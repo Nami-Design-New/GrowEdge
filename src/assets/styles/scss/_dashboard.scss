@@ -53,7 +53,7 @@ flex-wrap: wrap;
 
       &.active {
         background: $main;
-        color: #fff;
+        color: $white;
         box-shadow: 0 4px 10px rgba(76, 63, 255, 0.3);
         transform: translateY(-2px);
       }
@@ -73,7 +73,7 @@ flex-wrap: wrap;
   height: 100vh;
   flex-shrink: 0;
   overflow-y: auto;
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  background: linear-gradient(180deg, $white 0%, #fafafa 100%);
   border-right: 1px solid #e9ecef;
   display: flex;
   flex-direction: column;
@@ -94,7 +94,7 @@ flex-wrap: wrap;
 
     .avatar {
       background: linear-gradient(135deg, #50b04d, #7cd67b);
-      color: #fff;
+      color: $white;
       font-weight: 600;
       width: 44px;
       height: 44px;
@@ -241,7 +241,7 @@ flex-wrap: wrap;
     left: -260px;
     width: 260px;
     height: 100%;
-    background: #fff;
+    background: $white;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease;
     z-index: 999;
@@ -269,49 +269,47 @@ flex-wrap: wrap;
 
 /////////
 .statistics-section {
-  .stat-card {
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    min-height: 100%;
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.stat-card {
+  background: $white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s;
+  border: 1px solid #eee;
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .stat-info {
+    .title {
+      font-size: 0.95rem;
+      color: #666;
     }
 
-    .icon-circle {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
+    .value {
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin: 5px 0;
     }
 
-    .stat-info {
-      h4 {
-        margin: 0;
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: #666;
-      }
-
-      p {
-        margin: 0;
-        font-size: 1.2rem;
-        color: #222;
-        font-weight: 600;
-      }
+    .change {
+      font-size: 0.85rem;
     }
   }
+
+  .icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 }
 ////
 .session-details {
@@ -335,14 +333,14 @@ flex-wrap: wrap;
   }
 
   .session-card {
-    background: #fff;
+    background: $white;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 2rem;
 
     .coach-avatar {
       background: #212529;
-      color: #fff;
+      color: $white;
       border-radius: 50%;
       width: 60px;
       height: 60px;
@@ -655,10 +653,10 @@ flex-wrap: wrap;
 
         &.active {
           background: $main;
-          color: #fff;
+          color: $white;
 
           .tab-icon {
-            color: #fff;
+            color: $white;
           }
         }
       }
@@ -1036,7 +1034,7 @@ flex-wrap: wrap;
 }
 ///notifications page 
 .notifications-page {
-  background: #fff;
+  background: $white;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -1254,7 +1252,124 @@ flex-wrap: wrap;
     }
   }
 }
+/////
+.quick-actions {
+  background: $white;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  @media (max-width: 992px) {
+    margin-top: 1rem;
+  }
+  .header {
+    margin-bottom: 1rem;
 
- 
+    h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: #6c757d;
+      margin: 0;
+    }
+  }
+
+  .actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #f9fafb;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 0.6rem 0.8rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      i {
+        font-size: 1rem;
+        color: $main;
+      }
+
+      &:hover {
+        background: $main;
+        color: $white;
+
+        i {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+//
+.sessions-card {
+  background: $white;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: 1.2rem;
+      color: $main;
+      margin-top: 2px;
+    }
+
+    h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: #6c757d;
+      margin: 0;
+    }
+  }
+
+  .session-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    
+  }
+
+  .footer {
+    margin-top: 1rem;
+    text-align: center;
+
+    .view-all {
+      border: none;
+      background: #f1f3f5;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        background: $main;
+        color: $white;
+      }
+    }
+  }
+}
+
 
 

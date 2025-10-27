@@ -20,6 +20,7 @@ import EditProfile from "../pages/participant/EditProfile";
 import Messages from "../pages/participant/Messages";
 import Notifications from "../pages/participant/Notifications";
 import Setting from "../pages/participant/Setting";
+import CoachOverview from "../pages/Coach/CoachOverview";
 
 export const router = createBrowserRouter([
   {
@@ -73,6 +74,20 @@ export const router = createBrowserRouter([
   children: [
     { index:true , element: <ParticipantOverview  /> },
     { path: "coaching", element: <Coaching/> },
+    { path: "internships", element: <Internships/> },
+    { path: "mvp-labs", element: <MVP/> },
+    { path: "profile", element: <EditProfile/> },
+    { path: "messages", element: <Messages/> },
+    { path: "notifications", element: <Notifications/> },
+    { path: "settings", element: <Setting/> },
+    
+  ],
+},
+ {
+  path: "/coach-dashboard",
+  element: <DashboardLayout />,
+  children: [
+    { index:true , element: <CoachOverview  /> },
     { path: "internships", element: <Internships/> },
     { path: "mvp-labs", element: <MVP/> },
     { path: "profile", element: <EditProfile/> },
