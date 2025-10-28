@@ -32,7 +32,7 @@
     padding: 0.5rem;
     background: #e7eaf0;
     border-radius: 12px;
-flex-wrap: wrap;
+    flex-wrap: wrap;
     .tab-btn {
       flex: 1;
       text-align: center;
@@ -79,7 +79,7 @@ flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   // padding: 1.5rem 1.2rem;
-    padding:5.5rem 1.2rem 1.5rem 1.2rem;
+  padding: 5.5rem 1.2rem 1.5rem 1.2rem;
   transition: all 0.3s ease;
 
   .user-info {
@@ -269,47 +269,46 @@ flex-wrap: wrap;
 
 /////////
 .statistics-section {
-.stat-card {
-  background: $white;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: box-shadow 0.3s;
-  border: 1px solid #eee;
-
-  &:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .stat-info {
-    .title {
-      font-size: 0.95rem;
-      color: #666;
-    }
-
-    .value {
-      font-weight: 600;
-      font-size: 1.4rem;
-      margin: 5px 0;
-    }
-
-    .change {
-      font-size: 0.85rem;
-    }
-  }
-
-  .icon-circle {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+  .stat-card {
+    background: $white;
+    border-radius: 12px;
+    padding: 20px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-  }
-}
+    transition: box-shadow 0.3s;
+    border: 1px solid #eee;
 
+    &:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-info {
+      .title {
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      .value {
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin: 5px 0;
+      }
+
+      .change {
+        font-size: 0.85rem;
+      }
+    }
+
+    .icon-circle {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 ////
 .session-details {
@@ -337,9 +336,19 @@ flex-wrap: wrap;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 2rem;
-
+    .btn-dark {
+      background-color: $main;
+    }
+    .btn-outline-dark {
+      border: 1px solid $main;
+      color: $main;
+      &:hover {
+        background-color: $main;
+        color: $white;
+      }
+    }
     .coach-avatar {
-      background: #212529;
+      background: linear-gradient(135deg, #50b04d, #7cd67b);
       color: $white;
       border-radius: 50%;
       width: 60px;
@@ -997,7 +1006,7 @@ flex-wrap: wrap;
 
   @media (max-width: 480px) {
     // .chat-sidebar {
-    //   display: none; 
+    //   display: none;
     // }
 
     .chat-window {
@@ -1032,76 +1041,75 @@ flex-wrap: wrap;
     }
   }
 }
-///notifications page 
+///notifications page
 .notifications-page {
   background: $white;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-  .notifications-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    h5 {
-      font-weight: 600;
-      color: #222;
-    }
-
-    .mark-read {
-      color: $main;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: 0.3s;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  h5 {
+    font-weight: 600;
+    color: #222;
   }
 
-  .tabs {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
+  .mark-read {
+    color: $main;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
 
-    .tab-btn {
-      background: #f8f9fa;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 10px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      cursor: pointer;
-      color: #747272;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: 0.3s;
-
-    .count {
-  background: #e9ecef;
-  border-radius: 50%;
-  width: 20px;      
-  height: 20px;      
-  font-size: 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
 
-      &.active {
-        color: $main;
+  .tab-btn {
+    background: #f8f9fa;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #747272;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
 
-        .count {
-          background: $main;
-          color: $white;
-        }
+    .count {
+      background: #e9ecef;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.active {
+      color: $main;
+
+      .count {
+        background: $main;
+        color: $white;
       }
     }
   }
+}
 ///
 .account-settings-page {
   .section-title {
@@ -1346,8 +1354,6 @@ flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-
-    
   }
 
   .footer {
@@ -1370,6 +1376,3 @@ flex-wrap: wrap;
     }
   }
 }
-
-
-

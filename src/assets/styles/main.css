@@ -2264,7 +2264,7 @@ body .career-coaching .search-bar .category-select {
   transition: 0.3s;
 }
 body .career-coaching .search-bar .category-select:focus {
-  border-color: #000;
+  border-color: #23254e;
 }
 body .career-coaching .search-bar .category-select option {
   background-color: #F7FAFC;
@@ -2298,7 +2298,7 @@ body .career-coaching .session-card .card-header p {
 }
 body .career-coaching .session-card .card-header .category {
   background: #f2f4f7;
-  color: #333;
+  color: #23254e;
   padding: 0.25rem 0.7rem;
   border-radius: 8px;
   font-size: 0.8rem;
@@ -2311,7 +2311,7 @@ body .career-coaching .session-card .coach-info {
 body .career-coaching .session-card .coach-info .avatar {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #6a67ff, #6a5acd);
+  background: linear-gradient(135deg, #50b04d, #7cd67b);
   color: #fff;
   display: flex;
   align-items: center;
@@ -2324,7 +2324,7 @@ body .career-coaching .session-card .coach-info h6 {
   margin: 0;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #000;
+  color: #23254e;
 }
 body .career-coaching .session-card .coach-info .role {
   margin: 0;
@@ -2374,7 +2374,7 @@ body .career-coaching .session-card .footer p {
   font-size: 13px;
 }
 body .career-coaching .session-card .footer .book-btn {
-  background: #000;
+  background: #23254e;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -2385,7 +2385,7 @@ body .career-coaching .session-card .footer .book-btn {
   transition: background 0.3s;
 }
 body .career-coaching .session-card .footer .book-btn:hover {
-  background: #333;
+  background: #50537e;
 }
 body .startup-page .container {
   max-width: 1200px;
@@ -2800,8 +2800,19 @@ body .session-details .session-card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
 }
+body .session-details .session-card .btn-dark {
+  background-color: #23254e;
+}
+body .session-details .session-card .btn-outline-dark {
+  border: 1px solid #23254e;
+  color: #23254e;
+}
+body .session-details .session-card .btn-outline-dark:hover {
+  background-color: #23254e;
+  color: #fff;
+}
 body .session-details .session-card .coach-avatar {
-  background: #212529;
+  background: linear-gradient(135deg, #50b04d, #7cd67b);
   color: #fff;
   border-radius: 50%;
   width: 60px;
