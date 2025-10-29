@@ -1,4 +1,3 @@
-// import "./QuickActions.scss";
 
 export default function QuickActions() {
   const actions = [

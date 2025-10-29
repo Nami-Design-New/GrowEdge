@@ -35,7 +35,6 @@ export default function UpcomingSessions() {
 
   const [showAll, setShowAll] = useState(false);
 
-  // لو مش عايزة كلهم يظهروا، خدي أول اتنين بس
   const sessionsToShow = showAll ? allSessions : allSessions.slice(0, 2);
 
   return (

@@ -2,10 +2,10 @@ import { useState } from "react";
 import Sidebar from "../../components/Dashboard/CoachSidebar";
 import StatsCards from "../../components/Dashboard/Overview/StatsCards";
 import WelcomeCard from "../../ui/cards/WelcomeCard";
-import UpcomingSessions from "../../components/Dashboard/Overview/UpcomingSessions";
-import QuickActions from "../../components/Dashboard/Overview/QuickActions";
-import PerformanceCard from "../../components/Dashboard/Overview/PerformanceCard";
-import RecentActivityCard from "../../components/Dashboard/Overview/RecentActivityCard";
+import UpcomingSessions from "../../components/CoachDashboard/Overview/UpcomingSessions";
+import QuickActions from "../../components/CoachDashboard/Overview/QuickActions";
+import PerformanceCard from "../../components/CoachDashboard/Overview/PerformanceCard";
+import RecentActivityCard from "../../components/CoachDashboard/Overview/RecentActivityCard";
 
 export default function CoachOverview() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

@@ -4528,6 +4528,573 @@ body .recent-card .activity-list .activity-item small {
   color: #6c757d;
   font-size: 0.8rem;
 }
+body .search-bar {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+body .search-bar .search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+@media (max-width: 576px) {
+  body .search-bar .search-wrapper {
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+}
+body .search-bar .search-wrapper .search-box {
+  position: relative;
+  flex: 1;
+}
+body .search-bar .search-wrapper .search-box i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 0.95rem;
+}
+body .search-bar .search-wrapper .search-box input {
+  width: 100%;
+  padding: 0.6rem 0.8rem 0.6rem 2.2rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+body .search-bar .search-wrapper .search-box input:focus {
+  border-color: #23254e;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+  outline: none;
+}
+body .search-bar .search-wrapper .filter-btn {
+  background: #23254e;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+body .search-bar .search-wrapper .filter-btn i {
+  font-size: 1rem;
+}
+body .search-bar .search-wrapper .filter-btn:hover {
+  background: #50537e;
+}
+body .client-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: 0.25s ease;
+  /* ===== Header ===== */
+  /* ===== Progress Section ===== */
+  /* ===== Status & Badge ===== */
+  /* ===== Footer ===== */
+  /* ===== Responsive ===== */
+}
+body .client-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+body .client-card .client-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+body .client-card .client-header .left-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+body .client-card .client-header .left-header .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #50b04d, #7cd67b);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+body .client-card .client-header .left-header .info h6 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+body .client-card .client-header .left-header .info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+body .client-card .client-header .view-btn {
+  background: #23254e;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+body .client-card .client-header .view-btn:hover {
+  background: #50537e;
+}
+body .client-card .progress-section .progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #495057;
+  margin-bottom: 6px;
+}
+body .client-card .progress-section .progress-bar {
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body .client-card .progress-section .progress-bar .fill {
+  background: #23254e;
+  height: 100%;
+  border-radius: 4px;
+}
+body .client-card .progress-section .stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+body .client-card .progress-section .stats div {
+  text-align: center;
+}
+body .client-card .progress-section .stats div strong {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+}
+body .client-card .progress-section .stats div span {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+body .client-card .progress-section .stats div.rating i {
+  color: #ffc107;
+  margin-right: 4px;
+}
+body .client-card .right-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: -0.5rem;
+}
+body .client-card .right-header .status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+}
+body .client-card .right-header .status.active {
+  background: #d4edda;
+  color: #50b04d;
+  border-color: #c3e6cb;
+}
+body .client-card .right-header .status.completed {
+  background: rgba(137, 173, 245, 0.1);
+  color: #3b3bd8;
+  border: 1px solid rgba(71, 71, 224, 0.4);
+}
+body .client-card .right-header .status.inactive {
+  background: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+body .client-card .right-header .status.pending {
+  background: #fff3cd;
+  color: #856404;
+  border-color: #ffeeba;
+}
+body .client-card .right-header .badge {
+  background: rgba(35, 37, 78, 0.08);
+  color: #23254e;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid rgba(35, 37, 78, 0.2);
+}
+body .client-card .client-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+body .client-card .client-footer .next-session span {
+  display: block;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+body .client-card .client-footer .next-session p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin: 2px 0 0;
+}
+body .client-card .client-footer .actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+body .client-card .client-footer .actions button {
+  border: 1px solid #dee2e6;
+  background: #fff;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+body .client-card .client-footer .actions button i {
+  margin-right: 4px;
+  color: #23254e;
+}
+body .client-card .client-footer .actions button:hover {
+  background: #23254e;
+  color: #fff;
+}
+body .client-card .client-footer .actions button:hover i {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  body .client-card {
+    padding: 1rem;
+  }
+  body .client-card .client-header {
+    align-items: flex-start;
+  }
+  body .client-card .client-header .right-header {
+    width: 100%;
+    justify-content: space-between;
+  }
+  body .client-card .stats {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  body .client-card .client-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+body .client-details {
+  padding: 2rem 0;
+  background: #f9fafc;
+  min-height: 100vh;
+}
+body .client-details .client-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+body .client-details .client-header-bar .client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+body .client-details .client-header-bar .client-info h5 {
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+body .client-details .client-header-bar .client-info span {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+body .client-details .client-header-bar .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+body .client-details .client-header-bar .header-actions button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+body .client-details .client-header-bar .header-actions .back-btn {
+  background: none;
+  color: #333;
+}
+body .client-details .client-header-bar .header-actions .back-btn i {
+  color: #6c757d;
+}
+body .client-details .client-header-bar .header-actions .back-btn:hover {
+  border-color: #c8d4ff;
+  color: #23254e;
+}
+body .client-details .client-header-bar .header-actions .back-btn:hover i {
+  color: #23254e;
+}
+body .client-details .client-header-bar .header-actions .schedule-btn {
+  background: #23254e;
+  border: none;
+  color: #fff;
+}
+body .client-details .client-header-bar .header-actions .schedule-btn i {
+  font-size: 1rem;
+}
+body .client-details .client-header-bar .header-actions .schedule-btn:hover {
+  background: #50537e;
+  transform: translateY(-2px);
+}
+body .client-details .card-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+body .client-details .card-box:hover {
+  transform: translateY(-2px);
+}
+body .client-details .card-box h6,
+body .client-details .card-box h5 {
+  color: #222;
+}
+body .client-details .card-box p,
+body .client-details .card-box li {
+  color: #555;
+}
+body .client-details .card-box .contact-info {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+body .client-details .card-box .contact-info .info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+body .client-details .card-box .contact-info .info-row p {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  flex: 1;
+}
+body .client-details .card-box .contact-info .info-row p i {
+  color: #777;
+  font-size: 1rem;
+  width: 18px;
+}
+body .client-details .card-box .contact-info .info-row p strong {
+  color: #222;
+  font-weight: 600;
+}
+body .client-details .card-box .progress {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+body .client-details .card-box .progress .progress-bar {
+  width: var(--progress);
+  height: 100%;
+  background: #23254e;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+body .client-details .card-box .badge-goal {
+  background: #eef3ff;
+  color: #23254e;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .client-details .card-box .status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+body .client-details .card-box .status-badge.active {
+  background: #e6f4ea;
+  color: #50b04d;
+}
+body .client-details .card-box .status-badge.completed {
+  background: rgba(137, 173, 245, 0.1);
+  color: #23254e;
+}
+body .client-details .notes-card .notes-list {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding-right: 0.3rem;
+}
+body .client-details .notes-card .notes-list .note-item {
+  background: #f4f7ff;
+  border-left: 4px solid #23254e;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+body .client-details .notes-card .notes-list .note-item i {
+  color: #23254e;
+  font-size: 0.9rem;
+}
+body .client-details .notes-card .notes-list .note-item:hover {
+  background: #e8eeff;
+  transform: translateX(2px);
+}
+body .client-details .notes-card .notes-list .no-notes {
+  background: #f8f9fa;
+  padding: 0.6rem;
+  border-radius: 6px;
+  text-align: center;
+}
+body .client-details .notes-card .add-note textarea {
+  resize: none;
+  border-radius: 8px;
+  border: 1px solid #dcdfe6;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+body .client-details .notes-card .add-note textarea:focus {
+  border-color: #23254e;
+  box-shadow: 0 0 0 2px rgba(75, 107, 251, 0.15);
+}
+body .client-details .notes-card .add-note button {
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  transition: 0.2s;
+  background: #23254e;
+  border: 1px solid #23254e;
+}
+body .client-details .notes-card .add-note button:hover {
+  background-color: #50537e;
+}
+body .client-details .quick-actions .header {
+  margin-bottom: 1rem;
+}
+body .client-details .quick-actions .header h6 {
+  font-weight: 600;
+}
+body .client-details .quick-actions .header p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+body .client-details .quick-actions .actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+body .client-details .quick-actions .actions-list .action-btn {
+  background: #f4f5f7;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  transition: 0.2s;
+  color: #333;
+  text-align: left;
+}
+body .client-details .quick-actions .actions-list .action-btn i {
+  color: #23254e;
+  font-size: 1rem;
+}
+body .client-details .quick-actions .actions-list .action-btn:hover {
+  background: #e0e7ff;
+  color: #23254e;
+}
+body .client-details .performance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .client-details .performance div {
+  text-align: center;
+}
+body .client-details .performance div h5 {
+  margin: 0;
+}
+body .client-details .performance div p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+body .client-details .achievements-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+body .client-details .achievements-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+body .client-details .achievements-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background: #e6f0ff;
+  color: #50b04d;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 body main {
   min-height: calc(100dvh - 300px);
 }

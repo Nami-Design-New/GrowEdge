@@ -13,7 +13,7 @@ import StartupInternships from "../routes/StartupInternships";
 import MvpLabs from "../routes/MvpLabs";
 import ParticipantOverview from "../pages/participant/ParticipantOverview";
 import Coaching from "../pages/participant/Coaching";
-import SessionDetails from "../routes/SessionDetails";
+import SessionDetails from "../pages/participant/SessionDetails";
 import Internships from "../pages/participant/Interships";
 import MVP from "../pages/participant/MvpLabs";
 import EditProfile from "../pages/participant/EditProfile";
@@ -21,6 +21,9 @@ import Messages from "../pages/participant/Messages";
 import Notifications from "../pages/participant/Notifications";
 import Setting from "../pages/participant/Setting";
 import CoachOverview from "../pages/Coach/CoachOverview";
+import Sessions from "../pages/Coach/Sessions";
+import Clients from "../pages/Coach/Clients";
+import ClientDetails from "../pages/Coach/ClientDetails";
 
 export const router = createBrowserRouter([
   {
@@ -88,8 +91,9 @@ export const router = createBrowserRouter([
   element: <DashboardLayout />,
   children: [
     { index:true , element: <CoachOverview  /> },
-    { path: "internships", element: <Internships/> },
-    { path: "mvp-labs", element: <MVP/> },
+    { path: "sessions", element: <Sessions/> },
+    { path: "clients", element: <Clients/> },
+    { path: "clients/:clientId", element: <ClientDetails /> }, 
     { path: "profile", element: <EditProfile/> },
     { path: "messages", element: <Messages/> },
     { path: "notifications", element: <Notifications/> },
