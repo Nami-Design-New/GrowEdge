@@ -375,16 +375,15 @@
 
     .back-btn {
       background: none;
-    //   border: 1px solid #dcdfe6;
-      color: #333;
+      border: 1px solid $main2;
+      color: $main2;
 
       i {
-        color: #6c757d;
+        color: $main2;
       }
 
       &:hover {
-        // background: #f0f4ff;
-        border-color: #c8d4ff;
+        border-color: $main;
         color: $main;
 
         i {

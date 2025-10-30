@@ -5,6 +5,7 @@ export default function ClientCard({ client }) {
 
   const handleViewClick = () => {
     navigate(`/coach-dashboard/clients/${client.name.replace(/\s+/g, "-").toLowerCase()}`);
+    
   };
 
   return (

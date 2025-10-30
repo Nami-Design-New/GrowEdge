@@ -4850,13 +4850,14 @@ body .client-details .client-header-bar .header-actions button {
 }
 body .client-details .client-header-bar .header-actions .back-btn {
   background: none;
-  color: #333;
+  border: 1px solid #50b04d;
+  color: #50b04d;
 }
 body .client-details .client-header-bar .header-actions .back-btn i {
-  color: #6c757d;
+  color: #50b04d;
 }
 body .client-details .client-header-bar .header-actions .back-btn:hover {
-  border-color: #c8d4ff;
+  border-color: #23254e;
   color: #23254e;
 }
 body .client-details .client-header-bar .header-actions .back-btn:hover i {
