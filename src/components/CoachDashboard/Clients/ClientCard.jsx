@@ -3,10 +3,13 @@ import { useNavigate } from "react-router";
 export default function ClientCard({ client }) {
   const navigate = useNavigate();
 
-  const handleViewClick = () => {
-    navigate(`/coach-dashboard/clients/${client.name.replace(/\s+/g, "-").toLowerCase()}`);
-    
-  };
+const handleViewClick = () => {
+  navigate(
+    `/coach-dashboard/clients/${client.name.replace(/\s+/g, "-").toLowerCase()}`,
+    { state: { client } } 
+  );
+};
+
 
   return (
     <div className="client-card">

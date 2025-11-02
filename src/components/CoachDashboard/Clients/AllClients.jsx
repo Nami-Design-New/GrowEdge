@@ -1,8 +1,10 @@
 import { useState } from "react";
-import Sidebar from "../../components/Dashboard/CoachSidebar";
-import SearchBar from "../../components/CoachDashboard/Clients/SearchBar";
-import ClientsTabs from "../../components/CoachDashboard/Clients/ClientsTabs";
-import ClientCard from "../../components/CoachDashboard/Clients/ClientCard";
+import Sidebar from "../CoachSidebar";
+import SearchBar from "./SearchBar";
+import ClientsTabs from "./ClientsTabs";
+import ClientCard from "./ClientCard";
+import ActiveClients from "./ActiveClients";
+import ProgressClients from "./ProgressClients";
 
 export default function Clients() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -55,7 +57,7 @@ export default function Clients() {
     },
   ];
 
-  // 🧠 فلترة العملاء بناءً على التاب المختار
+  // فلترة العملاء بناءً على التاب المختار
   const filteredClients = clients.filter((client) => {
     if (activeTab === "all") return true;
     if (activeTab === "active") return client.status === "Active";
@@ -68,6 +70,7 @@ export default function Clients() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       <div className="main-content p-0 p-md-4">
+        {/* Header */}
         <div className="overview-header">
           <h5>Clients</h5>
           <button
@@ -78,6 +81,7 @@ export default function Clients() {
           </button>
         </div>
 
+        {/* Page Title */}
         <div className="d-flex justify-content-between align-items-center mb-4">
           <div>
             <h5 className="mb-0">Client Management</h5>
@@ -87,18 +91,24 @@ export default function Clients() {
           </div>
         </div>
 
+        {/* Search & Tabs */}
         <SearchBar />
         <ClientsTabs activeTab={activeTab} setActiveTab={setActiveTab} />
 
-        <div className="row mt-4">
-          {filteredClients.length > 0 ? (
-            filteredClients.map((client, i) => (
-              <div className="col-lg-6 mb-4" key={i}>
-                <ClientCard client={client} />
-              </div>
-            ))
+        {/* Tabs Content */}
+        <div className="mt-4">
+          {activeTab === "active" ? (
+            <ActiveClients clients={clients} />
+          ) : activeTab === "progress" ? (
+            <ProgressClients clients={clients} />
           ) : (
-            <p className="text-muted text-center mt-4">No clients found.</p>
+            <div className="row">
+              {filteredClients.map((client, i) => (
+                <div className="col-lg-6 mb-4" key={i}>
+                  <ClientCard client={client} />
+                </div>
+              ))}
+            </div>
           )}
         </div>
       </div>

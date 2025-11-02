@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sidebar from "../../components/Dashboard/CoachSidebar";
+import Sidebar from "../../components/CoachDashboard/CoachSidebar";
 import StatsCards from "../../components/Dashboard/Overview/StatsCards";
 import WelcomeCard from "../../ui/cards/WelcomeCard";
 import UpcomingSessions from "../../components/CoachDashboard/Overview/UpcomingSessions";

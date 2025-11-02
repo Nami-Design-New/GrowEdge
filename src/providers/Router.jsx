@@ -22,8 +22,9 @@ import Notifications from "../pages/participant/Notifications";
 import Setting from "../pages/participant/Setting";
 import CoachOverview from "../pages/Coach/CoachOverview";
 import Sessions from "../pages/Coach/Sessions";
-import Clients from "../pages/Coach/Clients";
+import Clients from "../components/CoachDashboard/Clients/AllClients";
 import ClientDetails from "../pages/Coach/ClientDetails";
+import Analytics from "../pages/Coach/Analytics";
 
 export const router = createBrowserRouter([
   {
@@ -94,6 +95,7 @@ export const router = createBrowserRouter([
     { path: "sessions", element: <Sessions/> },
     { path: "clients", element: <Clients/> },
     { path: "clients/:clientId", element: <ClientDetails /> }, 
+    { path: "analytics", element: <Analytics/> },
     { path: "profile", element: <EditProfile/> },
     { path: "messages", element: <Messages/> },
     { path: "notifications", element: <Notifications/> },

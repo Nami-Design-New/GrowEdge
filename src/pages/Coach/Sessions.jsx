@@ -1,6 +1,6 @@
 // import React from 'react'
 import { useState } from "react";
-import Sidebar from "../../components/Dashboard/CoachSidebar";
+import Sidebar from "../../components/CoachDashboard/CoachSidebar";
 export default function Sessions() {
       const [sidebarOpen, setSidebarOpen] = useState(false);
     
