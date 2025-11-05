@@ -25,6 +25,11 @@ import Sessions from "../pages/Coach/Sessions";
 import Clients from "../components/CoachDashboard/Clients/AllClients";
 import ClientDetails from "../pages/Coach/ClientDetails";
 import Analytics from "../pages/Coach/Analytics";
+import EditCoachProfile from "../pages/Coach/EditCoachProfile";
+import CoachMessages from "../pages/Coach/CoachMessages";
+import CoachNotifications from "../pages/Coach/CoachNotifications";
+import CoachSettings from "../pages/Coach/CoachSetting";
+// import EditCoachProfile from "../pages/Coach/EditCoachProfile";
 
 export const router = createBrowserRouter([
   {
@@ -96,10 +101,10 @@ export const router = createBrowserRouter([
     { path: "clients", element: <Clients/> },
     { path: "clients/:clientId", element: <ClientDetails /> }, 
     { path: "analytics", element: <Analytics/> },
-    { path: "profile", element: <EditProfile/> },
-    { path: "messages", element: <Messages/> },
-    { path: "notifications", element: <Notifications/> },
-    { path: "settings", element: <Setting/> },
+    { path: "edit-profile", element: <EditCoachProfile /> },
+    { path: "messages", element: <CoachMessages/> },
+    { path: "notifications", element: <CoachNotifications/> },
+    { path: "settings", element: <CoachSettings/> },
     
   ],
 }

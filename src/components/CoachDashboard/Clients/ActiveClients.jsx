@@ -5,7 +5,7 @@ export default function ActiveClients({ clients }) {
 
   return (
     <div className="active-clients">
-      <h6 className="fw-bold mb-3">Active Clients</h6>
+      <h6 className="fw-bold mb-3 mx-3">Active Clients</h6>
 
       <div className="row">
         {activeClients.length > 0 ? (

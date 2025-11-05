@@ -1,15 +1,15 @@
 import { useState } from "react";
-import Sidebar from "../../components/Dashboard/ParticipantSidebar";
-import ProfileTabs from "../../components/Dashboard/profile/ProfileTabs";
-import BasicInfoForm from "../../components/Dashboard/profile/BasicInfoForm";
-import ProfessionalInfoForm from "../../components/Dashboard/profile/ProfessionalInfo";
-import Preferences from "../../components/Dashboard/profile/Preferences";
+import Sidebar from "../../components/CoachDashboard/CoachSidebar";
+import ProfileTabs from "../../components/CoachDashboard/profile/ProfileTabs";
+import BasicInfoForm from "../../components/CoachDashboard/profile/BasicInfoForm";
+import ProfessionalInfoForm from "../../components/CoachDashboard/profile/ProfessionalInfo";
+import Preferences from "../../components/CoachDashboard/profile/Preferences";
 
-export default function EditProfile() {
+export default function EditCoachProfile() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("basic");
   const [avatar, setAvatar] = useState(null); 
-  const [userName] = useState("Ahmed hassan"); 
+  const [userName] = useState("Mariam Samir"); 
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];

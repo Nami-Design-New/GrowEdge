@@ -43,7 +43,7 @@ export default function CoachSidebar({ isOpen, onClose }) {
             <span>Analytics</span>
           </NavLink>
 
-          <NavLink to="/coach-dashboard/profile" className="menu-item">
+          <NavLink to="/coach-dashboard/edit-profile" className="menu-item">
             <i className="fa-solid fa-user"></i>
             <span>Edit Profile</span>
           </NavLink>
