@@ -1,9 +1,14 @@
 // import React from 'react'
 import { useState } from "react";
 import Sidebar from "../../components/CoachDashboard/CoachSidebar";
+import SessionsTabs from "../../components/CoachDashboard/Sessions/SessionsTabs";
+import UpcomingSessions from "../../components/CoachDashboard/Sessions/UpcomingSessions";
+import CompletedSessions from "../../components/CoachDashboard/Sessions/CompletedSessions";
+import CalendarView from "../../components/CoachDashboard/Sessions/CalendarView";
 export default function Sessions() {
       const [sidebarOpen, setSidebarOpen] = useState(false);
-    
+      const [activeTab, setActiveTab] = useState("Upcoming");
+
   return (
    <div className="dashboard-layout">
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -29,6 +34,12 @@ export default function Sessions() {
             </p>
           </div>
         </div>
+           {/* ===== Tabs ===== */}
+         <SessionsTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+         {activeTab === "Upcoming" && <UpcomingSessions />}
+{activeTab === "Completed" && <CompletedSessions/>}
+{activeTab === "Calendar" && <CalendarView/>}
+
         </div>
           </div>
   )

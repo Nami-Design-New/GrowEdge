@@ -105,7 +105,6 @@ export const router = createBrowserRouter([
     { path: "messages", element: <CoachMessages/> },
     { path: "notifications", element: <CoachNotifications/> },
     { path: "settings", element: <CoachSettings/> },
-    
   ],
 }
 

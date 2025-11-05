@@ -4559,7 +4559,6 @@ body .search-bar .search-wrapper .search-box input {
   width: 100%;
   padding: 0.6rem 0.8rem 0.6rem 2.2rem;
   border-radius: 8px;
-  border: 1px solid #dee2e6;
   font-size: 0.9rem;
   transition: all 0.2s ease;
 }
@@ -5382,6 +5381,201 @@ body .coaching-goals .goal-item .percent-text {
   font-weight: 500;
   min-width: 40px;
   text-align: right;
+}
+body .completed-session-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+body .completed-session-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+body .completed-session-card .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .completed-session-card .header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body .completed-session-card .header .left .icon {
+  color: #50b04d;
+  font-size: 30px;
+}
+body .completed-session-card .header .left .info .client-name {
+  margin: 0;
+  font-weight: 600;
+}
+body .completed-session-card .header .left .info .tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+body .completed-session-card .header .left .info .tags span {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+body .completed-session-card .header .left .info .tags span.completed {
+  background: #e7f8ef;
+  color: #50b04d;
+}
+body .completed-session-card .header .left .info .tags span.type {
+  background: #f3f4f6;
+  color: #555;
+}
+body .completed-session-card .header .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body .completed-session-card .header .right .rating {
+  color: #facc15;
+  font-size: 14px;
+}
+body .completed-session-card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+body .completed-session-card .meta .price {
+  color: #50b04d;
+  font-weight: 600;
+}
+body .completed-session-card .session-summary {
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 14px;
+}
+body .completed-session-card .section {
+  margin-top: 15px;
+}
+body .completed-session-card .section h6 {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+body .completed-session-card .section p, body .completed-session-card .section ul {
+  font-size: 14px;
+  color: #555;
+}
+body .completed-session-card .section.notes {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+body .completed-session-card .section.next-steps ul {
+  list-style: none;
+  padding: 0;
+}
+body .completed-session-card .section.next-steps ul li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+body .completed-session-card .section.next-steps ul li i {
+  color: #50b04d;
+}
+body .completed-session-card .section.feedback {
+  background: #f0f8ff;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+body .completed-session-card .section.feedback .feedback-text {
+  font-style: italic;
+  color: #333;
+}
+body .calendar-view {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+body .calendar-view .calendar-container .react-calendar {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+}
+body .calendar-view .calendar-container .react-calendar button {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+body .calendar-view .calendar-container .react-calendar button:hover {
+  background: #f3f4f6;
+}
+body .calendar-view .calendar-container .react-calendar .react-calendar__tile--active {
+  background: #f7941d !important;
+  color: #fff !important;
+}
+body .calendar-view .session-details {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+body .calendar-view .session-details .selected-date {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+body .calendar-view .session-details .session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .calendar-view .session-details .session-list .calendar-session-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+body .calendar-view .session-details .session-list .calendar-session-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+body .calendar-view .session-details .session-list .calendar-session-card h6 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+body .calendar-view .session-details .session-list .calendar-session-card .client,
+body .calendar-view .session-details .session-list .calendar-session-card .time {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 3px;
+}
+body .calendar-view .session-details .session-list .calendar-session-card .status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+body .calendar-view .session-details .session-list .calendar-session-card .status-badge.upcoming {
+  background: #fff3e0;
+  color: #f7941d;
+}
+body .calendar-view .session-details .session-list .calendar-session-card .status-badge.completed {
+  background: #e6f9ed;
+  color: #2e7d32;
+}
+body .calendar-view .session-details .no-session {
+  color: #999;
+  font-size: 14px;
+  margin-top: 15px;
 }
 body main {
   min-height: calc(100dvh - 300px);

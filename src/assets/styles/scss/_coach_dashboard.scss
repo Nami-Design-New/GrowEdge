@@ -30,7 +30,7 @@
         width: 100%;
         padding: 0.6rem 0.8rem 0.6rem 2.2rem;
         border-radius: 8px;
-        border: 1px solid #dee2e6;
+        // border: 1px solid #dee2e6;
         font-size: 0.9rem;
         transition: all 0.2s ease;
 
@@ -1026,6 +1026,238 @@ border: 1px solid $main;
       font-weight: 500;
       min-width: 40px;
       text-align: right;
+    }
+  }
+}
+///
+.completed-session-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  }
+
+  .header {
+@include space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .icon {
+        color: $main2;
+        font-size: 30px;
+      }
+
+      .info {
+        .client-name {
+          margin: 0;
+          font-weight: 600;
+        }
+        .tags {
+          display: flex;
+          gap: 6px;
+          margin-top: 4px;
+
+          span {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 6px;
+            &.completed {
+              background: #e7f8ef;
+              color: $main2;
+            }
+            &.type {
+              background: #f3f4f6;
+              color: #555;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .rating {
+        color: #facc15;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+
+    .price {
+      color: $main2;
+      font-weight: 600;
+    }
+  }
+
+  .session-summary {
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 14px;
+  }
+
+  .section {
+    margin-top: 15px;
+
+    h6 {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    p, ul {
+      font-size: 14px;
+      color: #555;
+    }
+
+    &.notes {
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 10px 15px;
+    }
+
+    &.next-steps {
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-bottom: 5px;
+          i {
+            color: $main2;
+          }
+        }
+      }
+    }
+
+    &.feedback {
+      background: #f0f8ff;
+      border-radius: 8px;
+      padding: 10px 15px;
+
+      .feedback-text {
+        font-style: italic;
+        color: #333;
+      }
+    }
+  }
+}
+////
+.calendar-view {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  .calendar-container {
+    .react-calendar {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 10px;
+      font-family: "Inter", sans-serif;
+
+      button {
+        border-radius: 8px;
+        transition: all 0.2s ease;
+      }
+
+      button:hover {
+        background: #f3f4f6;
+      }
+
+      .react-calendar__tile--active {
+        background: #f7941d !important;
+        color: #fff !important;
+      }
+    }
+  }
+
+  .session-details {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    .selected-date {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .session-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .calendar-session-card {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 12px 15px;
+        position: relative;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h6 {
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        .client,
+        .time {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 3px;
+        }
+
+        .status-badge {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          padding: 2px 8px;
+          border-radius: 6px;
+          font-size: 12px;
+          font-weight: 500;
+          &.upcoming {
+            background: #fff3e0;
+            color: #f7941d;
+          }
+          &.completed {
+            background: #e6f9ed;
+            color: #2e7d32;
+          }
+        }
+      }
+    }
+
+    .no-session {
+      color: #999;
+      font-size: 14px;
+      margin-top: 15px;
     }
   }
 }
