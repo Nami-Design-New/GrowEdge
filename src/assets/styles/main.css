@@ -171,9 +171,9 @@ button {
   margin-right: 6px;
 }
 .btn-group .btn-outline:hover {
-  background-color: #000;
+  background-color: #50b04d;
   color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #50b04d;
 }
 .btn-group .btn-dark {
   background-color: #23254e;
@@ -190,6 +190,15 @@ button {
 .btn-group .btn-danger:hover {
   background-color: #ef4444;
   color: #fff;
+}
+
+.btn-dark {
+  background-color: #23254e;
+  color: #fff;
+  border: none;
+}
+.btn-dark:hover {
+  background-color: #50537e;
 }
 
 body {
@@ -3694,6 +3703,7 @@ body .internship-card__header {
 }
 body .internship-card__header h5 {
   font-size: 1.1rem;
+  color: #23254e;
 }
 body .internship-card__header .badge {
   padding: 0.35rem 0.7rem;
@@ -3702,7 +3712,7 @@ body .internship-card__header .badge {
   text-transform: capitalize;
 }
 body .internship-card__header .badge.full {
-  background: #000;
+  background: rgba(46, 125, 50, 0.6352941176);
   color: #fff;
 }
 body .internship-card__header .badge.part {
@@ -3716,7 +3726,7 @@ body .internship-card__company {
   gap: 0.5rem;
 }
 body .internship-card__company strong {
-  color: #222;
+  color: #23254e;
 }
 body .internship-card__company .funding {
   border: 1px solid #ddd;

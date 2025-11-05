@@ -206,9 +206,9 @@ button {
       }
 
       &:hover {
-        background-color: $black;
+        background-color: $main2;
         color: $white;
-        border: 1px solid $black;
+        border: 1px solid $main2;
       }
     }
 
@@ -231,3 +231,12 @@ button {
       }
     }
   }
+    .btn-dark {
+      background-color: $main;
+      color: $white;
+      border: none;
+
+      &:hover {
+        background-color: #50537e;
+      }
+    }
