@@ -100,15 +100,25 @@
     padding: 1rem;
   }
 }
-.mvp-page{
-    .container {
-        max-width: 1200px;
-    }
+.mvp-page {
+  background: url("../images/patt.png") center/cover no-repeat;
+  isolation: isolate;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffffd8;
+    z-index: -1;
+  }
+  .container {
+    max-width: 1200px;
+  }
 
-    form{
-        padding: 2rem;
-  @media (max-width: 576px) {
-      padding: 2rem 0;      
-        }
+  form {
+    padding: 2rem;
+    @media (max-width: 576px) {
+      padding: 2rem 0;
     }
+  }
 }

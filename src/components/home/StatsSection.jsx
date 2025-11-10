@@ -25,6 +25,8 @@ export default function StatsSection() {
 
   return (
     <section ref={ref} className="stats-section">
+      <div className="bg">
+
       <div className="stats-grid container">
         {stats.map((item, i) => (
           <StatCard
@@ -36,6 +38,8 @@ export default function StatsSection() {
           />
         ))}
       </div>
+            </div>
+
     </section>
   );
 }

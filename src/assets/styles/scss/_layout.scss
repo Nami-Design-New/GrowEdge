@@ -165,7 +165,7 @@ margin-right: 0px;
 
 .user_dropdown {
   background: $main2 !important;
-  border-radius: 999px;
+  border-radius: $border-radius;
   padding: 8px 14px;
   display: flex;
   align-items: center;
