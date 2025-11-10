@@ -29,6 +29,7 @@ import EditCoachProfile from "../pages/Coach/EditCoachProfile";
 import CoachMessages from "../pages/Coach/CoachMessages";
 import CoachNotifications from "../pages/Coach/CoachNotifications";
 import CoachSettings from "../pages/Coach/CoachSetting";
+import Blogs from "../routes/Blogs";
 // import EditCoachProfile from "../pages/Coach/EditCoachProfile";
 
 export const router = createBrowserRouter([
@@ -60,6 +61,10 @@ export const router = createBrowserRouter([
           {
         path: "faqs",
         element: <Faqs />,
+      },
+        {
+        path: "blog",
+        element: <Blogs />,
       },
           {
         path: "career-coaching",

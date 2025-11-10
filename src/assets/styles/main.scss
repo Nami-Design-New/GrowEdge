@@ -17,6 +17,8 @@ body {
   @import "./scss/dashboard";
   @import "./scss/cards";
   @import "./scss/coach_dashboard";
+    @import "./scss/blogs";
+
   main {
     min-height: calc(100dvh - 300px);
   }

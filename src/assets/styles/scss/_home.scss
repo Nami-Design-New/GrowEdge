@@ -495,7 +495,7 @@
 
 /////statistics////
 .stats-section {
-  background: #bdd3c4;
+  background: $main;
   color: #0f172a;
   position: relative;
 
@@ -506,13 +506,13 @@
     isolation: isolate;
     padding: 4rem 0;
 
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-     background: #f7fafcd5;
-      z-index: -1;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   inset: 0;
+    //  background: #f7fafcd5;
+    //   z-index: -1;
+    // }
   }
   .stats-grid {
     margin: 0 auto;

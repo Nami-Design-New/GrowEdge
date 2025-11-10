@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import HeroSection from '../components/home/HeroSection'
 import About from '../components/home/AboutSection'
 import StatsSection from '../components/home/StatsSection'
@@ -16,7 +16,7 @@ export default function Home() {
      <CareerSection/>
      <Why/>
      <ReviewsSection/>
-          <HowItWork/>
+      <HowItWork/>
 </>
   )
 }

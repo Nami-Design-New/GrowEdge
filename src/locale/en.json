@@ -76,18 +76,18 @@
 
   },
   "hero": {
-  "coachingTitle": "Coaching",
-  "coachingText": "Accelerate your career growth with personalized guidance from industry experts. Our coaches provide tailored strategies, skill development, and networking opportunities to help you reach your professional goals.",
-  "coachingButton": "Find Your Coach",
+    "coachingTitle": "Coaching",
+    "coachingText": "Accelerate your career growth with personalized guidance from industry experts. Our coaches provide tailored strategies, skill development, and networking opportunities to help you reach your professional goals.",
+    "coachingButton": "Find Your Coach",
 
-  "internshipTitle": "Internships",
-  "internshipText": "Gain real-world experience with hands-on internships designed to prepare you for success in your field.",
-  "internshipButton": "View Internships",
+    "internshipTitle": "Internships",
+    "internshipText": "Gain real-world experience with hands-on internships designed to prepare you for success in your field.",
+    "internshipButton": "View Internships",
 
-  "mvpTitle": "MVP Labs",
-  "mvpText": "Work on real startup projects, build your MVP, and learn how to turn ideas into scalable products.",
-  "mvpButton": "Join MVP Labs"
-},
+    "mvpTitle": "MVP Labs",
+    "mvpText": "Work on real startup projects, build your MVP, and learn how to turn ideas into scalable products.",
+    "mvpButton": "Join MVP Labs"
+  },
 
   "about": {
     "kicker": "About Us",
@@ -125,79 +125,78 @@
     "success": "Success Rate"
   },
   "footer": {
-  "brandDesc": "Connecting talent with opportunity. We bridge the gap between ambition and achievement through career coaching and internships.",
-  "phone": "+966 11 123 4567",
-  "email": "support@Grow Edge.com",
-  "location": "Riyadh, Saudi Arabia",
-  "follow": "Follow Us",
-  "copy": "© 2025 Grow Edge. All rights reserved. Made with ❤️ by Grow Digital",
+    "brandDesc": "Connecting talent with opportunity. We bridge the gap between ambition and achievement through career coaching and internships.",
+    "phone": "+966 11 123 4567",
+    "email": "support@Grow Edge.com",
+    "location": "Riyadh, Saudi Arabia",
+    "follow": "Follow Us",
+    "copy": "© 2025 Grow Edge. All rights reserved. Made with ❤️ by Grow Digital",
 
-  "platform": {
-    "title": "Platform",
-    "links": [
-      "Career Coaching",
-      "Startup Internships",
-      "MVP Labs",
-      "Success Stories",
-      "Become a Coach"
+    "platform": {
+      "title": "Platform",
+      "links": [
+        "Career Coaching",
+        "Startup Internships",
+        "MVP Labs",
+        "Success Stories",
+        "Become a Coach"
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "links": ["Blog", "FAQ", "Help Center", "Career Guides", "Startup Resources"]
+    },
+    "company": {
+      "title": "Company",
+      "links": ["About Us", "Careers", "Press", "Partnerships", "Contact"]
+    },
+    "legal": {
+      "title": "Legal",
+      "links": ["Privacy Policy", "Terms of Service", "Cookie Policy", "Accessibility", "Data Protection"]
+    }
+  },
+  "faqs": {
+    "hint": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our platform, services, and process.",
+    "items": [{
+        "question": "What is Grow Edge?",
+        "answer": "Grow Edge connects students and professionals with career coaches and startup internships to help them gain real-world experience."
+      },
+      {
+        "question": "How can I apply for an internship?",
+        "answer": "Simply visit our Internships page, browse available opportunities, and submit your application directly through the platform."
+      },
+      {
+        "question": "Are the coaching sessions online or in-person?",
+        "answer": "Most of our coaching sessions are conducted online for flexibility, but some mentors also offer in-person meetings."
+      },
+      {
+        "question": "Do I receive a certificate after completing an internship?",
+        "answer": "Yes, Grow Edge provides an official certificate of completion for all verified internship programs."
+      },
+      {
+        "question": "Can companies partner with Grow Edge?",
+        "answer": "Absolutely! We welcome partnerships with startups and organizations looking to mentor or host talented individuals."
+      }
     ]
   },
-  "resources": {
-    "title": "Resources",
-    "links": ["Blog", "FAQ", "Help Center", "Career Guides", "Startup Resources"]
-  },
-  "company": {
-    "title": "Company",
-    "links": ["About Us", "Careers", "Press", "Partnerships", "Contact"]
-  },
-  "legal": {
-    "title": "Legal",
-    "links": ["Privacy Policy", "Terms of Service", "Cookie Policy", "Accessibility", "Data Protection"]
-  }
-},
-"faqs": {
-  "hint": "FAQ",
-  "title": "Frequently Asked Questions",
-  "subtitle": "Find answers to common questions about our platform, services, and process.",
-  "items": [
-    {
-      "question": "What is Grow Edge?",
-      "answer": "Grow Edge connects students and professionals with career coaches and startup internships to help them gain real-world experience."
-    },
-    {
-      "question": "How can I apply for an internship?",
-      "answer": "Simply visit our Internships page, browse available opportunities, and submit your application directly through the platform."
-    },
-    {
-      "question": "Are the coaching sessions online or in-person?",
-      "answer": "Most of our coaching sessions are conducted online for flexibility, but some mentors also offer in-person meetings."
-    },
-    {
-      "question": "Do I receive a certificate after completing an internship?",
-      "answer": "Yes, Grow Edge provides an official certificate of completion for all verified internship programs."
-    },
-    {
-      "question": "Can companies partner with Grow Edge?",
-      "answer": "Absolutely! We welcome partnerships with startups and organizations looking to mentor or host talented individuals."
-    }
-  ]
-},
- "routes": {
+  "routes": {
     "home": "Home"
   },
-   "careerCoaching": {
+  "careerCoaching": {
     "title": "Career Coaching",
     "subtitle": "Explore one-on-one guidance to help you build a successful career.",
-   "apply_btn": "Book Session"
-   
+    "apply_btn": "Book Session"
+
   },
   "startupInternships": {
     "title": "Startup Internships",
     "subtitle": "Gain hands-on experience through internships at innovative startups.",
-     "details_btn": "View Details",
+    "details_btn": "View Details",
     "apply_btn": "Apply Now"
   },
-    "MvpLabs": {
+  "MvpLabs": {
     "title": "MVP Labs Application",
     "subtitle": "Work on real startup projects and learn how to build a successful MVP",
     "form": {
@@ -229,7 +228,27 @@
       "experiencePlaceholder": "Tell us about your relevant experience",
       "cancel": "Cancel",
       "submit": "Submit Application"
-    }}
+    }
+  },
+  "blog": {
+    "headerTitle": "GrowEdge Blog",
+    "headerSubtitle": "Insights, tips, and stories to accelerate your professional journey and entrepreneurship",
+    "searchPlaceholder": "Search articles...",
+    "categories": {
+      "all": "All",
+      "entrepreneurship": "Entrepreneurship",
+      "softwareDev": "Software Development",
+      "technology": "Technology"
+    },
+    "header": "Latest Blogs",
+    "newsletter": {
+      "title": "Stay updated with the latest articles",
+      "subtitle": "Subscribe to our newsletter to get the latest tips and professional insights.",
+      "placeholder": "Email address",
+      "button": "Subscribe"
+    }
+
+  }
 
 
 
