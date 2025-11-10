@@ -30,6 +30,7 @@ import CoachMessages from "../pages/Coach/CoachMessages";
 import CoachNotifications from "../pages/Coach/CoachNotifications";
 import CoachSettings from "../pages/Coach/CoachSetting";
 import Blogs from "../routes/Blogs";
+import StartupOverview from "../pages/Startup/StartupOverview";
 // import EditCoachProfile from "../pages/Coach/EditCoachProfile";
 
 export const router = createBrowserRouter([
@@ -110,6 +111,14 @@ export const router = createBrowserRouter([
     { path: "messages", element: <CoachMessages/> },
     { path: "notifications", element: <CoachNotifications/> },
     { path: "settings", element: <CoachSettings/> },
+  ],
+},
+ {
+  path: "/startup-dashboard",
+  element: <DashboardLayout />,
+  children: [
+    { index:true , element: <StartupOverview /> },
+
   ],
 }
 

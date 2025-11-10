@@ -60,7 +60,8 @@ export default function UserDropDown() {
           <div className="u-role">Coach</div>
         </div>
       </div>
-      <div className="user-item">
+      <div className="user-item"
+          onClick={() => navigate("/startup-dashboard")} >
         <div className="icon">س</div>
         <div className="meta">
           <div className="u-name">سارة أحمد</div>

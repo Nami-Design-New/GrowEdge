@@ -21,7 +21,7 @@ const NewsletterSection = () => {
           />
           <button type="submit" className="btn btn-subscribe">
             <span>{t("blog.newsletter.button")}</span>
-            <i className="fa-solid fa-arrow-left"></i>
+            <i className="fa-solid fa-arrow-right"></i>
           </button>
         </form>
       </div>
