@@ -31,7 +31,9 @@ import CoachNotifications from "../pages/Coach/CoachNotifications";
 import CoachSettings from "../pages/Coach/CoachSetting";
 import Blogs from "../routes/Blogs";
 import StartupOverview from "../pages/Startup/StartupOverview";
-// import EditCoachProfile from "../pages/Coach/EditCoachProfile";
+import InternshipsStartup from "../pages/Startup/InternshipsStartup";
+import EditStartupProfile from "../pages/Startup/EditProfile";
+import InternshipDetails from "../components/StartupDashboard/Internships/InternshipDetails";
 
 export const router = createBrowserRouter([
   {
@@ -118,6 +120,9 @@ export const router = createBrowserRouter([
   element: <DashboardLayout />,
   children: [
     { index:true , element: <StartupOverview /> },
+    { path: "Internships", element: <InternshipsStartup /> },
+{ path: "Internships/:id", element: <InternshipDetails /> },
+    { path: "edit-profile", element: <EditStartupProfile/> },
 
   ],
 }

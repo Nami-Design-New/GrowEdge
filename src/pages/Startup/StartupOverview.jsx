@@ -4,6 +4,10 @@ import WelcomeCard from "../../ui/cards/WelcomeCard";
 import StatsCards from "../../components/Dashboard/Overview/StatsCards";
 import QuickActions from "../../components/StartupDashboard/Overview/QuickActions";
 import ActiveInternships from "../../components/StartupDashboard/Overview/ActiveInternships";
+import RecentApplications from "../../components/StartupDashboard/Overview/RecentApplications";
+import CurrentInterns from "../../components/StartupDashboard/Overview/CurrentInterns";
+import UpcomingTasks from "../../components/StartupDashboard/Overview/UpcomingTasks";
+import InternshipBudget from "../../components/StartupDashboard/Overview/InternshipBudget";
 
 export default function StartupOverview() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -62,7 +66,16 @@ export default function StartupOverview() {
           <div className="row">
                   <ActiveInternships />
                   <QuickActions />
-                </div>
+           </div>
+             <div className="row mt-4">
+             <RecentApplications />
+             <CurrentInterns />
+           </div>
+             <div className="row mt-4">
+             <InternshipBudget/>
+             <UpcomingTasks/>
+             </div>
+
     </div>
     </div>
 

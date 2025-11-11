@@ -1,28 +1,31 @@
 .internships-card {
-  padding: 1.5rem;
   background: $white;
-  border-radius: 16px;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
   .header {
     display: flex;
-    align-items: center;
-    gap: 0.8rem;
+    align-items: flex-start;
+    gap: 0.7rem;
     margin-bottom: 1rem;
 
     i {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: $main;
+      margin-top: 2px;
     }
 
     h6 {
-      margin: 0;
+      font-size: 1rem;
       font-weight: 600;
+      margin: 0;
     }
 
     p {
-      font-size: 0.85rem;
-      color: $gray;
+      font-size: 0.875rem;
+      color: #6c757d;
+      margin: 0;
     }
   }
 
@@ -32,26 +35,190 @@
     gap: 1rem;
 
     .internship-item {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr auto;
-      gap: 0.5rem;
-      align-items: center;
-      padding: 1rem;
-      border-radius: 8px;
-      background: rgba(0, 123, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.226);
 
-      .status.active {
-        color: #28a745;
+      .info-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .icon {
+          width: 40px;
+          height: 40px;
+          border-radius: 20%;
+          background-color: rgba(0, 123, 255, 0.05);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $main;
+          font-size: 1.2rem;
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+
+          .title {
+            font-weight: 600;
+            font-size: 1rem;
+          }
+
+          .department,
+          .salary {
+            font-size: 0.85rem;
+            color: $gray;
+          }
+        }
+      }
+
+      .meta-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.3rem;
+        .status-badge {
+          display: inline-block;
+          padding: 0.2rem 0.5rem;
+          font-size: 0.75rem;
+          font-weight: 600;
+          border-radius: 12px;
+          color: #fff;
+          text-transform: capitalize;
+          width: max-content;
+          &.active {
+            background-color: #28a745;
+          }
+
+          &.pending {
+            background-color: #ffc107;
+          }
+
+          &.inactive {
+            background-color: #dc3545;
+          }
+        }
+        .applications,
+        .posted {
+          font-size: 0.9rem;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+////
+.recent-applications {
+  background: $white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+
+  .header {
+    margin-bottom: 1rem;
+
+    h6 {
+      margin: 0;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .new-count {
+        font-size: 0.85rem;
+        color: $main;
+        font-weight: 500;
+      }
+    }
+
+    .sub-title {
+      font-size: 0.85rem;
+      color: $gray;
+      margin: 0.2rem 0 0 0;
+    }
+  }
+
+  .applications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    .application-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      background: #e4e5e62a;
+
+      .avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: $main;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-weight: 600;
       }
 
-      .manage-btn {
-        padding: 0.5rem 1rem;
-        border: none;
-        background: $main;
-        color: #fff;
-        border-radius: 6px;
-        cursor: pointer;
+      .info {
+        flex: 1;
+        margin-left: 0.8rem;
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          font-weight: 600;
+        }
+
+        .university {
+          font-size: 0.85rem;
+          color: $gray;
+        }
+      }
+
+      .rating-status {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.2rem;
+
+        .rating {
+          font-weight: 600;
+        }
+
+        .status-badge {
+          font-size: 0.75rem;
+          font-weight: 600;
+          padding: 0.2rem 0.5rem;
+          border-radius: 12px;
+          text-transform: capitalize;
+
+          &.new {
+            color: #28a745;
+            background-color: rgba(40, 167, 69, 0.1);
+          }
+          &.reviewed {
+            color: #ffc107;
+            background-color: rgba(255, 193, 7, 0.1);
+          }
+          &.interview {
+            color: #17a2b8;
+            background-color: rgba(23, 162, 184, 0.1);
+          }
+        }
+
+        .time {
+          font-size: 0.75rem;
+          color: $gray;
+        }
       }
     }
   }
@@ -60,13 +227,774 @@
     margin-top: 1rem;
     text-align: center;
 
-    .view-all {
+    .view-all-btn {
       padding: 0.5rem 1rem;
-      border: none;
       background: $main;
       color: #fff;
+      border: none;
       border-radius: 6px;
       cursor: pointer;
+    }
+  }
+}
+////
+.current-interns-card {
+  padding: 1.5rem;
+  background: $white;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: 1.2rem;
+      color: $main;
+      margin-top: 2px;
+    }
+
+    h6 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin: 0;
+    }
+  }
+
+  .interns-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .intern-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 12px;
+      border: 1px solid #e4e5e6;
+
+      .intern-info {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        .avatar {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background: #f8f9fa;
+          color: $main;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 600;
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+
+          .name {
+            font-weight: 600;
+          }
+
+          .role {
+            font-size: 0.85rem;
+            color: #6c757d;
+          }
+
+          .mentor {
+            font-size: 0.75rem;
+            color: #6c757d;
+          }
+        }
+      }
+
+      .progress-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.2rem;
+
+        .progress-bar {
+          width: 100px;
+          height: 8px;
+          background: #e9ecef;
+          border-radius: 8px;
+          overflow: hidden;
+
+          .progress-fill {
+            height: 100%;
+            background: $main;
+            border-radius: 8px 0 0 8px;
+            transition: width 0.4s ease;
+          }
+        }
+
+        .progress-text {
+          font-size: 0.75rem;
+          color: #333;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+///
+.budget-card {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: 1.2rem;
+      color: $main;
+      margin-top: 2px;
+    }
+
+    h6 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin: 0;
+    }
+  }
+
+  .budget-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .budget-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .progress-bar-wrapper {
+    width: 100%;
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+
+    .progress-bar-fill {
+      height: 100%;
+      background: $main;
+      transition: width 0.4s ease;
+    }
+  }
+
+  .percent-text {
+    font-size: 0.85rem;
+    color: $main2;
+    text-align: right;
+  }
+}
+///
+
+////
+.empty-card {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #6c757d;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: $main;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #6c757d;
+  }
+}
+.active-sessions {
+  display: flex;
+  justify-content: center;
+  .active-internship-card {
+    background: $white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin-top: 20px;
+    .card-header {
+      .icon {
+        width: 40px;
+        height: 40px;
+        background: #eef4ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $main;
+        font-size: 1.2rem;
+      }
+
+      .title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .badges {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.2rem;
+
+        .status-badge {
+          padding: 0.2rem 0.5rem;
+          font-size: 0.75rem;
+          font-weight: 600;
+          border-radius: 12px;
+          text-transform: capitalize;
+          &.active {
+            background: #e6f4ea;
+            color: #28a745;
+          }
+          &.draft {
+            background: #fff3cd;
+            color: #ffc107;
+          }
+          &.closed {
+            background: #e2e3e5;
+            color: #6c757d;
+          }
+        }
+
+        .type-badge {
+          padding: 0.2rem 0.5rem;
+          font-size: 0.75rem;
+          background: #f1f3f5;
+          color: #495057;
+          border-radius: 12px;
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.6rem;
+
+      .view-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        border: none;
+        background-color: #eef4ff;
+        color: $main;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: 6px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 0.95rem;
+        }
+
+        &:hover {
+          background-color: $main;
+          color: #fff;
+        }
+      }
+
+      .more-btn {
+        border: none;
+        background: transparent;
+        color: #6c757d;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $main;
+        }
+      }
+    }
+    .details {
+      font-size: 0.85rem;
+      color: #6c757d;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .stats {
+      border-top: 1px solid #eee;
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+
+      .stat {
+        text-align: center;
+
+        strong {
+          display: block;
+          color: $main;
+          font-size: 1.1rem;
+        }
+
+        span {
+          font-size: 0.75rem;
+          color: #6c757d;
+        }
+      }
+    }
+  }
+}
+///
+.draft-internship-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-header {
+    .icon {
+      width: 40px;
+      height: 40px;
+      background: #eef4ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $main;
+      font-size: 1.2rem;
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      color: #333;
+    }
+
+    .badges {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.2rem;
+
+      .status-badge {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 12px;
+        text-transform: capitalize;
+
+        &.draft {
+          background: #fff3cd;
+          color: #856404;
+        }
+      }
+
+      .type-badge {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
+        background: #f1f3f5;
+        color: #495057;
+        border-radius: 12px;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+
+      button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: #6c757d;
+        transition: all 0.3s ease;
+
+        i {
+          margin-right: 4px;
+        }
+
+        &:hover {
+          color: $main2;
+        }
+      }
+
+      .edit-btn {
+        background-color: #96ca9441;
+        border-radius: 6px;
+        padding: 6px 12px;
+        color: $main2;
+        font-weight: 500;
+
+        &:hover {
+          background-color: $main2;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .details {
+    font-size: 0.85rem;
+    color: #6c757d;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.8rem;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 0.8rem;
+  }
+
+  .stats {
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+
+    .stat {
+      text-align: center;
+
+      strong {
+        display: block;
+        color: $main2;
+        font-size: 1.1rem;
+      }
+
+      span {
+        font-size: 0.75rem;
+        color: #6c757d;
+      }
+    }
+  }
+}
+///
+.closed-internship-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-header {
+    .icon {
+      width: 40px;
+      height: 40px;
+      background: #96ca9441;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $main2;
+      font-size: 1.2rem;
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      color: #333;
+    }
+
+    .badges {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.2rem;
+
+      .status-badge {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 12px;
+        text-transform: capitalize;
+
+        &.closed {
+          background: #e2e3e5;
+          color: #6c757d;
+        }
+      }
+
+      .type-badge {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
+        background: #f1f3f5;
+        color: #495057;
+        border-radius: 12px;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+
+      .more-btn {
+        border: none;
+        background: transparent;
+        color: #6c757d;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #495057;
+        }
+      }
+    }
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 0.8rem;
+  }
+}
+///
+.internship-details {
+  margin: 4rem auto;
+
+  .details-header {
+   @include space-between;
+padding: 0 1rem;
+    h5 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: $main;
+    }
+
+    .text-muted {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 0.5rem;
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.9rem;
+        color: $main;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          color: $main2;
+        }
+      }
+    }
+  }
+
+  .card-box {
+    background: $white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    h6 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+        color: #6c757d;
+
+        .status-badge {
+          padding: 0.25rem 0.5rem;
+          font-size: 0.75rem;
+          border-radius: 12px;
+          font-weight: 600;
+          text-transform: capitalize;
+
+          &.active {
+            background: #e6f4eacb;
+            color: #28a745;
+          }
+          &.draft {
+            background: #fff3cdc9;
+            color: #ffc107;
+          }
+          &.closed {
+            background: #e2e3e5c0;
+            color: #6c757d;
+          }
+        }
+      }
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: #495057;
+        line-height: 1.4;
+
+        i {
+          min-width: 18px;
+          color: $main2;
+        }
+      }
+    }
+  i {
+          min-width: 18px;
+          color: $main2;
+        }
+    /* Skills badges */
+    .badges {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      .skill-badge {
+        padding: 0.25rem 0.6rem;
+        background: #f1f3f5;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        color: #495057;
+        margin-bottom: 0.3rem;
+      }
+    }
+
+    /* Metrics cards */
+    .metrics {
+      display: flex;
+      gap: 1rem;
+
+      .metric-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 12px;
+        font-weight: 600;
+        text-align: center;
+
+        strong {
+          font-size: 1.5rem;
+          margin-bottom: 0.3rem;
+        }
+
+        span {
+          font-size: 0.85rem;
+          color: #555;
+        }
+
+        &.applications {
+          background: #cfe9ff;
+          color: #0d6efd;
+        }
+        &.views {
+          background: #d3f9d8;
+          color: #28a745;
+        }
+        &.hired {
+          background: #fff3cd;
+          color: #ffc107;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .details-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .metrics {
+      flex-direction: column;
     }
   }
 }

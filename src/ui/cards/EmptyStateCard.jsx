@@ -29,7 +29,7 @@ export default function EmptyStateCard({
             <div className="empty-icon">
               <i className={icon}></i>
             </div>
-            <p>{emptyText || "No upcoming sessions"}</p>
+            <p>{emptyText}</p>
             <Link to={link} className="btn-outline">
               {buttonText}
             </Link>

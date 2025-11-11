@@ -4,15 +4,15 @@ import SelectField from "../../../ui/forms/SelectField";
 
 export default function BasicInfoForm() {
   const initialData = {
-    fullName: "Khaled Ismail",
-    email: "Khaled@example.com",
+    fullName: "Sarah Ahmed",
+    email: "Sarah@example.com",
     phone: "+966501234567",
     dob: "1990-01-01",
-    gender: "male",
+    gender: "Female",
     nationality: "Saudi Arabian",
     city: "Riyadh",
     country: "Saudi Arabia",
-    bio: "Hello! I am Khaled, a web developer.",
+    bio: "Hello! I am Mariam, a web developer.",
   };
 
   const [formData, setFormData] = useState(initialData);

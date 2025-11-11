@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function ActiveInternships() {
   const allInternships = [
     {
@@ -9,6 +7,7 @@ export default function ActiveInternships() {
       salary: "$2,500/month",
       posted: "2 weeks ago",
       status: "active",
+      icon: "fa-regular fa-briefcase",
     },
     {
       title: "Product Marketing Intern",
@@ -17,6 +16,7 @@ export default function ActiveInternships() {
       salary: "$2,000/month",
       posted: "1 week ago",
       status: "active",
+      icon: "fa-regular fa-briefcase",
     },
     {
       title: "Data Science Intern",
@@ -25,11 +25,9 @@ export default function ActiveInternships() {
       salary: "$3,000/month",
       posted: "3 days ago",
       status: "active",
+      icon: "fa-regular fa-briefcase",
     },
   ];
-
-  const [showAll, setShowAll] = useState(false);
-  const internshipsToShow = showAll ? allInternships : allInternships.slice(0, 2);
 
   return (
     <div className="col-lg-8">
@@ -43,26 +41,30 @@ export default function ActiveInternships() {
         </div>
 
         <div className="internship-list">
-          {internshipsToShow.map((internship, i) => (
+          {allInternships.map((internship, i) => (
             <div key={i} className="internship-item">
-              <div className="title">{internship.title}</div>
-              <div className="department">{internship.department}</div>
-              <div className="applications">{internship.applications} applications</div>
-              <div className="salary">{internship.salary}</div>
-              <div className="posted">{internship.posted}</div>
-              <div className={`status ${internship.status}`}>{internship.status}</div>
-              <button className="manage-btn">Manage</button>
+              {/* Info Section */}
+              <div className="info-section">
+                <div className="icon">
+                  <i className={internship.icon}></i>
+                </div>
+                <div className="text">
+                  <div className="title">{internship.title}</div>
+                  <div className="department">{internship.department}</div>
+                  <div className="salary">{internship.salary}</div>
+                </div>
+              </div>
+
+              {/* Meta Section */}
+              <div className="meta-section">
+                  <div className={`status-badge ${internship.status}`}>
+                    {internship.status}
+                  </div>
+                <div className="posted">{internship.posted}</div>
+                 <div className="applications">{internship.applications} applications</div>
+              </div>
             </div>
           ))}
-        </div>
-
-        <div className="footer">
-          <button
-            className="view-all"
-            onClick={() => setShowAll(!showAll)}
-          >
-            {showAll ? "Show Less" : "View All Internships"}
-          </button>
         </div>
       </div>
     </div>

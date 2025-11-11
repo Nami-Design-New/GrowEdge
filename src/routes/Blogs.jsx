@@ -92,31 +92,30 @@ const latestArticles = [
   },
 ];
 
-
 export default function Blogs() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchText, setSearchText] = useState("");
   const { t } = useTranslation();
 
-  const categoryMap = {
-    all: "الكل",
-    entrepreneurship: "ريادة الأعمال",
-    softwareDev: "تطوير البرمجيات",
-    technology: "التكنولوجيا",
-  };
+ const categoryMap = {
+  all: "all",
+  entrepreneurship: "Entrepreneurship",
+  softwareDev: "Software Development",
+  technology: "Technology",
+};
 
-  const filteredArticles = latestArticles.filter((article) => {
-    const matchCategory =
-      activeCategory === "all"
-        ? true
-        : article.category === categoryMap[activeCategory];
+const filteredArticles = latestArticles.filter((article) => {
+  const matchCategory =
+    activeCategory === "all"
+      ? true
+      : article.category === categoryMap[activeCategory];
 
-    const matchSearch =
-      article.title.includes(searchText) ||
-      article.description.includes(searchText);
+  const matchSearch =
+    article.title.toLowerCase().includes(searchText.toLowerCase()) ||
+    article.description.toLowerCase().includes(searchText.toLowerCase());
 
-    return matchCategory && matchSearch;
-  });
+  return matchCategory && matchSearch;
+});
 
   return (
     <>
