@@ -2,6 +2,8 @@ import { useState } from "react";
 import Sidebar from "../../components/StartupDashboard/StartupSidebar";
 import WelcomeCard from "../../ui/cards/WelcomeCard";
 import StatsCards from "../../components/Dashboard/Overview/StatsCards";
+import QuickActions from "../../components/StartupDashboard/Overview/QuickActions";
+import ActiveInternships from "../../components/StartupDashboard/Overview/ActiveInternships";
 
 export default function StartupOverview() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -57,7 +59,10 @@ export default function StartupOverview() {
           message="You have 23 new applications this week and 3 interviews scheduled for today. Keep building your amazing team!"
         />
        <StatsCards stats={Stats} />
-        
+          <div className="row">
+                  <ActiveInternships />
+                  <QuickActions />
+                </div>
     </div>
     </div>
 

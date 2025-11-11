@@ -45,11 +45,11 @@ export default function InternshipDetailsModal({ show, setShow, internship }) {
         size="lg"
       >
         <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
+          <Modal.Title className="mx-3">{title}</Modal.Title>
         </Modal.Header>
 
-        <Modal.Body>
-          <div className="company-info mb-3">
+        <Modal.Body className="mx-4">
+          <div className="company-info mb-2">
             <strong>{company}</strong> • {location}
           </div>
 

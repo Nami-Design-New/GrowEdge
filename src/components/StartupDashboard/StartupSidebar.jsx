@@ -28,9 +28,9 @@ export default function Sidebar({ isOpen, onClose }) {
             <span>Overview</span>
           </NavLink>
 
-          <NavLink to="/startup-dashboard/sessions" className="menu-item">
-            <i className="fa-solid fa-calendar-check"></i>
-            <span>Sessions</span>
+            <NavLink to="/startup-dashboard/internships" className="menu-item">
+            <i className="fa-solid fa-briefcase"></i>
+            <span>Internships</span>
           </NavLink>
 
           <NavLink to="/coach-dashboard/clients" className="menu-item">

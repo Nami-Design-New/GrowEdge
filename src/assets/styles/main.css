@@ -2652,7 +2652,6 @@ body .startup-page .startup-cards {
 }
 body .internship-modal h6 {
   font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 body .internship-modal .company-info {
   font-size: 1rem;
@@ -6113,6 +6112,68 @@ body .newsletter-section .newsletter-content .newsletter-form .btn-subscribe i {
   body .newsletter-section .newsletter-content .email-input {
     width: 100%;
   }
+}
+body .internships-card {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+body .internships-card .header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+body .internships-card .header i {
+  font-size: 1.4rem;
+  color: #23254e;
+}
+body .internships-card .header h6 {
+  margin: 0;
+  font-weight: 600;
+}
+body .internships-card .header p {
+  font-size: 0.85rem;
+  color: #777;
+}
+body .internships-card .internship-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body .internships-card .internship-list .internship-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(0, 123, 255, 0.05);
+}
+body .internships-card .internship-list .internship-item .status.active {
+  color: #28a745;
+  font-weight: 600;
+}
+body .internships-card .internship-list .internship-item .manage-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #23254e;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+body .internships-card .footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+body .internships-card .footer .view-all {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #23254e;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
 }
 body main {
   min-height: calc(100dvh - 300px);

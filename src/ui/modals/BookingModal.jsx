@@ -33,7 +33,7 @@ export default function BookingModal({ show, setShow }) {
                 <Modal.Title>Book Your Session</Modal.Title>
             </Modal.Header>
 
-            <Modal.Body>
+            <Modal.Body className="m-3">
                 <p className="text-muted mb-3">
                     Schedule your coaching session with <strong>Michael Chen</strong>
                 </p>
