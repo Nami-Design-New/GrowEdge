@@ -18,7 +18,6 @@ export default function ActiveSessions() {
       views: 234,
       hired: 0,
     },
-    // ممكن تضيفي internships تانية هنا
   ];
 
   const hasData = internships && internships.length > 0;

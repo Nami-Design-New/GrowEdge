@@ -1040,7 +1040,39 @@
       align-items: center;
       gap: 1rem;
       z-index: 6;
+
+      &--1 {
+        top: 12%;
+        left: 20%;
+        @media (max-width: 698px) {
+          top: 0%;
+          left: 2%;
+        }
+      }
+
+      &--2 {
+        top: 50%;
+        left: 75%;
+        @media (max-width: 698px) {
+          top: 40%;
+          left: 20%;
+        }
+      }
+
+      &--3 {
+        top: 88%;
+        left: 40%;
+        @media (max-width: 698px) {
+          top: 85%;
+          left: 40%;
+        }
+      }
+
+      @media (max-width: 698px) {
+        transform: none;
+      }
     }
+
     .hw-card {
       min-width: 240px;
       max-width: 260px;
@@ -1114,7 +1146,7 @@
 
   @media (max-width: 480px) {
     .howitwork-timeline {
-      height: 360px;
+      margin-bottom: 10%;
     }
     .hw-card {
       min-width: 140px;

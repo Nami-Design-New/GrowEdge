@@ -7,7 +7,7 @@ import ClosedSessions from "../../components/StartupDashboard/Internships/Closed
 
 export default function InternshipsStartup() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-      const [activeTab, setActiveTab] = useState("Active");
+  const [activeTab, setActiveTab] = useState("Active");
 
   return (
     <div className="dashboard-layout">
@@ -16,7 +16,7 @@ export default function InternshipsStartup() {
 
       <div className="main-content p-0 p-md-4">
         {/* ===== Header ===== */}
-        <div className="overview-header d-flex justify-content-between align-items-center mb-4">
+        <div className="overview-header">
           <h5 className="mb-0">Internships</h5>
           <button
             className="sidebar-toggle-btn"
@@ -27,22 +27,23 @@ export default function InternshipsStartup() {
         </div>
 
         {/* ===== Subheader with Button ===== */}
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <div>
+        <div className="internship-header">
+          <div className="internship-info">
             <h5 className="mb-0">Startup Internships</h5>
             <p className="text-muted small mb-0">
               Discover exciting internship opportunities at innovative startups
             </p>
           </div>
 
-          <button className="btn btn-dark"><i className="fa-solid fa-plus"></i> Create Internship</button>
+          <button className="btn btn-dark">
+            <i className="fa-solid fa-plus"></i> Create Internship
+          </button>
         </div>
 
-           <InternshipsTabs activeTab={activeTab} setActiveTab={setActiveTab} />
-      {activeTab === "Active" && <ActiveSessions />}
-      {activeTab === "Drafts" && <DraftSessions />}
-      {activeTab === "Closed" && <ClosedSessions />}
-
+        <InternshipsTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+        {activeTab === "Active" && <ActiveSessions />}
+        {activeTab === "Drafts" && <DraftSessions />}
+        {activeTab === "Closed" && <ClosedSessions />}
       </div>
     </div>
   );

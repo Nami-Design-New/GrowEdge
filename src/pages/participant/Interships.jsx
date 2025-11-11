@@ -26,7 +26,7 @@ export default function Internships() {
 
       <div className="main-content p-0 p-md-4">
         {/* ===== Header ===== */}
-        <div className="overview-header d-flex justify-content-between align-items-center mb-4">
+        <div className="overview-header ">
           <h5 className="mb-0">Internships</h5>
           <button
             className="sidebar-toggle-btn"

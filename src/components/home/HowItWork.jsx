@@ -21,19 +21,16 @@ export default function HowItWork() {
       title: "Choose Your Track",
       desc: "Select from Career Coaching, Startup Internships, or MVP Labs based on your goals.",
       time: "Step 01",
-      pos: { top: "12%", left: "20%" },
     },
     {
       title: "Get Matched",
       desc: "Our algorithm connects you with the perfect coach, startup, or funding opportunity.",
       time: "Step 02",
-      pos: { top: "50%", left: "75%" },
     },
     {
       title: "Achieve Success",
       desc: "Follow your personalized plan and track your progress towards your career goals.",
       time: "Step 03",
-      pos: { top: "88%", left: "40%" },
     },
   ];
 
@@ -79,19 +76,19 @@ export default function HowItWork() {
           </svg>
 
           {/* Steps */}
-          {steps.map((s, idx) => (
-            <div
-              key={idx}
-              className={`hw-step hw-step--${idx + 1}`}
-              style={{ top: s.pos.top, left: s.pos.left }}
-            >
-              <div className="hw-card">
-                <div className="hw-step-no">{s.time}</div>
-                <h4 className="hw-step-title">{s.title}</h4>
-                <p className="hw-step-desc">{s.desc}</p>
-              </div>
-            </div>
-          ))}
+         {steps.map((s, idx) => (
+  <div
+    key={idx}
+    className={`hw-step hw-step--${idx + 1}`}
+  >
+    <div className="hw-card">
+      <div className="hw-step-no">{s.time}</div>
+      <h4 className="hw-step-title">{s.title}</h4>
+      <p className="hw-step-desc">{s.desc}</p>
+    </div>
+  </div>
+))}
+
         </div>
       </div>
     </section>

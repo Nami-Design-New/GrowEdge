@@ -1981,6 +1981,41 @@ body .howitwork-section .howitwork-timeline .hw-step {
   gap: 1rem;
   z-index: 6;
 }
+body .howitwork-section .howitwork-timeline .hw-step--1 {
+  top: 12%;
+  left: 20%;
+}
+@media (max-width: 698px) {
+  body .howitwork-section .howitwork-timeline .hw-step--1 {
+    top: 0%;
+    left: 2%;
+  }
+}
+body .howitwork-section .howitwork-timeline .hw-step--2 {
+  top: 50%;
+  left: 75%;
+}
+@media (max-width: 698px) {
+  body .howitwork-section .howitwork-timeline .hw-step--2 {
+    top: 40%;
+    left: 20%;
+  }
+}
+body .howitwork-section .howitwork-timeline .hw-step--3 {
+  top: 88%;
+  left: 40%;
+}
+@media (max-width: 698px) {
+  body .howitwork-section .howitwork-timeline .hw-step--3 {
+    top: 85%;
+    left: 40%;
+  }
+}
+@media (max-width: 698px) {
+  body .howitwork-section .howitwork-timeline .hw-step {
+    transform: none;
+  }
+}
 body .howitwork-section .howitwork-timeline .hw-card {
   min-width: 240px;
   max-width: 260px;
@@ -2044,7 +2079,7 @@ body .howitwork-section .howitwork-timeline .hw-step-desc {
 }
 @media (max-width: 480px) {
   body .howitwork-section .howitwork-timeline {
-    height: 360px;
+    margin-bottom: 10%;
   }
   body .howitwork-section .hw-card {
     min-width: 140px;
@@ -2792,6 +2827,46 @@ body .dashboard-layout .tabs-common .tab-btn.active {
     font-size: 0.8rem;
   }
 }
+body .dashboard-layout .internship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+body .dashboard-layout .internship-header .internship-info h5 {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+}
+body .dashboard-layout .internship-header .internship-info p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+body .dashboard-layout .internship-header .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+body .dashboard-layout .internship-header .btn i {
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  body .dashboard-layout .internship-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  body .dashboard-layout .internship-header .btn {
+    text-align: center;
+    justify-content: center;
+  }
+}
 body .sidebar {
   width: 260px;
   position: sticky;
@@ -2806,6 +2881,11 @@ body .sidebar {
   justify-content: space-between;
   padding: 5.5rem 1.2rem 1.5rem 1.2rem;
   transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  body .sidebar {
+    justify-content: start;
+  }
 }
 body .sidebar .user-info {
   display: flex;
@@ -6496,8 +6576,9 @@ body .empty-card p {
   color: #6c757d;
 }
 body .active-sessions {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 body .active-sessions .active-internship-card {
   background: #fff;
@@ -6506,7 +6587,19 @@ body .active-sessions .active-internship-card {
   padding: 1rem 1.2rem;
   margin-top: 20px;
 }
-body .active-sessions .active-internship-card .card-header .icon {
+body .active-sessions .active-internship-card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+body .active-sessions .active-internship-card .card-header .left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+body .active-sessions .active-internship-card .card-header .left .icon {
   width: 40px;
   height: 40px;
   background: #eef4ff;
@@ -6517,47 +6610,48 @@ body .active-sessions .active-internship-card .card-header .icon {
   color: #23254e;
   font-size: 1.2rem;
 }
-body .active-sessions .active-internship-card .card-header .title {
+body .active-sessions .active-internship-card .card-header .left .info .title {
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
 }
-body .active-sessions .active-internship-card .card-header .badges {
+body .active-sessions .active-internship-card .card-header .left .info .badges {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.2rem;
 }
-body .active-sessions .active-internship-card .card-header .badges .status-badge {
+body .active-sessions .active-internship-card .card-header .left .info .badges .status-badge {
   padding: 0.2rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 12px;
   text-transform: capitalize;
 }
-body .active-sessions .active-internship-card .card-header .badges .status-badge.active {
+body .active-sessions .active-internship-card .card-header .left .info .badges .status-badge.active {
   background: #e6f4ea;
   color: #28a745;
 }
-body .active-sessions .active-internship-card .card-header .badges .status-badge.draft {
+body .active-sessions .active-internship-card .card-header .left .info .badges .status-badge.draft {
   background: #fff3cd;
   color: #ffc107;
 }
-body .active-sessions .active-internship-card .card-header .badges .status-badge.closed {
+body .active-sessions .active-internship-card .card-header .left .info .badges .status-badge.closed {
   background: #e2e3e5;
   color: #6c757d;
 }
-body .active-sessions .active-internship-card .card-header .badges .type-badge {
+body .active-sessions .active-internship-card .card-header .left .info .badges .type-badge {
   padding: 0.2rem 0.5rem;
   font-size: 0.75rem;
   background: #f1f3f5;
   color: #495057;
   border-radius: 12px;
 }
-body .active-sessions .active-internship-card .actions {
+body .active-sessions .active-internship-card .card-header .actions {
   display: flex;
+  align-items: center;
   gap: 0.6rem;
 }
-body .active-sessions .active-internship-card .actions .view-btn {
+body .active-sessions .active-internship-card .card-header .actions .view-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
@@ -6571,14 +6665,14 @@ body .active-sessions .active-internship-card .actions .view-btn {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-body .active-sessions .active-internship-card .actions .view-btn i {
+body .active-sessions .active-internship-card .card-header .actions .view-btn i {
   font-size: 0.95rem;
 }
-body .active-sessions .active-internship-card .actions .view-btn:hover {
+body .active-sessions .active-internship-card .card-header .actions .view-btn:hover {
   background-color: #23254e;
   color: #fff;
 }
-body .active-sessions .active-internship-card .actions .more-btn {
+body .active-sessions .active-internship-card .card-header .actions .more-btn {
   border: none;
   background: transparent;
   color: #6c757d;
@@ -6586,7 +6680,7 @@ body .active-sessions .active-internship-card .actions .more-btn {
   cursor: pointer;
   transition: color 0.2s ease;
 }
-body .active-sessions .active-internship-card .actions .more-btn:hover {
+body .active-sessions .active-internship-card .card-header .actions .more-btn:hover {
   color: #23254e;
 }
 body .active-sessions .active-internship-card .details {
@@ -6595,6 +6689,7 @@ body .active-sessions .active-internship-card .details {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 0.8rem;
 }
 body .active-sessions .active-internship-card .details span {
   display: flex;
@@ -6604,8 +6699,11 @@ body .active-sessions .active-internship-card .details span {
 body .active-sessions .active-internship-card .description {
   font-size: 0.9rem;
   color: #333;
+  margin-top: 0.8rem;
 }
 body .active-sessions .active-internship-card .stats {
+  display: flex;
+  justify-content: space-around;
   border-top: 1px solid #eee;
   margin-top: 1rem;
   padding-top: 0.8rem;
@@ -6621,6 +6719,31 @@ body .active-sessions .active-internship-card .stats .stat strong {
 body .active-sessions .active-internship-card .stats .stat span {
   font-size: 0.75rem;
   color: #6c757d;
+}
+@media (max-width: 768px) {
+  body .active-sessions .active-internship-card {
+    padding: 1rem;
+  }
+  body .active-sessions .active-internship-card .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body .active-sessions .active-internship-card .card-header .actions {
+    align-self: stretch;
+    justify-content: space-between;
+    width: 100%;
+  }
+  body .active-sessions .active-internship-card .details {
+    gap: 0.6rem;
+    font-size: 0.8rem;
+  }
+  body .active-sessions .active-internship-card .description {
+    font-size: 0.85rem;
+  }
+  body .active-sessions .active-internship-card .stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 body .draft-internship-card {
   background: #fff;
