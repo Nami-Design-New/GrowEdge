@@ -626,4 +626,65 @@ margin-right: 0px;
   }
 }
 
+///
+.preloader {
+  background-color: $main;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .preloaderImg {
+    width: 120px;
+    height: 120px;
+    mask-image: url("../images/logo.svg");
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/logo.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: grayscale(1) opacity(0.5);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $main2;
+      transform: translateY(100%); 
+      animation: fill-up 2s ease-out forwards;
+      mask-image: url("../images/logo.svg");
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      z-index: 2;
+    }
+
+    @keyframes fill-up {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0%);
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ export default function EditCoachProfile() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("basic");
   const [avatar, setAvatar] = useState(null); 
-  const [userName] = useState("Mariam Samir"); 
+  const [userName] = useState("Khaled Ismail"); 
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];

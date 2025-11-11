@@ -57,7 +57,7 @@ export default function CoachOverview() {
         </div>
 
         <WelcomeCard
-          name="Mariam"
+          name="Khaled"
           message="Here's your coaching overview for this month."
         />
 

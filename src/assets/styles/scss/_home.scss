@@ -850,24 +850,20 @@
     gap: 1.5rem;
     justify-items: center;
 
- .reason-card {
-  background: $white;
-  border-radius: 1rem;
-  padding: 2rem 1.5rem;
-  max-width: 360px;
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.06),  
-    0 8px 24px rgba(0, 0, 0, 0.08), 
-    0 16px 40px rgba(0, 0, 0, 0.06);  
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .reason-card {
+      background: $white;
+      border-radius: 1rem;
+      padding: 2rem 1.5rem;
+      max-width: 360px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08),
+        0 16px 40px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 
-      0 6px 16px rgba(0, 0, 0, 0.1),
-      0 12px 32px rgba(0, 0, 0, 0.12),
-      0 20px 48px rgba(0, 0, 0, 0.08);
-  }
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1),
+          0 12px 32px rgba(0, 0, 0, 0.12), 0 20px 48px rgba(0, 0, 0, 0.08);
+      }
 
       .icon {
         width: 70px;
@@ -1045,29 +1041,24 @@
       gap: 1rem;
       z-index: 6;
     }
-.hw-card {
-  min-width: 240px;
-  max-width: 260px;
-  background: white;
-  border-radius: 14px;
-  padding: 14px 14px 12px 14px;
-  transform: translateX(12px);
-  z-index: 7;
-  box-shadow: 
-    0 2px 6px rgba(38, 40, 44, 0.05),   
-    0 8px 16px rgba(38, 40, 44, 0.08), 
-    0 16px 24px rgba(38, 40, 44, 0.06); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .hw-card {
+      min-width: 240px;
+      max-width: 260px;
+      background: white;
+      border-radius: 14px;
+      padding: 14px 14px 12px 14px;
+      transform: translateX(12px);
+      z-index: 7;
+      box-shadow: 0 2px 6px rgba(38, 40, 44, 0.05),
+        0 8px 16px rgba(38, 40, 44, 0.08), 0 16px 24px rgba(38, 40, 44, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  &:hover {
-    transform: translateX(12px) translateY(-4px);
-    box-shadow: 
-      0 4px 12px rgba(38, 40, 44, 0.1),
-      0 12px 24px rgba(38, 40, 44, 0.12),
-      0 20px 40px rgba(38, 40, 44, 0.08);
-  }
-}
-
+      &:hover {
+        transform: translateX(12px) translateY(-4px);
+        box-shadow: 0 4px 12px rgba(38, 40, 44, 0.1),
+          0 12px 24px rgba(38, 40, 44, 0.12), 0 20px 40px rgba(38, 40, 44, 0.08);
+      }
+    }
 
     .hw-step-no {
       font-size: 12px;
@@ -1323,6 +1314,40 @@
   padding: 4rem 0;
   background-color: #f8f9fa;
   margin-top: 60px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2%;
+    left: 8%;
+    width: 100px;
+    height: 100px;
+    background: url("../images/patt3.png") no-repeat;
+    background-size: contain;
+    z-index: 1;
+    opacity: 0.6;
+    @media (max-width: 576px) {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    background: url("../images/patt1.png") no-repeat;
+    background-size: contain;
+    z-index: 1;
+    @media (max-width: 576px) {
+      width: 50px;
+      height: 50px;
+      top: 4%;
+      right: 6%;
+    }
+  }
   .section_header {
     margin-bottom: 2rem;
 

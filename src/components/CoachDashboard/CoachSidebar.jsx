@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 
 export default function CoachSidebar({ isOpen, onClose }) {
-  const name = "Mariam Samir";
+  const name = "Khaled Ismail";
   const role = "Coach";
 
   const avatarLetter = name.charAt(0).toUpperCase();

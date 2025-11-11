@@ -761,6 +761,71 @@ body .dashboard-footer p {
   margin: 0;
   font-size: 0.9rem;
 }
+body .preloader {
+  background-color: #23254e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .preloader .preloaderImg {
+  width: 120px;
+  height: 120px;
+  -webkit-mask-image: url("../images/logo.svg");
+          mask-image: url("../images/logo.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  position: relative;
+}
+body .preloader .preloaderImg::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/logo.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1) opacity(0.5);
+  z-index: 1;
+}
+body .preloader .preloaderImg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #50b04d;
+  transform: translateY(100%);
+  animation: fill-up 2s ease-out forwards;
+  -webkit-mask-image: url("../images/logo.svg");
+          mask-image: url("../images/logo.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  z-index: 2;
+}
+@keyframes fill-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 body .form_ui {
   width: 100%;
 }
@@ -2167,6 +2232,44 @@ body .faqs_section {
   padding: 4rem 0;
   background-color: #f8f9fa;
   margin-top: 60px;
+  position: relative;
+}
+body .faqs_section::before {
+  content: "";
+  position: absolute;
+  bottom: -2%;
+  left: 8%;
+  width: 100px;
+  height: 100px;
+  background: url("../images/patt3.png") no-repeat;
+  background-size: contain;
+  z-index: 1;
+  opacity: 0.6;
+}
+@media (max-width: 576px) {
+  body .faqs_section::before {
+    width: 90px;
+    height: 90px;
+  }
+}
+body .faqs_section::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  width: 100px;
+  height: 100px;
+  background: url("../images/patt1.png") no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+@media (max-width: 576px) {
+  body .faqs_section::after {
+    width: 50px;
+    height: 50px;
+    top: 4%;
+    right: 6%;
+  }
 }
 body .faqs_section .section_header {
   margin-bottom: 2rem;
@@ -4655,14 +4758,49 @@ body .recent-card .activity-list {
 body .recent-card .activity-list .activity-item {
   border-left: 3px solid #23254e;
   padding-left: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 10px;
 }
 body .recent-card .activity-list .activity-item p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 body .recent-card .activity-list .activity-item small {
   color: #6c757d;
   font-size: 0.8rem;
+}
+body .recent-card .activity-list .activity-item:nth-child(1) {
+  border-left-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+body .recent-card .activity-list .activity-item:nth-child(2) {
+  border-left-color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+}
+body .recent-card .activity-list .activity-item:nth-child(3) {
+  border-left-color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.15);
+}
+body .recent-card .activity-list .activity-item:nth-child(4) {
+  border-left-color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+body .recent-card .activity-list .activity-item:nth-child(5n+1) {
+  border-left-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+body .recent-card .activity-list .activity-item:nth-child(5n+2) {
+  border-left-color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+}
+body .recent-card .activity-list .activity-item:nth-child(5n+3) {
+  border-left-color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.15);
+}
+body .recent-card .activity-list .activity-item:nth-child(5n+4) {
+  border-left-color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
 }
 body .search-bar {
   width: 100%;
@@ -5831,17 +5969,6 @@ body .article-card {
 body .article-card:hover {
   transform: translateY(-5px);
 }
-body .article-card .badge-featured {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #ff7b00;
-  color: #fff;
-  padding: 0.2rem 0.6rem;
-  border-radius: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-}
 body .article-card .image-wrapper {
   background: #f5f0ff;
   display: flex;
@@ -5904,7 +6031,7 @@ body .article-card .content .author-info .stats span {
 }
 body .newsletter-section {
   position: relative;
-  border-radius: 1rem;
+  border-radius: 10px;
   overflow: hidden;
   padding: 3rem 0;
   margin: 2rem auto;
@@ -5912,6 +6039,11 @@ body .newsletter-section {
   color: #fff;
   background: #23254e;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 576px) {
+  body .newsletter-section {
+    border-radius: 0;
+  }
 }
 body .newsletter-section .bg-cover {
   position: absolute;
@@ -5930,10 +6062,21 @@ body .newsletter-section .newsletter-content .title {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+@media (max-width: 576px) {
+  body .newsletter-section .newsletter-content .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
 body .newsletter-section .newsletter-content .subtitle {
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 1.5rem;
   font-size: 1rem;
+}
+@media (max-width: 576px) {
+  body .newsletter-section .newsletter-content .subtitle {
+    font-size: 0.8rem;
+  }
 }
 body .newsletter-section .newsletter-content .newsletter-form {
   display: flex;
@@ -5947,6 +6090,11 @@ body .newsletter-section .newsletter-content .newsletter-form .email-input {
   padding: 0.6rem 1rem;
   font-size: 0.9rem;
   color: #23254e;
+}
+@media (max-width: 576px) {
+  body .newsletter-section .newsletter-content .newsletter-form .email-input {
+    width: 200px;
+  }
 }
 body .newsletter-section .newsletter-content .newsletter-form .btn-subscribe {
   display: flex;

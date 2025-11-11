@@ -1,7 +1,6 @@
 const ArticleCard = ({ article }) => {
   return (
     <div className="article-card">
-      {article.featured && <span className="badge-featured">مميز</span>}
 
       <div className="image-wrapper">
         <img src={article.image} alt={article.title} />

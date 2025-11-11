@@ -9,7 +9,7 @@ export default function UserDropDown() {
   const { client } = useSelector((state) => state.clientData);
   const navigate = useNavigate(); 
 
-  const displayName = client?.displayName || "Mariam Samir";
+  const displayName = client?.displayName || "Khaled Ismail";
 
   return (
     <Dropdown>
@@ -20,10 +20,10 @@ export default function UserDropDown() {
 
   <Dropdown.Menu className="custom-dropdown-menu text-end">
     <div className="dd-header">
-      <div className="avatar">M</div>
+      <div className="avatar">K</div>
       <div className="user-meta">
-        <div className="name">Mariam Samir</div>
-        <div className="email">Mariam.coach@example.com</div>
+        <div className="name">Khaled Ismail</div>
+        <div className="email">Khaled.coach@example.com</div>
         <div className="role-badge">Coach</div>
       </div>
     </div>
@@ -45,26 +45,26 @@ export default function UserDropDown() {
 
       <div className="user-item" 
        onClick={() => navigate("/dashboard")} >
-        <div className="icon">أ</div>
+        <div className="icon">A</div>
         <div className="meta">
-          <div className="u-name">أحمد حسن</div>
+          <div className="u-name">Ahmed Hassan</div>
           <div className="u-role">Participant</div>
         </div>
       </div>
   <div className="user-item"       
         onClick={() => navigate("/coach-dashboard")} >
 
-        <div className="icon">م</div>
+        <div className="icon">K</div>
         <div className="meta">
-          <div className="u-name"> مريم سمير</div>
+          <div className="u-name"> Khaled Ismail </div>
           <div className="u-role">Coach</div>
         </div>
       </div>
       <div className="user-item"
           onClick={() => navigate("/startup-dashboard")} >
-        <div className="icon">س</div>
+        <div className="icon">S</div>
         <div className="meta">
-          <div className="u-name">سارة أحمد</div>
+          <div className="u-name">Sarah Ahmed</div>
           <div className="u-role">Startup</div>
         </div>
       </div>
