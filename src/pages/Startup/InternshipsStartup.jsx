@@ -4,10 +4,12 @@ import InternshipsTabs from "../../components/StartupDashboard/Internships/Inter
 import ActiveSessions from "../../components/StartupDashboard/Internships/ActiveSessions";
 import DraftSessions from "../../components/StartupDashboard/Internships/DraftSessions";
 import ClosedSessions from "../../components/StartupDashboard/Internships/ClosedSessions";
+import { useNavigate } from "react-router";
 
 export default function InternshipsStartup() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Active");
+  const navigate = useNavigate();
 
   return (
     <div className="dashboard-layout">
@@ -27,15 +29,18 @@ export default function InternshipsStartup() {
         </div>
 
         {/* ===== Subheader with Button ===== */}
-        <div className="internship-header">
-          <div className="internship-info">
+        <div className="sub-header">
+          <div className="info">
             <h5 className="mb-0">Startup Internships</h5>
             <p className="text-muted small mb-0">
               Discover exciting internship opportunities at innovative startups
             </p>
           </div>
 
-          <button className="btn btn-dark">
+          <button
+            className="btn btn-dark"
+            onClick={() => navigate("/startup-dashboard/create")}
+          >
             <i className="fa-solid fa-plus"></i> Create Internship
           </button>
         </div>

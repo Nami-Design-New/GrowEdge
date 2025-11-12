@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Sidebar from "../../components/Dashboard/ParticipantSidebar";
-import SettingsTabs from "../../components/Dashboard/Settings/SettingsTabs";
-import PrivacySettings from "../../components/Dashboard/profile/Preferences";
-import BasicInfoForm from "../../components/Dashboard/profile/BasicInfoForm";
-import NotificationPreferences from "../../components/Dashboard/Settings/NotificationPreferences";
-import AccountSettings from "../../components/Dashboard/Settings/AccountSettings";
+import Sidebar from "../../components/StartupDashboard/StartupSidebar";
+import SettingsTabs from "../../components/StartupDashboard/Settings/SettingsTabs";
+import PrivacySettings from "../../components/StartupDashboard/profile/Preferences";
+import BasicInfoForm from "../../components/StartupDashboard/profile/BasicInfoForm";
+import NotificationPreferences from "../../components/StartupDashboard/Settings/NotificationPreferences";
+import AccountSettings from "../../components/StartupDashboard/Settings/AccountSettings";
 
-export default function Settings() {
+export default function StartupSettings() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Profile");
 
@@ -31,7 +31,7 @@ export default function Settings() {
     <div className="dashboard-layout">
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <div className="main-content p-0 p-md-4">
-        <div className="overview-header">
+        <div className="overview-header ">
           <h5 className="mb-0">Settings</h5>
           <button
             className="sidebar-toggle-btn"

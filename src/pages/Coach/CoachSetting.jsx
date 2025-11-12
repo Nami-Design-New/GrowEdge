@@ -8,7 +8,7 @@ import AccountSettings from "../../components/CoachDashboard/Settings/AccountSet
 
 export default function CoachSettings() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("Privacy");
+  const [activeTab, setActiveTab] = useState("Profile");
 
   const renderTabContent = () => {
     switch (activeTab) {

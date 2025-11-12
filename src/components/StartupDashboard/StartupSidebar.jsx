@@ -33,7 +33,7 @@ export default function Sidebar({ isOpen, onClose }) {
             <span>Internships</span>
           </NavLink>
 
-          <NavLink to="/startup-dashboard/clients" className="menu-item">
+          <NavLink to="/startup-dashboard/Candidates" className="menu-item">
             <i className="fa-solid fa-users"></i>
             <span>Candidates</span>
           </NavLink>

@@ -770,47 +770,7 @@ border: 1px solid $main;
 
 ///
  .overview-tab{
-.earnings-card{
-  background: $white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin: 0 1rem;
-  h6 {
-    font-size: 1rem;
-  }
 
-  .session-item {
-    .progress-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      position: relative;
-    }
-
-    .progress {
-      flex: 1;
-      height: 8px;
-      background: #e9ecef;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .progress-bar {
-      height: 8px;
-      background: $main; 
-      border-radius: 4px;
-      transition: width 0.4s ease;
-    }
-
-    .percent-text {
-      font-size: 0.8rem;
-      color: #6c757d;
-      min-width: 35px;
-      text-align: right;
-    }
-  }
-}
 .monthly-earnings {
   background: $white;
   border-radius: 12px;
@@ -858,6 +818,48 @@ border: 1px solid $main;
   }
 }
  }
+ ///
+ .earnings-card{
+  background: $white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin: 0 1rem;
+  h6 {
+    font-size: 1rem;
+  }
+
+  .session-item {
+    .progress-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      position: relative;
+    }
+
+    .progress {
+      flex: 1;
+      height: 8px;
+      background: #e9ecef;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: $main; 
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    .percent-text {
+      font-size: 0.8rem;
+      color: #6c757d;
+      min-width: 35px;
+      text-align: right;
+    }
+  }
+}
 ///
 .recent-payments {
   background: $white;
@@ -1261,5 +1263,11 @@ border: 1px solid $main;
     }
   }
 }
-
+///
+.internships-card{
+  background: $white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin:  1rem;}
 

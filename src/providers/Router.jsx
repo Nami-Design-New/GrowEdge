@@ -34,6 +34,12 @@ import StartupOverview from "../pages/Startup/StartupOverview";
 import InternshipsStartup from "../pages/Startup/InternshipsStartup";
 import EditStartupProfile from "../pages/Startup/EditProfile";
 import InternshipDetails from "../components/StartupDashboard/Internships/InternshipDetails";
+import StartupMessages from "../pages/Startup/StartupMessages";
+import StartupNotifications from "../pages/Startup/StartupNotifications";
+import StartupSettings from "../pages/Startup/StartupSetting";
+import CreateInternship from "../pages/Startup/CreateInternship";
+import StartupCandidates from "../pages/Startup/StartupCandidates";
+import StartupAnalytics from "../pages/Startup/StartupAnalytics";
 
 export const router = createBrowserRouter([
   {
@@ -120,9 +126,15 @@ export const router = createBrowserRouter([
   element: <DashboardLayout />,
   children: [
     { index:true , element: <StartupOverview /> },
-    { path: "Internships", element: <InternshipsStartup /> },
-{ path: "Internships/:id", element: <InternshipDetails /> },
+    { path: "Internships", element: <InternshipsStartup /> },  
+    { path: "Internships/:id", element: <InternshipDetails /> },
+    { path: "Candidates", element: <StartupCandidates/> },
     { path: "edit-profile", element: <EditStartupProfile/> },
+    { path: "analytics", element: <StartupAnalytics/> },
+    { path: "messages", element: <StartupMessages/> },
+    { path: "notifications", element: <StartupNotifications/> },
+    { path: "settings", element: <StartupSettings/> },
+    { path: "create", element: <CreateInternship /> },
 
   ],
 }
