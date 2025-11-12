@@ -1663,6 +1663,18 @@ body .career-path::before {
   z-index: 1;
   opacity: 0.3;
 }
+body .career-path::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  width: 120px;
+  height: 120px;
+  background: url("../images/2.svg") no-repeat;
+  background-size: contain;
+  z-index: 2;
+  opacity: 0.8;
+}
 body .career-path .section-title {
   font-size: 2rem;
   font-weight: 700;
@@ -1820,6 +1832,18 @@ body .why-choose::after {
   background-size: contain;
   z-index: 1;
   opacity: 0.9;
+}
+body .why-choose .pattern-bottom {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: url("../images/8.svg") no-repeat;
+  background-size: contain;
+  opacity: 0.9;
+  z-index: 1;
 }
 body .why-choose .section-title,
 body .why-choose .section-subtitle,
@@ -2126,13 +2150,31 @@ body .success-section {
 body .success-section::before {
   content: "";
   position: absolute;
-  top: -2%;
+  top: 0%;
   right: 0%;
-  width: 100px;
+  width: 80px;
   height: 100px;
-  background: url("../images/pat.png") no-repeat;
+  background: url("../images/3.svg") no-repeat;
   background-size: contain;
   z-index: 1;
+  opacity: 0.9;
+}
+@media (max-width: 768px) {
+  body .success-section::before {
+    width: 70px;
+    height: 70px;
+  }
+}
+body .success-section::after {
+  content: "";
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  background: url("../images/6.svg") no-repeat;
+  background-size: contain;
+  z-index: 2;
   opacity: 0.9;
 }
 body .success-section .section-header {

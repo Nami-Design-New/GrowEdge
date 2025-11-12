@@ -8,9 +8,12 @@ export default function Why() {
     Discover what makes Grow Edge the trusted platform for accelerating your career journey.
   </p>
 <div className="container">
+            <span className="pattern-bottom"></span>
 
   <div className="reasons">
+
     <div className="reason-card">
+
       <div className="icon">
         <i className="fa-solid fa-user-tie"></i>
       </div>
