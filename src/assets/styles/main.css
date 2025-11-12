@@ -6250,10 +6250,21 @@ body .internships-card .internship-list .internship-item {
   border-radius: 12px;
   border: 1px solid #ddd;
 }
+@media (max-width: 768px) {
+  body .internships-card .internship-list .internship-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 body .internships-card .internship-list .internship-item .info-section {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  body .internships-card .internship-list .internship-item .info-section {
+    flex-direction: column;
+  }
 }
 body .internships-card .internship-list .internship-item .info-section .icon {
   width: 40px;
@@ -6424,6 +6435,11 @@ body .current-interns-card {
   border-radius: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+@media (max-width: 768px) {
+  body .current-interns-card {
+    margin-top: 1rem;
+  }
+}
 body .current-interns-card .header {
   display: flex;
   align-items: flex-start;
@@ -6456,6 +6472,11 @@ body .current-interns-card .interns-list .intern-item {
   padding: 1rem;
   border-radius: 12px;
   border: 1px solid #e4e5e6;
+}
+@media (max-width: 768px) {
+  body .current-interns-card .interns-list .intern-item {
+    flex-direction: column;
+  }
 }
 body .current-interns-card .interns-list .intern-item .intern-info {
   display: flex;
@@ -6758,7 +6779,6 @@ body .active-sessions .active-internship-card .stats .stat span {
     font-size: 0.85rem;
   }
   body .active-sessions .active-internship-card .stats {
-    flex-direction: column;
     gap: 0.5rem;
   }
 }
@@ -7072,6 +7092,11 @@ body .internship-details .card-box .metrics {
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 992px) {
+  body .internship-details .card-box .metrics {
+    flex-direction: column;
+  }
+}
 body .internship-details .card-box .metrics .metric-card {
   flex: 1;
   display: flex;
@@ -7118,6 +7143,11 @@ body .create-internship {
   border-radius: 12px;
   padding: 1rem 1.2rem;
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  body .create-internship .btn-group {
+    flex-direction: column;
+  }
 }
 body .pipeline-view .stage-column {
   border: 1px solid #eee;
@@ -7272,6 +7302,11 @@ body .application-card .application-main {
   gap: 1rem;
   flex: 1;
 }
+@media (max-width: 768px) {
+  body .application-card .application-main {
+    flex-direction: column;
+  }
+}
 body .application-card .application-main .avatar {
   width: 50px;
   height: 50px;
@@ -7410,6 +7445,7 @@ body .interviews-page .interview-card {
   border-radius: 12px;
   padding: 10px 16px;
   transition: 0.3s;
+  /* Responsive */
 }
 body .interviews-page .interview-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -7479,6 +7515,54 @@ body .interviews-page .interview-card .actions .join-btn {
 body .interviews-page .interview-card .actions .review-btn {
   color: #444;
 }
+@media (max-width: 768px) {
+  body .interviews-page .interview-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  body .interviews-page .interview-card .left {
+    width: 100%;
+    gap: 12px;
+  }
+  body .interviews-page .interview-card .left .info .name {
+    font-size: 0.95rem;
+  }
+  body .interviews-page .interview-card .left .info .position {
+    font-size: 0.8rem;
+  }
+  body .interviews-page .interview-card .datetime {
+    text-align: left;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  body .interviews-page .interview-card .actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  body .interviews-page .interview-card .actions .btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  body .interviews-page .interview-card {
+    padding: 8px 12px;
+  }
+  body .interviews-page .interview-card .left {
+    gap: 8px;
+  }
+  body .interviews-page .interview-card .left .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+  body .interviews-page .interview-card .actions .btn {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+  }
+}
 body .recruitment-page {
   display: flex;
 }
@@ -7540,6 +7624,11 @@ body .recruitment-page .time-to-hire {
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 768px) {
+  body .recruitment-page .time-to-hire {
+    margin-top: 1rem;
+  }
 }
 body .recruitment-page .time-to-hire .title {
   font-size: 1rem;
@@ -7614,6 +7703,11 @@ body .recruitment-page .response-rate-card .metrics {
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 992px) {
+  body .recruitment-page .response-rate-card .metrics {
+    flex-direction: column;
+  }
+}
 body .recruitment-page .response-rate-card .metrics .metric-card {
   flex: 1;
   display: flex;
@@ -7672,6 +7766,11 @@ body .recruitment-page .monthly-applications-card .trend-item .metrics {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media (max-width: 992px) {
+  body .recruitment-page .monthly-applications-card .trend-item .metrics {
+    flex-wrap: wrap;
+  }
 }
 body .recruitment-page .monthly-applications-card .trend-item .metrics .metric-card {
   flex: 1;

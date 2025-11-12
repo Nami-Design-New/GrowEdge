@@ -9,10 +9,10 @@ export default function Performance() {
             <div className=" col-12">
         <RecruitmentGoals />
         </div>
-         <div className=" col-6 mt-3">
+         <div className="col-12 col-md-6 mt-3">
         <HiringTeamPerformance />
         </div>
-          <div className=" col-6 mt-3">
+          <div className="col-12 col-md-6 mt-3">
         <BottleneckAnalysis />
         </div>
           <div className=" col-12 mt-3">

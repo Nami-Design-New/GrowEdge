@@ -6,10 +6,10 @@ import TimeToHire from "./TimeToHire";
 export default function Recruitment() {
     return (
         <div className="recruitment-page row">
-            <div className=" col-6">
+            <div className=" col-12 col-md-6">
                 <CandidateQuality />
             </div>
-            <div className=" col-6">
+            <div className="col-12 col-md-6">
                 <TimeToHire />
             </div>
             <div className="col-12 mt-3">
