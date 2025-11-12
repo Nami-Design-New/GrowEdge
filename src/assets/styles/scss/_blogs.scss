@@ -122,7 +122,7 @@
 .article-card {
   background: $white;
   border-radius: 1rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   position: relative;
   transition: transform 0.3s;
@@ -205,7 +205,7 @@
 ////
 .newsletter-section {
   position: relative;
-  border-radius: $border-radius;
+  border-radius:$border-radius;
   overflow: hidden;
   padding: 3rem 0;
   margin: 2rem auto;
@@ -213,9 +213,9 @@
   color: #fff;
   background: $main;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  @media (max-width: 576px) {
-    border-radius: 0;
-  }
+    @media (max-width: 576px) {
+      border-radius:0;
+    }
   .bg-cover {
     position: absolute;
     inset: 0;
@@ -233,19 +233,20 @@
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      @media (max-width: 576px) {
-        font-size: 1.1rem;
-        font-weight: 600;
-      }
+          @media (max-width: 576px) {
+              font-size: 1.1rem;
+      font-weight: 600;
+          }
     }
 
     .subtitle {
       color: rgba(255, 255, 255, 0.85);
       margin-bottom: 1.5rem;
       font-size: 1rem;
-      @media (max-width: 576px) {
-        font-size: 0.8rem;
-      }
+                @media (max-width: 576px) {
+                        font-size: 0.8rem;
+
+                }
     }
 
     .newsletter-form {
@@ -260,9 +261,10 @@
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
         color: $main;
-        @media (max-width: 576px) {
-          width: 200px;
-        }
+                        @media (max-width: 576px) {
+                                  width: 200px;
+
+                        }
       }
 
       .btn-subscribe {

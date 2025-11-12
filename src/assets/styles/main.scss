@@ -6,6 +6,24 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   font-family: "Cairo", sans-serif;
+  cursor: none;
+  button,
+  a {
+    cursor: none;
+  }
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    background: url("../public/images/cursor.svg") no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: top 0.05s ease, left 0.05s ease;
+  }
 
   @import "./scss/layout";
   @import "./scss/form_ui";
@@ -64,6 +82,7 @@ body {
     .success-section .controls-row .nav-btns .nav-btn i {
       transform: rotate(180deg);
     }
+   
   }
   &.ar {
     .hero__panel .hero__overlay .hero_title .arrow {
