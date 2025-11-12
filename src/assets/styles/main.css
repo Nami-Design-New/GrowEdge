@@ -2774,7 +2774,11 @@ body .mvp-page .container {
   max-width: 1200px;
 }
 body .mvp-page form {
-  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 1.5rem 0;
 }
 @media (max-width: 576px) {
   body .mvp-page form {
