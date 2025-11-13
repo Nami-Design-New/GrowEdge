@@ -5973,86 +5973,213 @@ body .completed-session-card .section.feedback .feedback-text {
   font-style: italic;
   color: #333;
 }
-body .calendar-view {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-body .calendar-view .calendar-container .react-calendar {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 10px;
-  font-family: "Inter", sans-serif;
-}
-body .calendar-view .calendar-container .react-calendar button {
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-body .calendar-view .calendar-container .react-calendar button:hover {
-  background: #f3f4f6;
-}
-body .calendar-view .calendar-container .react-calendar .react-calendar__tile--active {
-  background: #f7941d !important;
-  color: #fff !important;
-}
-body .calendar-view .session-details {
+body .calendar-container {
+  padding: 30px;
   background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  margin-top: 30px;
 }
-body .calendar-view .session-details .selected-date {
-  font-weight: 600;
-  margin-bottom: 10px;
+body .calendar-container .calendar-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #23254e;
+  margin-bottom: 20px;
 }
-body .calendar-view .session-details .session-list {
+body .calendar-container .calendar-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+body .calendar-container .calendar-wrapper .custom-calendar {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  height: 600px;
+}
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 12px 12px 0 0;
+  gap: 10px;
 }
-body .calendar-view .session-details .session-list .calendar-session-card {
-  border: 1px solid #eee;
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group button {
+  background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
-  padding: 12px 15px;
-  position: relative;
-  transition: all 0.3s ease;
+  padding: 6px 14px;
+  font-size: 14px;
+  color: #23254e;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
-body .calendar-view .session-details .session-list .calendar-session-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group button:hover {
+  background: #f1f5f9;
 }
-body .calendar-view .session-details .session-list .calendar-session-card h6 {
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group button.rbc-active {
+  background: #23254e;
+  color: #fff;
+  border-color: #23254e;
+}
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-toolbar-label {
   font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 16px;
+  color: #23254e;
+  text-align: center;
+  flex: 1;
 }
-body .calendar-view .session-details .session-list .calendar-session-card .client,
-body .calendar-view .session-details .session-list .calendar-session-card .time {
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-event {
+  border-radius: 8px;
   font-size: 14px;
-  color: #666;
-  margin-bottom: 3px;
+  padding: 4px 8px;
+  font-weight: 600;
+  cursor: pointer;
 }
-body .calendar-view .session-details .session-list .calendar-session-card .status-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 2px 8px;
-  border-radius: 6px;
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-event.upcoming {
+  background-color: #fef3c7;
+  color: #78350f;
+  border-left: 4px solid #f7b500;
+}
+body .calendar-container .calendar-wrapper .custom-calendar .rbc-event.completed {
+  background-color: #dcfce7;
+  color: #14532d;
+  border-left: 4px solid #16a34a;
+}
+body .calendar-container .modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+body .calendar-container .modal-content {
+  background: #fff;
+  padding: 24px 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 1000000;
+}
+body .calendar-container .modal-content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+body .calendar-container .modal-content p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #374151;
+}
+body .calendar-container .modal-content .status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 10px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  width: -moz-max-content;
+  width: max-content;
 }
-body .calendar-view .session-details .session-list .calendar-session-card .status-badge.upcoming {
+body .calendar-container .modal-content .status.upcoming {
   background: #fff3e0;
-  color: #f7941d;
+  color: #f7b500;
 }
-body .calendar-view .session-details .session-list .calendar-session-card .status-badge.completed {
+body .calendar-container .modal-content .status.completed {
   background: #e6f9ed;
-  color: #2e7d32;
+  color: #16a34a;
 }
-body .calendar-view .session-details .no-session {
-  color: #999;
-  font-size: 14px;
-  margin-top: 15px;
+body .calendar-container .modal-content .close-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+body .calendar-container .modal-content .close-btn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 992px) {
+  body .calendar-container {
+    padding: 20px;
+  }
+  body .calendar-container .calendar-title {
+    font-size: 20px;
+    text-align: center;
+  }
+  body .calendar-container .calendar-wrapper .custom-calendar {
+    height: 800px;
+  }
+  body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group {
+    justify-content: center;
+  }
+  body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group button {
+    flex: 1 1 30%;
+    font-size: 13px;
+  }
+  body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-toolbar-label {
+    order: -1;
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  body .calendar-container .calendar-wrapper .custom-calendar {
+    height: 600px;
+    overflow-x: auto;
+  }
+  body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar {
+    padding: 10px;
+  }
+  body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-toolbar-label {
+    font-size: 14px;
+  }
+  body .calendar-container .modal-content {
+    padding: 18px;
+  }
+  body .calendar-container .modal-content h4 {
+    font-size: 18px;
+  }
+  body .calendar-container .modal-content p {
+    font-size: 13px;
+  }
 }
 body .internships-card {
   background: #fff;
