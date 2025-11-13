@@ -1,18 +1,15 @@
-
 import { useEffect, useState, useRef } from "react";
-import { useTranslation } from "react-i18next";
 
 export default function StatsSection() {
-  const { t } = useTranslation();
+  const stats = [
+    { value: 10000, label: "Students Placed", suffix: "+" },
+    { value: 500, label: "Partner Startups", suffix: "+" },
+    { value: 200, label: "Expert Coaches", suffix: "+" },
+    { value: 95, label: "Success Rate", suffix: "%" },
+  ];
+
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
-
-  const stats = [
-    { value: 10000, label: t("stats.students")  },
-    { value: 500, label: t("stats.partners") },
-    { value: 200, label: t("stats.coaches")  },
-    { value: 95, label: t("stats.success"), suffix: "%" },
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,21 +22,26 @@ export default function StatsSection() {
 
   return (
     <section ref={ref} className="stats-section">
-      <div className="bg">
+      <div className="stats-container">
+        <div className="stats-text">
+          <p>We speak with our powerful statistics</p>
+        </div>
 
-      <div className="stats-grid container">
-        {stats.map((item, i) => (
-          <StatCard
-            key={i}
-            value={item.value}
-            label={item.label}
-            visible={visible}
-            suffix={item.suffix}
-          />
-        ))}
+        <div className="stats-items">
+          {stats.map((item, index) => (
+            <StatCard
+              key={index}
+              value={item.value}
+              label={item.label}
+              suffix={item.suffix}
+              visible={visible}
+              index={index}
+            />
+          ))}
+        </div>
+
+        <img src="../images/5.svg" alt="pattern" className="pattern-svg" />
       </div>
-            </div>
-
     </section>
   );
 }
@@ -48,7 +50,7 @@ function easeOutCubic(t) {
   return 1 - Math.pow(1 - t, 3);
 }
 
-function StatCard({ value, label, visible, suffix = "+" }) {
+function StatCard({ value, label, suffix, visible, index }) {
   const [count, setCount] = useState(0);
   const [show, setShow] = useState(false);
   const cardRef = useRef(null);
@@ -56,15 +58,17 @@ function StatCard({ value, label, visible, suffix = "+" }) {
   useEffect(() => {
     if (!visible) return;
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) setShow(true);
+      if (entry.isIntersecting) {
+        setTimeout(() => setShow(true), index * 200);
+      }
     });
     if (cardRef.current) observer.observe(cardRef.current);
     return () => observer.disconnect();
-  }, [visible]);
+  }, [visible, index]);
 
   useEffect(() => {
     if (!show) return;
-    const duration = 1400;
+    const duration = 2000;
     const startTime = performance.now();
 
     const tick = (now) => {
@@ -79,12 +83,12 @@ function StatCard({ value, label, visible, suffix = "+" }) {
   }, [show, value]);
 
   return (
-    <div ref={cardRef} className={`stat-card ${show ? "visible" : ""}`}>
-      <div className="stat-value">
+    <div ref={cardRef} className="stat-card">
+      <h2>
         {count}
-        <span className="plus">{suffix}</span>
-      </div>
-      <p className="stat-label">{label}</p>
+        <span className="suffix">{suffix}</span>
+      </h2>
+      <p>{label}</p>
     </div>
   );
 }
