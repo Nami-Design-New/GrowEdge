@@ -190,12 +190,12 @@
   display: flex;
   justify-content: center;
   position: relative;
+
  @media (max-width: 576px) {
   padding-top: 100px ;
        }
   .hero-inner {
     width: 100%;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -466,7 +466,6 @@
     }
   }
 }
-
 
 /////////about sec/////////////
 .about-section {
@@ -1046,7 +1045,7 @@
 /////////////
 .career-path {
   padding: 4rem 0rem;
-  background: #fff;
+  background: $white;
   text-align: center;
   position: relative;
   &::before {

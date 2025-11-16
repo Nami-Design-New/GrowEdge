@@ -6,15 +6,13 @@ header {
   z-index: 1000;
   backdrop-filter: blur(20px);
   transition: $transition;
-  // background: #fafafc;
-  // box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     padding: 0.9rem 2rem;
-    // background: #fafafc;
     transition: $transition;
 
     @media screen and (max-width: 992px) {
@@ -40,7 +38,7 @@ header {
       align-items: center;
       gap: 40px;
       transition: $transition;
-margin-right: 40px;
+      margin-right: 40px;
       a {
         font-weight: 500;
         font-size: 16px;
@@ -74,7 +72,7 @@ margin-right: 40px;
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
         transition: $transition;
         z-index: 900;
-margin-right: 0px;
+        margin-right: 0px;
 
         &.open {
           right: 0;
@@ -161,7 +159,13 @@ margin-right: 0px;
     }
   }
 }
-
+header.sticky {
+  background: #fafafc;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+ header.sticky nav {
+    background: #fafafc;
+}
 .user_dropdown {
   background: $main2 !important;
   border-radius: $border-radius;

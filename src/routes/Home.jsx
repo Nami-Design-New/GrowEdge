@@ -1,7 +1,6 @@
 // import React from 'react'
-import Hero from '../components/home/Hero'
+// import Hero from '../components/home/Hero'
 import HeroSection from '../components/home/HeroSection'
-
 import About from '../components/home/AboutSection'
 import StatsSection from '../components/home/StatsSection'
 import CareerSection from '../components/home/CareerSection'
@@ -13,7 +12,7 @@ export default function Home() {
   return (
     <>
      <HeroSection/>
-     <Hero/>
+     {/* <Hero/> */}
       
      <About/>
      <StatsSection />

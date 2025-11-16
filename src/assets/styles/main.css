@@ -375,6 +375,13 @@ body header nav .actions .toggle_menu {
     gap: 10px;
   }
 }
+body header.sticky {
+  background: #fafafc;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+body header.sticky nav {
+  background: #fafafc;
+}
 body .user_dropdown {
   background: #50b04d !important;
   border-radius: 10px;
@@ -1284,7 +1291,6 @@ body .hero-section {
 }
 body .hero-section .hero-inner {
   width: 100%;
-  max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
