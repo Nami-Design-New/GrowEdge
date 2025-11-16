@@ -1,78 +1,120 @@
-import  { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router";
+import { useState, useEffect } from "react";
 
-const HeroSection = () => {
-  const [active, setActive] = useState(null);
-  const { t } = useTranslation();
-  const navigate = useNavigate();
+export default function HeroSection() {
+    const [currentImage, setCurrentImage] = useState(0);
 
-  const sections = [
-    {
-      title: t("hero.coachingTitle"),
-      text: t("hero.coachingText"),
-      button: t("hero.coachingButton"),
-      image: "/images/coaching.webp",
-      path: "/career-coaching",
-    },
-    {
-      title: t("hero.internshipTitle"),
-      text: t("hero.internshipText"),
-      button: t("hero.internshipButton"),
-      image: "/images/internship.avif",
-      path: "/startup-internships",
-    },
-    {
-      title: t("hero.mvpTitle"),
-      text: t("hero.mvpText"),
-      button: t("hero.mvpButton"),
-      image: "/images/mvp.webp",
-      path: "/mvpLabs",
-    },
-  ];
+    const images = [
+        "/images/internship.avif",
+        "/images/coaching.webp",
+        "/images/mvp.webp",
+    ];
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % images.length);
+        }, 3000);
 
-  return (
-    <div className="hero">
-      {sections.map((section, index) => (
-        <div
-          key={index}
-          className={`hero__panel ${active === index ? "active" : ""}`}
-          style={{ backgroundImage: `url(${section.image})` }}
-          onMouseEnter={() => setActive(index)}
-          onMouseLeave={() => setActive(null)}
-        >
-          <div className="hero__overlay">
-            <div className="hero_title">
-              <h2>{section.title}</h2>
-              <span className="arrow">
-                <i className="fa-solid fa-angles-right"></i>
-              </span>
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <section className="hero-section">
+
+            {/* SOCIALS LEFT */}
+            <div className="socials-left">
+                <span>INSTAGRAM</span>
+                <span>TWITTER</span>
+                <span>FACEBOOK</span>
             </div>
 
-            <div className="hero__bullets">
-              {[0, 1, 2].map((bulletIndex) => (
-                <span
-                  key={bulletIndex}
-                  className={`bullet ${active === index && bulletIndex === index ? "active" : ""
-                    }`}
-                ></span>
-              ))}
+            <div className="hero-inner container">
+
+                {/* CENTER CONTENT */}
+                <div className="center-content">
+                    {/* BIG TITLE */}
+                    <div className="big-title">
+                        <div className="title-row">
+                            <div className="small-title">
+                                <p>HI, THIS IS</p>
+                                <h4>GROWEDGE</h4>
+                                <img src="/images/7.svg" alt="underline" className="underline-svg" />
+                            </div>
+                            <h1>YOUR</h1>
+                            <img src="/images/Asset 4.svg" alt="icon" className="title-icon" />
+                        </div>
+                        <div className="title-row">
+                            <h1>TRUSTED GROWTH</h1>
+                        </div>
+                        <div className="title-row">
+                            <h1>PARTNER</h1>
+                            <div className="img-contact-row">
+                                <div className="img-wrapper">
+                                    {/* <img src="/images/internship.avif" alt="partner" className="main-img" /> */}
+                                    <img src={images[currentImage]} alt="partner" className="main-img" />
+
+                                </div>
+                                <div className="circle-btn">
+                                    <i className="fa-solid fa-arrow-trend-up arrow"></i>
+                                    <svg width="120" height="120" viewBox="0 0 120 120">
+                                        <defs>
+                                            <path
+                                                id="circlePath"
+                                                d="M60,10 a50,50 0 1,1 -0.1,0"
+                                            />
+                                        </defs>
+
+                                        <text fontSize="10" fill="#fff">
+                                            <textPath xlinkHref="#circlePath" startOffset="0%">
+                                                CONTACT US • CONTACT US • CONTACT US •
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="desc-curve-row">
+                        <div className="curve-svg">
+                            <svg width="300" height="180" viewBox="0 0 300 180">
+                                <path
+                                    id="curvePath"
+                                    d="M10,140 Q150,10 290,140"
+                                    stroke="#1b2d55"
+                                    strokeWidth="4"
+                                    fill="transparent"
+                                />
+
+                                <text fontSize="14" fill="#1c2b4d" fontWeight="400" style={{ baselineShift: "-16px" }}>
+                                    <textPath href="#curvePath" startOffset="30%" spacing="auto">
+                                        SCROLL NOW
+                                    </textPath>
+                                </text>
+                                <image
+                                    href="/images/arrow.svg"
+                                    width="30"
+                                    height="25"
+                                    x="276"
+                                    y="126"
+                                />
+                            </svg>
+                        </div>
+
+                        <p className="desc">
+                            GrowEdge helps young talents build real skills and unlock their full potential.
+                            We guide students step by step toward confidence, growth, and new opportunities.
+                            Join us and take the edge in your learning journey.
+                            {/* <div className="know-more">KNOW MORE</div> */}
+
+                        </p>
+
+                    </div>
+                </div>
+
             </div>
 
-            {active === index && (
-              <div className="hero__content">
-                <p>{section.text}</p>
-                <button onClick={() => navigate(section.path)}>
-                  {section.button}
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default HeroSection;
+        </section>
+    );
+}

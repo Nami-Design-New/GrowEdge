@@ -28,8 +28,8 @@ export default function CalendarSchedule() {
     {
       id: 2,
       title: "Nutrition Guidance - Sara Mohamed",
-      start: new Date(2025, 10, 14, 14, 0),
-      end: new Date(2025, 10, 14, 15, 0),
+      start: new Date(2025, 10, 20, 14, 0),
+      end: new Date(2025, 10, 20, 15, 0),
       type: "upcoming",
     },
     {

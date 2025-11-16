@@ -6,15 +6,15 @@ header {
   z-index: 1000;
   backdrop-filter: blur(20px);
   transition: $transition;
-  background: #fafafc;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  // background: #fafafc;
+  // box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     padding: 0.9rem 2rem;
-    background: #fafafc;
+    // background: #fafafc;
     transition: $transition;
 
     @media screen and (max-width: 992px) {

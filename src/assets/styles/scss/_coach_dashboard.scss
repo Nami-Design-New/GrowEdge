@@ -1332,6 +1332,9 @@ border: 1px solid $main;
       }
     }
   }
+  .rbc-current-time-indicator{
+    background-color: transparent;
+  }
 }
 
 @keyframes fadeIn {
@@ -1421,5 +1424,6 @@ border: 1px solid $main;
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin:  1rem;}
+  margin:  1rem;
+}
 
