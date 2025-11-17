@@ -70,38 +70,34 @@ export default function HeroSection() {
                                         </text>
                                     </svg>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
-
                     <div className="desc-curve-row">
                         <div className="curve-svg">
                             <svg width="300" height="180" viewBox="0 0 300 180">
                                 <path
                                     id="curvePath"
-                                    d="M10,140 Q150,10 290,140"
+                                    d="M10,40 Q150,170 290,40"
                                     stroke="#1b2d55"
                                     strokeWidth="4"
                                     fill="transparent"
                                 />
 
-                                <text fontSize="14" fill="#1c2b4d" fontWeight="400" style={{ baselineShift: "-16px" }}>
+                                <text fontSize="14" fill="#1c2b4d" fontWeight="400" style={{ baselineShift: "5px" }}>
                                     <textPath href="#curvePath" startOffset="30%" spacing="auto">
                                         SCROLL NOW
                                     </textPath>
                                 </text>
                                 <image
-                                    href="/images/arrow.svg"
+                                    href="/images/arr.svg"
                                     width="30"
                                     height="25"
                                     x="276"
-                                    y="126"
+                                    y="26"
                                 />
                             </svg>
                         </div>
-
                         <p className="desc">
                             GrowEdge helps young talents build real skills and unlock their full potential.
                             We guide students step by step toward confidence, growth, and new opportunities.

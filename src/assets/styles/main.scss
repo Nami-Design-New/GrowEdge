@@ -6,24 +6,10 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   font-family: "Cairo", sans-serif;
-  cursor: none;
-  button,
-  a {
-    cursor: none;
-  }
-  .custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    pointer-events: none;
-    background: url("../images/cursor.svg") no-repeat center center;
-    background-size: contain;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: top 0.05s ease, left 0.05s ease;
-  }
+  cursor: url("/images/cursor.svg") 12 12, auto;
+button, a {
+  cursor: url("/images/cursor.svg") 12 12, auto;
+}
 
   @import "./scss/layout";
   @import "./scss/form_ui";

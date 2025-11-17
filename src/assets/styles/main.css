@@ -207,24 +207,10 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   font-family: "Cairo", sans-serif;
-  cursor: none;
+  cursor: url("/images/cursor.svg") 12 12, auto;
 }
-body button,
-body a {
-  cursor: none;
-}
-body .custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-  background: url("../images/cursor.svg") no-repeat center center;
-  background-size: contain;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition: top 0.05s ease, left 0.05s ease;
+body button, body a {
+  cursor: url("/images/cursor.svg") 12 12, auto;
 }
 body header {
   position: fixed;
@@ -1553,7 +1539,6 @@ body .hero-section .desc-curve-row .desc {
 }
 body .hero-section .desc-curve-row .curve-svg {
   width: 300px;
-  margin-top: -10rem;
 }
 body .hero-section .desc-curve-row .curve-svg svg {
   width: 100%;
@@ -6754,6 +6739,121 @@ body .newsletter-section .newsletter-content .newsletter-form .btn-subscribe i {
   body .newsletter-section .newsletter-content .email-input {
     width: 100%;
   }
+}
+body .blog-details {
+  padding: 3rem 1rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+body .blog-details::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: #23254e;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  body .blog-details::before {
+    height: 20%;
+  }
+}
+body .blog-details .back-btn {
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s;
+  margin-top: 0.5rem;
+}
+body .blog-details .back-btn i {
+  font-size: 1rem;
+}
+body .blog-details .back-btn:hover {
+  color: #50b04d;
+}
+body .blog-details .blog-image {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+body .blog-details .blog-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 1rem;
+}
+body .blog-details .blog-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+body .blog-details .blog-meta .category {
+  border: 1px solid #50b04d;
+  color: #50b04d;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+body .blog-details .blog-meta .date {
+  color: #888;
+}
+body .blog-details .blog-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #1c2b4d;
+}
+body .blog-details .blog-description {
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+body .blog-details .blog-points {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+body .blog-details .blog-points li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+@media (max-width: 768px) {
+  body .blog-details .blog-title {
+    font-size: 1.5rem;
+  }
+}
+body .blog-details .more-details {
+  margin-top: 2rem;
+}
+body .blog-details .more-details .more-details-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1c2b4d;
+  margin-bottom: 1rem;
+}
+body .blog-details .more-details .more-details-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+body .not-found-article {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  color: #23254e;
 }
 body .internships-card {
   background: #fff;

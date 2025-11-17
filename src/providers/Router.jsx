@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 // import ProtectionProvider from "./ProtectionProvider";
 import RootLayout from "../layout/RootLayout";
-import DashboardLayout from "../ui/layout/DashboardLayout"; 
+import DashboardLayout from "../ui/layout/DashboardLayout";
 import Error from "../routes/Error";
 import Home from "../routes/Home";
 import Login from "../routes/Login";
@@ -40,6 +40,7 @@ import StartupSettings from "../pages/Startup/StartupSetting";
 import CreateInternship from "../pages/Startup/CreateInternship";
 import StartupCandidates from "../pages/Startup/StartupCandidates";
 import StartupAnalytics from "../pages/Startup/StartupAnalytics";
+import BlogDetails from "../routes/BlogDetails";
 
 export const router = createBrowserRouter([
   {
@@ -51,93 +52,97 @@ export const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-       {
+      {
         path: "signin",
         element: <Login />,
       },
-        {
+      {
         path: "signup",
         element: <Register />,
       },
-        {
+      {
         path: "signup",
         element: <Register />,
       },
-          {
+      {
         path: "reset-password",
         element: <ResetPassword />,
       },
-          {
+      {
         path: "faqs",
         element: <Faqs />,
       },
-        {
+      {
         path: "blog",
         element: <Blogs />,
       },
-          {
+      {
+        path: "/blog/:id",
+        element: <BlogDetails />,
+      },
+      {
         path: "career-coaching",
         element: <CareerCoaching />,
       },
-          {
+      {
         path: "startup-internships",
         element: <StartupInternships />,
       },
-          {
+      {
         path: "mvp-labs",
         element: <MvpLabs />,
       },
-      { path: "/session-details", element: <SessionDetails/> }
+      { path: "/session-details", element: <SessionDetails /> }
 
     ],
   },
-   {
-  path: "/dashboard",
-  element: <DashboardLayout />,
-  children: [
-    { index:true , element: <ParticipantOverview  /> },
-    { path: "coaching", element: <Coaching/> },
-    { path: "internships", element: <Internships/> },
-    { path: "mvp-labs", element: <MVP/> },
-    { path: "profile", element: <EditProfile/> },
-    { path: "messages", element: <Messages/> },
-    { path: "notifications", element: <Notifications/> },
-    { path: "settings", element: <Setting/> },
-    
-  ],
-},
- {
-  path: "/coach-dashboard",
-  element: <DashboardLayout />,
-  children: [
-    { index:true , element: <CoachOverview  /> },
-    { path: "sessions", element: <Sessions/> },
-    { path: "clients", element: <Clients/> },
-    { path: "clients/:clientId", element: <ClientDetails /> }, 
-    { path: "analytics", element: <Analytics/> },
-    { path: "edit-profile", element: <EditCoachProfile /> },
-    { path: "messages", element: <CoachMessages/> },
-    { path: "notifications", element: <CoachNotifications/> },
-    { path: "settings", element: <CoachSettings/> },
-  ],
-},
- {
-  path: "/startup-dashboard",
-  element: <DashboardLayout />,
-  children: [
-    { index:true , element: <StartupOverview /> },
-    { path: "Internships", element: <InternshipsStartup /> },  
-    { path: "Internships/:id", element: <InternshipDetails /> },
-    { path: "Candidates", element: <StartupCandidates/> },
-    { path: "edit-profile", element: <EditStartupProfile/> },
-    { path: "analytics", element: <StartupAnalytics/> },
-    { path: "messages", element: <StartupMessages/> },
-    { path: "notifications", element: <StartupNotifications/> },
-    { path: "settings", element: <StartupSettings/> },
-    { path: "create", element: <CreateInternship /> },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      { index: true, element: <ParticipantOverview /> },
+      { path: "coaching", element: <Coaching /> },
+      { path: "internships", element: <Internships /> },
+      { path: "mvp-labs", element: <MVP /> },
+      { path: "profile", element: <EditProfile /> },
+      { path: "messages", element: <Messages /> },
+      { path: "notifications", element: <Notifications /> },
+      { path: "settings", element: <Setting /> },
 
-  ],
-}
+    ],
+  },
+  {
+    path: "/coach-dashboard",
+    element: <DashboardLayout />,
+    children: [
+      { index: true, element: <CoachOverview /> },
+      { path: "sessions", element: <Sessions /> },
+      { path: "clients", element: <Clients /> },
+      { path: "clients/:clientId", element: <ClientDetails /> },
+      { path: "analytics", element: <Analytics /> },
+      { path: "edit-profile", element: <EditCoachProfile /> },
+      { path: "messages", element: <CoachMessages /> },
+      { path: "notifications", element: <CoachNotifications /> },
+      { path: "settings", element: <CoachSettings /> },
+    ],
+  },
+  {
+    path: "/startup-dashboard",
+    element: <DashboardLayout />,
+    children: [
+      { index: true, element: <StartupOverview /> },
+      { path: "Internships", element: <InternshipsStartup /> },
+      { path: "Internships/:id", element: <InternshipDetails /> },
+      { path: "Candidates", element: <StartupCandidates /> },
+      { path: "edit-profile", element: <EditStartupProfile /> },
+      { path: "analytics", element: <StartupAnalytics /> },
+      { path: "messages", element: <StartupMessages /> },
+      { path: "notifications", element: <StartupNotifications /> },
+      { path: "settings", element: <StartupSettings /> },
+      { path: "create", element: <CreateInternship /> },
+
+    ],
+  }
 
 
 ]);

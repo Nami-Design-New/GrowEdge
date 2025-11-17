@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const latestArticles = [
   {
+    id:1,
     featured: true,
     image: "../images/coaching.webp",
     category: "Technology",
@@ -21,6 +22,7 @@ const latestArticles = [
     comments: 24,
   },
   {
+        id:2,
     featured: false,
     image: "../images/internship.avif",
     category: "Entrepreneurship",
@@ -35,6 +37,7 @@ const latestArticles = [
     comments: 12,
   },
   {
+    id:3,
     featured: false,
     image: "../images/team.jpg",
     category: "Software Development",
@@ -49,6 +52,7 @@ const latestArticles = [
     comments: 18,
   },
   {
+    id:4,
     featured: true,
     image: "../images/coaching.webp",
     category: "Technology",
@@ -63,6 +67,7 @@ const latestArticles = [
     comments: 30,
   },
   {
+    id:5,
     featured: false,
     image: "../images/coaching.webp",
     category: "Entrepreneurship",
@@ -77,6 +82,7 @@ const latestArticles = [
     comments: 10,
   },
   {
+    id:6,
     featured: false,
     image: "../images/internship.avif",
     category: "Software Development",
@@ -133,7 +139,7 @@ const filteredArticles = latestArticles.filter((article) => {
 
           {filteredArticles.map((article, idx) => (
             <div key={idx} className="col-12 col-md-6 col-lg-4">
-              <ArticleCard article={article} />
+  <ArticleCard  article={article} />
             </div>
           ))}
         </div>
