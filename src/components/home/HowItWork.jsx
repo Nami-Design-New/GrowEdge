@@ -49,47 +49,60 @@ export default function HowItWork() {
           </a>
         </div>
 
-        <div className="howitwork-timeline" aria-hidden="true">
-          <svg
-            className="timeline-svg"
-            viewBox="0 0 500 700"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M 60 40 C 160 80, 320 120, 360 220 C 400 320, 120 420, 320 520 C 520 620, 180 700, 240 760"
-              fill="none"
-              stroke="#23254e"
-              strokeWidth="6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              opacity="0.14"
-            />
-            <path
-              d="M 60 40 C 160 80, 320 120, 360 220 C 400 320, 120 420, 320 520 C 520 620, 180 700, 240 760"
-              fill="none"
-              stroke="#23254e"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-
-          {/* Steps */}
-         {steps.map((s, idx) => (
-  <div
-    key={idx}
-    className={`hw-step hw-step--${idx + 1}`}
+     <div className="howitwork-timeline" aria-hidden="true">
+  <svg
+    className="timeline-svg"
+    viewBox="0 0 500 400"
+    preserveAspectRatio="none"
+    aria-hidden="true"
   >
-    <div className="hw-card">
-      <div className="hw-step-no">{s.time}</div>
-      <h4 className="hw-step-title">{s.title}</h4>
-      <p className="hw-step-desc">{s.desc}</p>
-    </div>
-  </div>
-))}
+    {/* Shadow path */}
+    <path
+      d="
+        M 180 60
+        L 180 120
+        L 400 120
+        L 400 220
+        L 240 220
+        L 240 370
+      "
+      fill="none"
+      stroke="#23254e"
+      strokeWidth="6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      opacity="0.14"
+    />
+    {/* Main path */}
+    <path
+      d="
+        M 180 60
+        L 180 120
+      L 400 120   
+        L 400 220
+        L 240 220
+        L 240 370
+      "
+      fill="none"
+      stroke="#23254e"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
 
-        </div>
+  {/* Steps */}
+  {steps.map((s, idx) => (
+    <div key={idx} className={`hw-step hw-step--${idx + 1}`}>
+      <div className="hw-card">
+        <div className="hw-step-no">{s.time}</div>
+        <h4 className="hw-step-title">{s.title}</h4>
+        <p className="hw-step-desc">{s.desc}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );

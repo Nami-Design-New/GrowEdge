@@ -2148,6 +2148,14 @@ body .why-choose::after {
   z-index: 1;
   opacity: 1;
 }
+@media (max-width: 768px) {
+  body .why-choose::after {
+    top: -2%;
+    left: -5%;
+    width: 80px;
+    height: 80px;
+  }
+}
 body .why-choose .pattern-bottom {
   content: "";
   position: absolute;

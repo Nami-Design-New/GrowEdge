@@ -1242,6 +1242,14 @@ border-radius: 0;
     background-size: contain;
     z-index: 1;
     opacity: 1;
+
+
+    @media (max-width: 768px) {
+
+        top: -2%;
+    left: -5%;
+    width: 80px;
+    height: 80px;}
   }
   .pattern-bottom {
     content: "";
@@ -1460,6 +1468,7 @@ border-radius: 0;
       height: 100%;
       z-index: 1;
       pointer-events: none;
+      // padding-right:40% ;
     }
 
     .hw-step {
