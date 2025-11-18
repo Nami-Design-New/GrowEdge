@@ -844,6 +844,7 @@ border: 1px solid $main;
       background: #e9ecef;
       // border-radius: 4px;
       overflow: hidden;
+border-radius: 0;
     }
 
     .progress-bar {
@@ -973,7 +974,7 @@ border: 1px solid $main;
 
       .progress-bar {
         height: 100%;
-        background-color: $main; // اللون الرئيسي الموحد
+        background-color: $main; 
         transition: width 0.5s ease;
       }
     }

@@ -462,7 +462,21 @@ border-radius: 0;
   background: linear-gradient(180deg, #0f172a, #111827);
   color: #cfd2dc;
   padding: 4rem 0 2rem;
-
+  position: relative;
+  overflow: hidden;
+ &::after {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    transform: rotate(180deg);
+    width: 250px;
+    height:250px;
+    background: url("../images/shap.svg") no-repeat;
+    background-size: contain;
+    z-index: 1;
+    opacity: 0.1;
+  }
   .brand_info {
     img {
       height: 50px;

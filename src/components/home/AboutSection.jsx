@@ -76,7 +76,7 @@ const About = () => {
             </figure>
 
             <figure className="collage__card collage__card-large-circle">
-              <img src="/images/work.jfif" alt={t("about.collage.alt.team")} />
+              <img src="/images/auth.jpg" alt={t("about.collage.alt.team")} />
             </figure>
 
             <div className="collage__badge collage__badge-like">

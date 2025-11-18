@@ -336,13 +336,13 @@ flex-direction: column;  }
           width: 100px;
           height: 8px;
           background: #e9ecef;
-          border-radius: 8px;
+          // border-radius: 8px;
           overflow: hidden;
 
           .progress-fill {
             height: 100%;
             background: $main;
-            border-radius: 8px 0 0 8px;
+            // border-radius: 8px 0 0 8px;
             transition: width 0.4s ease;
           }
         }

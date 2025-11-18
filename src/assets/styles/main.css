@@ -626,6 +626,21 @@ body .footer_section {
   background: linear-gradient(180deg, #0f172a, #111827);
   color: #cfd2dc;
   padding: 4rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+body .footer_section::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  transform: rotate(180deg);
+  width: 250px;
+  height: 250px;
+  background: url("../images/shap.svg") no-repeat;
+  background-size: contain;
+  z-index: 1;
+  opacity: 0.1;
 }
 body .footer_section .brand_info img {
   height: 50px;
@@ -1629,33 +1644,15 @@ body .about-section .collage__card-square:hover::before {
 body .about-section .collage__card-large-circle {
   bottom: -10%;
   left: 0%;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
+  height: 210px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background: #fff;
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 768px) {
   body .about-section .collage__card-large-circle {
     bottom: -20%;
-    width: 120px;
-    height: 120px;
-  }
-}
-body .about-section .collage__card-large-circle::after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  width: 190px;
-  height: 190px;
-  background: url("../images/2.svg") no-repeat;
-  background-size: contain;
-  z-index: 1;
-  opacity: 0.9;
-}
-@media (max-width: 768px) {
-  body .about-section .collage__card-large-circle::after {
-    top: 4%;
     width: 120px;
     height: 120px;
   }
@@ -2139,14 +2136,14 @@ body .why-choose::before {
 body .why-choose::after {
   content: "";
   position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100px;
-  height: 100px;
-  background: url("../images/patt2.png") no-repeat;
+  top: -6%;
+  left: -3%;
+  width: 150px;
+  height: 150px;
+  background: url("../images/shap.svg") no-repeat;
   background-size: contain;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 1;
 }
 body .why-choose .pattern-bottom {
   content: "";
@@ -2725,7 +2722,10 @@ body .faqs_section.ar .accordion-header button {
   text-align: right;
 }
 body .auth_section {
-  padding: 50px 0;
+  padding: 80px 0;
+}
+body .auth_section .row {
+  justify-content: space-between;
 }
 body .auth_section .img {
   width: 100%;
@@ -2735,8 +2735,8 @@ body .auth_section .img {
 body .auth_section .img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body .auth_section .note {
   font-size: 14px;
@@ -4573,7 +4573,7 @@ body .booked-session-card .actions {
 body .booked-session-card .actions .btn {
   border: none;
   padding: 0.45rem 0.8rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -5850,6 +5850,7 @@ body .earnings-card .session-item .progress {
   height: 8px;
   background: #e9ecef;
   overflow: hidden;
+  border-radius: 0;
 }
 body .earnings-card .session-item .progress-bar {
   height: 8px;
@@ -6986,13 +6987,11 @@ body .current-interns-card .interns-list .intern-item .progress-wrapper .progres
   width: 100px;
   height: 8px;
   background: #e9ecef;
-  border-radius: 8px;
   overflow: hidden;
 }
 body .current-interns-card .interns-list .intern-item .progress-wrapper .progress-bar .progress-fill {
   height: 100%;
   background: #23254e;
-  border-radius: 8px 0 0 8px;
   transition: width 0.4s ease;
 }
 body .current-interns-card .interns-list .intern-item .progress-wrapper .progress-text {

@@ -106,10 +106,9 @@ export default function Register() {
             </form>
           </div>
 
-          {/* صورة جانبية */}
-          <div className="col-lg-6 col-12 p-2 d-lg-block d-none">
+          <div className="col-lg-5 col-12 p-2 d-lg-block d-none">
             <div className="img">
-              <img src="/images/auth.jpg" alt="auth" />
+              <img src="/images/auth.png" alt="auth" />
             </div>
           </div>
         </div>
