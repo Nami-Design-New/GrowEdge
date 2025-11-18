@@ -1618,6 +1618,7 @@ body .about-section .collage__card-square {
   height: 400px;
   background: #fff;
   overflow: hidden;
+  z-index: -2;
 }
 @media (max-width: 768px) {
   body .about-section .collage__card-square {
@@ -1642,13 +1643,15 @@ body .about-section .collage__card-square:hover::before {
   opacity: 1;
 }
 body .about-section .collage__card-large-circle {
+  position: absolute;
   bottom: -10%;
   left: 0%;
   width: 250px;
   height: 210px;
+  overflow: visible;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  background: #fff;
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+  z-index: 1;
 }
 @media (max-width: 768px) {
   body .about-section .collage__card-large-circle {
@@ -1798,11 +1801,11 @@ body .about-section .about-content .features-list li .check-icon {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: rgba(118, 224, 114, 0.2745098039);
+  background: url("../images/Asset 4.svg") center/contain no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #50b04d;
+  color: #fff;
   font-size: 14px;
 }
 body .about-section .about-content .features-list li strong {
