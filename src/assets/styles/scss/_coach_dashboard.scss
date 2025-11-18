@@ -29,7 +29,7 @@
       input {
         width: 100%;
         padding: 0.6rem 0.8rem 0.6rem 2.2rem;
-        border-radius: 8px;
+        // border-radius: 8px;
         // border: 1px solid #dee2e6;
         font-size: 0.9rem;
         transition: all 0.2s ease;
@@ -47,7 +47,7 @@
       color: $white;
       border: none;
       padding: 0.8rem 0.8rem;
-      border-radius: 8px;
+      // border-radius: 8px;
       cursor: pointer;
       font-size: 1rem;
       display: flex;
@@ -68,7 +68,7 @@
 //
 .client-card {
   background: $white;
-  border-radius: 14px;
+  // border-radius: 14px;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -127,7 +127,7 @@
     color: #fff;
     border: none;
     padding: 6px 14px;
-    border-radius: 8px;
+    // border-radius: 8px;
     font-size: 0.8rem;
     cursor: pointer;
     transition: 0.2s ease;
@@ -151,13 +151,13 @@
     .progress-bar {
       height: 10px;
       background: #e9ecef;
-      border-radius: 4px;
+      // border-radius: 4px;
       overflow: hidden;
 
       .fill {
         background: $main;
         height: 100%;
-        border-radius: 4px;
+        // border-radius: 4px;
       }
     }
 
@@ -200,7 +200,7 @@
 
   .status {
     padding: 4px 10px;
-    border-radius: 20px;
+    // border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
     text-transform: capitalize;
@@ -235,11 +235,12 @@
     background: rgba($main, 0.08);
     color: $main;
     padding: 6px 12px;
-    border-radius: 20px;
+    // border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
     text-transform: capitalize;
     border: 1px solid rgba($main, 0.2);
+    border-radius: 0px;
   }
 }
 
@@ -278,7 +279,7 @@
         border: 1px solid #dee2e6;
         background: #fff;
         padding: 0.35rem 0.8rem;
-        border-radius: 6px;
+        // border-radius: 6px;
         font-size: 0.8rem;
         cursor: pointer;
         transition: 0.2s ease;
@@ -365,7 +366,7 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      border-radius: 8px;
+      // border-radius: 8px;
       padding: 0.6rem 1.1rem;
       font-size: 0.9rem;
       font-weight: 500;
@@ -413,7 +414,7 @@
 
   .card-box {
     background: $white;
-    border-radius: 12px;
+    // border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: 0.2s ease-in-out;
@@ -469,14 +470,14 @@
     .progress {
       height: 8px;
       background: #e9ecef;
-      border-radius: 6px;
+      // border-radius: 6px;
       overflow: hidden;
 
       .progress-bar {
         width: var(--progress);
         height: 100%;
         background: $main;
-        border-radius: 6px;
+        // border-radius: 6px;
         transition: width 0.3s ease;
       }
     }
@@ -485,14 +486,14 @@
       background: #eef3ff;
       color: $main;
       padding: 4px 10px;
-      border-radius: 12px;
+      // border-radius: 12px;
       font-size: 0.8rem;
       font-weight: 500;
     }
 
     .status-badge {
       padding: 4px 10px;
-      border-radius: 12px;
+      // border-radius: 12px;
       font-size: 0.8rem;
       font-weight: 500;
       text-transform: capitalize;
@@ -520,7 +521,7 @@
         background: #f4f7ff;
         border-left: 4px solid $main;
         padding: 0.6rem 0.8rem;
-        border-radius: 8px;
+        // border-radius: 8px;
         margin-bottom: 0.6rem;
         display: flex;
         align-items: center;
@@ -542,7 +543,7 @@
       .no-notes {
         background: #f8f9fa;
         padding: 0.6rem;
-        border-radius: 6px;
+        // border-radius: 6px;
         text-align: center;
       }
     }
@@ -550,7 +551,7 @@
     .add-note {
       textarea {
         resize: none;
-        border-radius: 8px;
+        // border-radius: 8px;
         border: 1px solid #dcdfe6;
         padding: 0.75rem;
         font-size: 0.9rem;
@@ -563,7 +564,7 @@
       }
 
       button {
-        border-radius: 8px;
+        // border-radius: 8px;
         font-weight: 500;
         display: flex;
         align-items: center;
@@ -603,7 +604,7 @@ border: 1px solid $main;
         background: #f4f5f7;
         border: none;
         padding: 0.75rem;
-        border-radius: 8px;
+        // border-radius: 8px;
         display: flex;
         align-items: center;
         gap: 0.6rem;
@@ -680,7 +681,7 @@ border: 1px solid $main;
 ///
 .progress-overview {
   background: $white;
-  border-radius: 14px;
+  // border-radius: 14px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
@@ -747,14 +748,14 @@ border: 1px solid $main;
     .progress-bar {
       height: 8px;
       background: #e9ecef;
-      border-radius: 4px;
+      // border-radius: 4px;
       overflow: hidden;
       margin-top: 8px;
 
       .fill {
         background: $main;
         height: 100%;
-        border-radius: 4px;
+        // border-radius: 4px;
         transition: width 0.4s ease;
       }
     }
@@ -773,7 +774,7 @@ border: 1px solid $main;
 
 .monthly-earnings {
   background: $white;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin: 0 1rem;
@@ -791,7 +792,7 @@ border: 1px solid $main;
 
   .trend-item {
     background: #f8f9fa;
-    border-radius: 10px;
+    // border-radius: 10px;
     padding: 1rem;
     text-align: center;
     transition: all 0.3s ease;
@@ -821,7 +822,7 @@ border: 1px solid $main;
  ///
  .earnings-card{
   background: $white;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin: 0 1rem;
@@ -841,14 +842,14 @@ border: 1px solid $main;
       flex: 1;
       height: 8px;
       background: #e9ecef;
-      border-radius: 4px;
+      // border-radius: 4px;
       overflow: hidden;
     }
 
     .progress-bar {
       height: 8px;
       background: $main; 
-      border-radius: 4px;
+      // border-radius: 4px;
       transition: width 0.4s ease;
     }
 
@@ -863,7 +864,7 @@ border: 1px solid $main;
 ///
 .recent-payments {
   background: $white;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin: 0 1rem;
@@ -880,7 +881,7 @@ border: 1px solid $main;
     align-items: flex-start;
     padding: 1rem;
     border: 1px solid #eee;
-    border-radius: 10px;
+    // border-radius: 10px;
     transition: 0.2s ease;
 
     &:hover {
@@ -919,7 +920,7 @@ border: 1px solid $main;
       .status {
         display: inline-block;
         padding: 3px 10px;
-        border-radius: 20px;
+        // border-radius: 20px;
         font-size: 0.75rem;
         font-weight: 500;
         text-transform: capitalize;
@@ -945,7 +946,7 @@ border: 1px solid $main;
 ///
 .performance-metrics {
   background: #fff;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
@@ -967,7 +968,7 @@ border: 1px solid $main;
     .progress {
       height: 8px;
       background-color: #f1f3f5;
-      border-radius: 6px;
+      // border-radius: 6px;
       overflow: hidden;
 
       .progress-bar {
@@ -981,12 +982,12 @@ border: 1px solid $main;
 ///
 .coaching-goals {
   background: $white;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
   .goal-item {
-    border-radius: 12px;
+    // border-radius: 12px;
     padding: 1rem;
     transition: 0.3s ease;
 
@@ -1009,14 +1010,14 @@ border: 1px solid $main;
     .progress {
       height: 8px;
       background: #e9ecef;
-      border-radius: 4px;
+      // border-radius: 4px;
       overflow: hidden;
       margin-top: 4px;
       flex-grow: 1;
 
       .progress-bar {
         height: 100%;
-        border-radius: 4px;
+        // border-radius: 4px;
         transition: width 0.4s ease;
         background-color: $main;
       }
@@ -1035,7 +1036,7 @@ border: 1px solid $main;
 .completed-session-card {
   background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -1072,7 +1073,7 @@ border: 1px solid $main;
           span {
             font-size: 12px;
             padding: 2px 8px;
-            border-radius: 6px;
+            // border-radius: 6px;
             &.completed {
               background: #e7f8ef;
               color: $main2;
@@ -1134,7 +1135,7 @@ border: 1px solid $main;
 
     &.notes {
       background: #f9fafb;
-      border-radius: 8px;
+      // border-radius: 8px;
       padding: 10px 15px;
     }
 
@@ -1156,7 +1157,7 @@ border: 1px solid $main;
 
     &.feedback {
       background: #f0f8ff;
-      border-radius: 8px;
+      // border-radius: 8px;
       padding: 10px 15px;
 
       .feedback-text {
@@ -1171,7 +1172,7 @@ border: 1px solid $main;
 .calendar-container {
   padding: 30px;
   background: $white;
-  border-radius: 16px;
+  // border-radius: 16px;
   margin-top: 30px;
 
   .calendar-title {
@@ -1182,12 +1183,12 @@ border: 1px solid $main;
   }
 
   .calendar-wrapper {
-    border-radius: 12px;
+    // border-radius: 12px;
     overflow: hidden;
 
     .custom-calendar {
       background-color: $white;
-      border-radius: 12px;
+      // border-radius: 12px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
       height: 600px;
 
@@ -1199,7 +1200,7 @@ border: 1px solid $main;
         padding: 12px 20px;
         background-color: #f9fafb;
         border-bottom: 1px solid #e5e7eb;
-        border-radius: 12px 12px 0 0;
+        // border-radius: 12px 12px 0 0;
         gap: 10px;
 
         .rbc-btn-group {
@@ -1210,7 +1211,7 @@ border: 1px solid $main;
           button {
             background: $white;
             border: 1px solid #e5e7eb;
-            border-radius: 8px;
+            // border-radius: 8px;
             padding: 6px 14px;
             font-size: 14px;
             color: $main;
@@ -1239,7 +1240,7 @@ border: 1px solid $main;
       }
 
       .rbc-event {
-        border-radius: 8px;
+        // border-radius: 8px;
         font-size: 14px;
         padding: 4px 8px;
         font-weight: 600;
@@ -1273,7 +1274,7 @@ border: 1px solid $main;
   .modal-content {
     background: $white;
     padding: 24px 30px;
-    border-radius: 16px;
+    // border-radius: 16px;
     width: 90%;
     max-width: 420px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -1296,7 +1297,7 @@ border: 1px solid $main;
     .status {
       display: inline-block;
       padding: 4px 10px;
-      border-radius: 10px;
+      // border-radius: 10px;
       font-size: 12px;
       font-weight: 600;
       text-transform: uppercase;
@@ -1318,7 +1319,7 @@ border: 1px solid $main;
       margin-top: 16px;
       padding: 8px 16px;
       border: none;
-      border-radius: 10px;
+      // border-radius: 10px;
       background: $white;
       color: $danger;
       border: 1px solid $danger;
@@ -1421,7 +1422,7 @@ border: 1px solid $main;
 ///
 .internships-card{
   background: $white;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin:  1rem;

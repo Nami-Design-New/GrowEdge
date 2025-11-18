@@ -126,7 +126,7 @@ button {
   box-shadow: $shadow !important;
   margin-top: 14px !important;
   background: $white;
-  border-radius: 8px;
+  // border-radius: 8px;
   text-align: start !important;
   padding: 8px;
 }
@@ -170,8 +170,9 @@ button {
 
 .modal-content {
   background: $white;
-  border-radius: 24px;
+  // border-radius: 24px;
   overflow: hidden;
+    border-radius: 0;
 }
 
 .modal .modal-xl {
@@ -189,7 +190,7 @@ button {
       padding: 0.6rem 1rem;
       font-weight: 500;
       font-size: 0.95rem;
-      border-radius: 10px;
+      // border-radius: 10px;
       transition: all 0.3s ease;
       cursor: pointer;
         @media (max-width: 576px) {
@@ -240,4 +241,7 @@ button {
       &:hover {
         background-color: #50537e;
       }
+    }
+    .btn{
+      border-radius: 0;
     }

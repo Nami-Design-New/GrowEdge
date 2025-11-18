@@ -85,7 +85,6 @@ button {
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1) !important;
   margin-top: 14px !important;
   background: #fff;
-  border-radius: 8px;
   text-align: start !important;
   padding: 8px;
 }
@@ -133,8 +132,8 @@ button {
 
 .modal-content {
   background: #fff;
-  border-radius: 24px;
   overflow: hidden;
+  border-radius: 0;
 }
 
 .modal .modal-xl {
@@ -153,7 +152,6 @@ button {
   padding: 0.6rem 1rem;
   font-weight: 500;
   font-size: 0.95rem;
-  border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -201,6 +199,10 @@ button {
   background-color: #50537e;
 }
 
+.btn {
+  border-radius: 0;
+}
+
 body {
   position: relative;
   direction: rtl;
@@ -221,6 +223,8 @@ body header {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 body header nav {
   display: flex;
@@ -229,6 +233,7 @@ body header nav {
   gap: 20px;
   padding: 0.9rem 2rem;
   transition: all 0.3s ease-in-out;
+  background-color: #fff;
 }
 @media screen and (max-width: 992px) {
   body header nav {
@@ -330,6 +335,7 @@ body header nav .actions button {
   gap: 6px;
   color: #000;
   transition: all 0.3s ease-in-out;
+  border-radius: 0;
 }
 body header nav .actions button:hover {
   color: #23254e;
@@ -339,7 +345,6 @@ body header nav .actions .login {
   color: #fff;
   font-size: 14px;
   padding: 8px 20px;
-  border-radius: 10px;
   transition: all 0.3s ease-in-out;
   white-space: nowrap;
 }
@@ -370,7 +375,6 @@ body header.sticky nav {
 }
 body .user_dropdown {
   background: #50b04d !important;
-  border-radius: 10px;
   padding: 8px 14px;
   display: flex;
   align-items: center;
@@ -396,18 +400,17 @@ body .custom-dropdown-menu {
   min-width: 260px;
   max-width: 320px;
   padding: 12px;
-  border-radius: 12px;
   background: linear-gradient(180deg, #ffffff, #fbfbff);
   box-shadow: 0 8px 30px rgba(3, 10, 24, 0.12);
   border: 1px solid #aaaaaa;
   color: #0b1320;
+  border-radius: 0;
 }
 body .custom-dropdown-menu .dd-header {
   display: flex;
   gap: 12px;
   align-items: center;
   padding: 8px 6px 12px 6px;
-  border-radius: 10px;
 }
 body .custom-dropdown-menu .dd-header .avatar {
   width: 44px;
@@ -443,7 +446,6 @@ body .custom-dropdown-menu .dd-header .user-meta .role-badge {
   display: inline-block;
   margin-top: 8px;
   padding: 4px 8px;
-  border-radius: 999px;
   font-size: 11px;
   font-weight: 700;
   background: #F7FAFC;
@@ -453,7 +455,6 @@ body .custom-dropdown-menu .divider {
   height: 1px;
   background: #aaaaaa;
   margin: 10px 0;
-  border-radius: 2px;
 }
 body .custom-dropdown-menu .menu-links {
   display: flex;
@@ -465,7 +466,6 @@ body .custom-dropdown-menu .menu-links .dropdown-item {
   align-items: center;
   gap: 10px;
   padding: 8px 10px;
-  border-radius: 8px;
   color: #071026;
   font-weight: 600;
   font-size: 14px;
@@ -496,7 +496,6 @@ body .custom-dropdown-menu .demo-users .user-item {
   align-items: center;
   gap: 10px;
   padding: 8px;
-  border-radius: 10px;
   cursor: pointer;
   transition: background 0.18s ease;
 }
@@ -530,7 +529,6 @@ body .custom-dropdown-menu .demo-users .user-item .badge-current {
   color: #fff;
   padding: 6px 10px;
   font-size: 12px;
-  border-radius: 999px;
   font-weight: 700;
 }
 body .custom-dropdown-menu .logout {
@@ -539,7 +537,6 @@ body .custom-dropdown-menu .logout {
   align-items: center;
   gap: 10px;
   padding: 10px;
-  border-radius: 10px;
   color: #ef4444;
   font-weight: 700;
   cursor: pointer;
@@ -565,7 +562,6 @@ body .dropdown-menu {
 body .dropdown-menu .dropdown-item {
   margin-bottom: 4px;
   padding: 8px 12px 8px 16px;
-  border-radius: 4px;
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
@@ -683,7 +679,6 @@ body .footer_section .brand_info .social_links .icons a {
   align-items: center;
   justify-content: center;
   border: 1px solid #2a2f3f;
-  border-radius: 8px;
   color: #cfd2dc;
   transition: all 0.3s ease;
 }
@@ -858,11 +853,9 @@ body .form_ui .input-field .pass-group .show-pass {
   background: #fafafa;
   border: 1px solid #f4f4f4;
   border-right: 0;
-  border-radius: 12px 0 0 12px !important;
 }
 body .form_ui .input-field .pass-group input {
   border-left: 0 !important;
-  border-radius: 0 12px 12px 0 !important;
 }
 body .form_ui .input-field input,
 body .form_ui .input-field select,
@@ -873,10 +866,10 @@ body .form_ui .input-field textarea {
   outline: none;
   font-size: 14px;
   border: 1px solid #f4f4f4;
-  border-radius: 12px;
   background: #fafafa;
   padding: 12px 16px;
   box-shadow: none !important;
+  border-radius: 0;
 }
 body .form_ui .input-field select {
   appearance: none;
@@ -921,7 +914,6 @@ body .form_ui .check_field input:checked + span {
 body .form_ui .check_field span {
   background: #fafafa;
   padding: 10px 16px;
-  border-radius: 8px;
   font-size: 14px;
   border: 1px solid #f4f4f4;
 }
@@ -938,7 +930,6 @@ body .otp-container .otp-input {
   max-height: 90px;
   outline: none;
   border: 1px solid #f4f4f4;
-  border-radius: 12px;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
@@ -960,7 +951,6 @@ body .back_btn {
   height: 48px;
   border: 1px solid #aaaaaa;
   color: #aaaaaa;
-  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -1086,7 +1076,6 @@ body .error-page a {
   font-size: 14px;
   color: #fff;
   background: #23254e;
-  border-radius: 10px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
 }
@@ -1175,7 +1164,6 @@ body .hero__panel .hero__overlay .hero__content button {
   color: #23254e;
   border: none;
   padding: 0.6rem 1.6rem;
-  border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -1214,7 +1202,6 @@ body .hero__panel .hero__overlay .hero__bullets .bullet {
 body .hero__panel .hero__overlay .hero__bullets .bullet.active {
   background: #fff;
   width: 18px;
-  border-radius: 12px;
 }
 body .hero__panel .hero__overlay .hero__bullets.hide {
   opacity: 0;
@@ -1416,7 +1403,6 @@ body .hero-section .big-title .title-row .img-contact-row .img-wrapper .main-img
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 60px;
 }
 @media (max-width: 992px) {
   body .hero-section .big-title .title-row .img-contact-row .img-wrapper .main-img {
@@ -1597,7 +1583,6 @@ body .about-section .collage__card {
   position: absolute;
   overflow: hidden;
   background: #fff;
-  border-radius: 20px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   z-index: 3;
   transition: transform 0.3s ease;
@@ -1616,7 +1601,6 @@ body .about-section .collage__card-square {
   right: 0%;
   width: 450px;
   height: 400px;
-  border-radius: 20px;
   background: #fff;
   overflow: hidden;
 }
@@ -1635,16 +1619,12 @@ body .about-section .collage__card-square::before {
   bottom: -10px;
   background: linear-gradient(45deg, transparent 49%, rgba(37, 99, 235, 0.1) 50%, transparent 51%), linear-gradient(-45deg, transparent 49%, rgba(37, 99, 235, 0.1) 50%, transparent 51%);
   background-size: 20px 20px;
-  border-radius: 25px;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 body .about-section .collage__card-square:hover::before {
   opacity: 1;
-}
-body .about-section .collage__card-square img {
-  border-radius: 20px;
 }
 body .about-section .collage__card-large-circle {
   bottom: -10%;
@@ -1690,7 +1670,6 @@ body .about-section .collage__badge {
   font-weight: 600;
   font-size: 13px;
   padding: 6px 10px;
-  border-radius: 999px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   z-index: 5;
   animation: floatUpDown 3.5s ease-in-out infinite;
@@ -1805,7 +1784,6 @@ body .about-section .about-content .features-list {
 body .about-section .about-content .features-list li {
   background: #fff;
   padding: 0.9rem 1rem;
-  border-radius: 12px;
   box-shadow: 0 10px 28px rgba(2, 6, 23, 0.03);
   display: flex;
   align-items: flex-start;
@@ -1847,9 +1825,9 @@ body .about-section .about-content .actions {
 body .about-section .about-content .actions .btn {
   display: inline-block;
   padding: 0.6rem 1rem;
-  border-radius: 12px;
   text-decoration: none;
   transition: all 0.3s ease;
+  border-radius: 0;
 }
 body .about-section .about-content .actions .primary {
   background: #23254e;
@@ -2027,7 +2005,6 @@ body .career-path .section-subtitle {
 body .career-path .image-slider {
   width: 100%;
   height: 180px;
-  border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1.2rem;
 }
@@ -2049,7 +2026,6 @@ body .career-path .cards {
 }
 body .career-path .cards .card {
   background: #f9fafb;
-  border-radius: 1rem;
   padding: 1rem;
   text-align: left;
   position: relative;
@@ -2058,6 +2034,7 @@ body .career-path .cards .card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 4;
+  border-radius: 0;
 }
 body .career-path .cards .card:hover {
   transform: translateY(-5px);
@@ -2069,7 +2046,6 @@ body .career-path .cards .card .tag {
   right: 1rem;
   font-size: 0.75rem;
   padding: 0.3rem 0.6rem;
-  border-radius: 0 0 0 0.5rem;
   color: #fff;
   font-weight: 600;
 }
@@ -2123,10 +2099,10 @@ body .career-path .cards .card .btn {
   background: #23254e;
   color: #fff;
   border: none;
-  border-radius: 0.5rem;
   padding: 0.8rem;
   cursor: pointer;
   transition: background 0.3s ease;
+  border-radius: 0;
 }
 body .career-path .cards .card .btn:hover {
   opacity: 0.8;
@@ -2207,7 +2183,6 @@ body .why-choose .reasons {
 }
 body .why-choose .reasons .reason-card {
   background: #fff;
-  border-radius: 1rem;
   padding: 2rem 1.5rem;
   max-width: 360px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08), 0 16px 40px rgba(0, 0, 0, 0.06);
@@ -2410,7 +2385,6 @@ body .howitwork-section .howitwork-timeline .hw-card {
   min-width: 240px;
   max-width: 260px;
   background: white;
-  border-radius: 14px;
   padding: 14px 14px 12px 14px;
   transform: translateX(12px);
   z-index: 7;
@@ -2569,7 +2543,6 @@ body .success-section .controls-row .custom-pagination .swiper-pagination-bullet
 body .success-section .controls-row .custom-pagination .swiper-pagination-bullet-active {
   background: #23254e;
   width: 22px;
-  border-radius: 8px;
 }
 body .success-section .section-subtitle {
   color: #6b7280;
@@ -2579,7 +2552,6 @@ body .success-section .stories-slider {
   padding-bottom: 3rem;
 }
 body .success-section .stories-slider .story-card {
-  border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
   text-align: left;
@@ -2600,7 +2572,6 @@ body .success-section .stories-slider .story-card .story-top {
 body .success-section .stories-slider .story-card .story-tag {
   display: inline-block;
   border: 1px solid;
-  border-radius: 999px;
   padding: 0.25rem 0.75rem;
   font-size: 0.85rem;
   font-weight: 600;
@@ -2647,13 +2618,11 @@ body .success-section .progress-bar-wrapper {
   height: 6px;
   background: #e5e7eb;
   margin: 0.5rem auto 1rem;
-  border-radius: 4px;
   overflow: hidden;
 }
 body .success-section .progress-bar-wrapper .progress-bar {
   height: 100%;
   background: #23254e;
-  border-radius: 4px;
   transition: width 0.8s ease;
 }
 body .success-section .legend {
@@ -2731,7 +2700,6 @@ body .faqs_section .accordion {
 body .faqs_section .accordion .accordion-item {
   border: none;
   margin-bottom: 1rem;
-  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -2769,7 +2737,6 @@ body .auth_section .img img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 16px;
 }
 body .auth_section .note {
   font-size: 14px;
@@ -2793,7 +2760,6 @@ body .auth_section button {
   height: 48px;
   border: 1px solid #23254e;
   color: #fff;
-  border-radius: 12px;
   background-color: #23254e;
 }
 body .auth_section button.success {
@@ -2807,7 +2773,6 @@ body .reset_btns {
 }
 body .back_btn {
   height: 48px;
-  border-radius: 12px;
   border: 1px solid #000;
   width: 90px;
   color: #000;
@@ -2895,7 +2860,7 @@ body .career-coaching .search-bar .search-box {
   align-items: center;
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 0.2rem 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
@@ -2917,7 +2882,6 @@ body .career-coaching .search-bar .search-box input {
 }
 body .career-coaching .search-bar .category-select {
   width: 250px;
-  border-radius: 10px;
   border: 1px solid #ddd;
   padding: 0.6rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -2940,7 +2904,6 @@ body .career-coaching .career-cards {
 }
 body .career-coaching .session-card {
   border: 1px solid #eee;
-  border-radius: 15px;
   padding: 1.5rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   min-height: 100%;
@@ -2961,7 +2924,6 @@ body .career-coaching .session-card .card-header .category {
   background: #f2f4f7;
   color: #23254e;
   padding: 0.25rem 0.7rem;
-  border-radius: 8px;
   font-size: 0.8rem;
   white-space: nowrap;
 }
@@ -3021,7 +2983,6 @@ body .career-coaching .session-card .tags {
 body .career-coaching .session-card .tags span {
   background: #f6f6f6;
   padding: 0.3rem 0.6rem;
-  border-radius: 8px;
   font-size: 0.7rem;
   color: #333;
 }
@@ -3038,7 +2999,6 @@ body .career-coaching .session-card .footer .book-btn {
   background: #23254e;
   color: #fff;
   border: none;
-  border-radius: 10px;
   padding: 0.6rem 1rem;
   width: 100%;
   margin-top: 0.9rem;
@@ -3070,7 +3030,6 @@ body .startup-page .search-box input {
   width: 100%;
   padding: 0.5rem 2rem 0.5em 2.8rem;
   border: 1px solid #ddd;
-  border-radius: 10px;
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -3136,7 +3095,6 @@ body .internship-modal .details-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.5rem;
   background: #f8f9fa;
-  border-radius: 10px;
   padding: 1rem;
 }
 body .mvp-page {
@@ -3156,7 +3114,6 @@ body .mvp-page .container {
 }
 body .mvp-page form {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin: 1.5rem 0;
@@ -3207,14 +3164,12 @@ body .dashboard-layout .tabs-common {
   gap: 0.5rem;
   padding: 0.5rem;
   background: #e7eaf0;
-  border-radius: 12px;
   flex-wrap: wrap;
 }
 body .dashboard-layout .tabs-common .tab-btn {
   flex: 1;
   text-align: center;
   padding: 0.6rem 1rem;
-  border-radius: 10px;
   border: none;
   font-weight: 600;
   color: #555;
@@ -3262,7 +3217,6 @@ body .dashboard-layout .sub-header .btn {
   gap: 6px;
   font-size: 0.95rem;
   padding: 8px 14px;
-  border-radius: 6px;
 }
 body .dashboard-layout .sub-header .btn i {
   font-size: 0.9rem;
@@ -3304,7 +3258,7 @@ body .sidebar .user-info {
   gap: 0.9rem;
   margin-bottom: 1rem;
   padding: 0.5rem 0.8rem;
-  border-radius: 10px;
+  border-radius: 0px;
   background: #f9f9ff;
   box-shadow: 0 2px 6px rgba(108, 99, 255, 0.08);
 }
@@ -3331,7 +3285,6 @@ body .sidebar .user-info .role {
   background: rgba(108, 99, 255, 0.1);
   color: #23254e;
   padding: 3px 10px;
-  border-radius: 10px;
   font-size: 0.75rem;
   font-weight: 500;
 }
@@ -3345,7 +3298,6 @@ body .sidebar .menu .menu-item {
   align-items: center;
   gap: 0.9rem;
   padding: 0.7rem 1rem;
-  border-radius: 10px;
   color: #444;
   text-decoration: none;
   font-size: 0.95rem;
@@ -3425,7 +3377,6 @@ body .overview-header .sidebar-toggle-btn {
   color: #000;
   border: none;
   padding: 0.6rem 0.8rem;
-  border-radius: 8px;
   cursor: pointer;
   display: none;
 }
@@ -3468,7 +3419,6 @@ body .overview-header .sidebar-toggle-btn i {
 }
 body .statistics-section .stat-card {
   background: #fff;
-  border-radius: 12px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -3516,7 +3466,6 @@ body .session-details .session-hed button:hover, body .session-details .session-
 }
 body .session-details .session-card {
   background: #fff;
-  border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
 }
@@ -3547,7 +3496,6 @@ body .session-details .session-card .status-badge {
   background: #cff4fc;
   color: #055160;
   padding: 4px 8px;
-  border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -3556,7 +3504,6 @@ body .session-details .session-card .expertise-badge {
   border: 1px solid #dee2e6;
   color: #212529;
   padding: 4px 8px;
-  border-radius: 6px;
   font-size: 0.85rem;
 }
 @media (max-width: 768px) {
@@ -3572,7 +3519,6 @@ body .session-details .session-card .expertise-badge {
 }
 body .success-modal .modal-content {
   border: none;
-  border-radius: 16px;
   padding: 1.5rem;
   background-color: #fff;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
@@ -3603,7 +3549,6 @@ body .success-modal .modal-content .modal-body .btn-outline {
   color: #23254e;
   background: transparent;
   padding: 0.5rem 1.5rem;
-  border-radius: 30px;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -3669,7 +3614,6 @@ body .profile-header .avatar-wrapper .upload-btn:hover i {
 }
 body .info-form {
   background: #fff;
-  border-radius: 12px;
   border: 1px solid #eee;
 }
 body .info-form .section-title {
@@ -3682,7 +3626,6 @@ body .info-form .form-label {
 }
 body .info-form .form-control,
 body .info-form .form-select {
-  border-radius: 8px;
   font-size: 0.9rem;
 }
 body .info-form .notification-label {
@@ -3700,7 +3643,6 @@ body .info-form .custom-switch {
   width: 48px;
   height: 26px;
   background-color: #ccc;
-  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -3750,7 +3692,6 @@ body .messages-page .chat-sidebar .header .search {
   display: flex;
   align-items: center;
   background: #fff;
-  border-radius: 8px;
   padding: 0.5rem;
   gap: 0.5rem;
   border: 1px solid #ddd;
@@ -3780,7 +3721,6 @@ body .messages-page .chat-sidebar .tabs .tab-btn {
   border: none;
   cursor: pointer;
   padding: 0.4rem 0.8rem;
-  border-radius: 8px;
   font-weight: 600;
   color: #777;
   position: relative;
@@ -3900,7 +3840,6 @@ body .messages-page .chat-window .chat-header .actions i {
   transition: 0.3s;
   background-color: #F7FAFC;
   padding: 10px;
-  border-radius: 8px;
 }
 body .messages-page .chat-window .chat-header .actions i:hover {
   color: #23254e;
@@ -3917,7 +3856,6 @@ body .messages-page .chat-window .chat-header .actions .menu-wrapper .dropdown-m
   top: 120%;
   background: #fff;
   border: 1px solid #eee;
-  border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
   display: flex;
@@ -3952,7 +3890,6 @@ body .messages-page .chat-window .chat-body {
 body .messages-page .chat-window .chat-body .message-bubble {
   max-width: 75%;
   padding: 0.6rem 0.9rem;
-  border-radius: 12px;
   font-size: 0.9rem;
   position: relative;
   transition: background 0.3s ease;
@@ -3997,13 +3934,11 @@ body .messages-page .chat-window .chat-body .message-bubble .attached-image {
 }
 body .messages-page .chat-window .chat-body .message-bubble .attached-image img {
   max-width: 200px;
-  border-radius: 10px;
   display: block;
 }
 body .messages-page .chat-window .chat-body .message-bubble .attached-file {
   background: #777;
   padding: 6px 10px;
-  border-radius: 6px;
   margin-top: 5px;
   font-size: 0.85rem;
   display: inline-flex;
@@ -4027,7 +3962,6 @@ body .messages-page .chat-window .chat-input .attached-file {
   color: #555;
   background: #f1f1f1;
   padding: 4px 8px;
-  border-radius: 6px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -4038,7 +3972,6 @@ body .messages-page .chat-window .chat-input .attached-file i {
 body .messages-page .chat-window .chat-input input {
   flex: 1;
   border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 0.6rem 1rem;
   outline: none;
 }
@@ -4111,7 +4044,6 @@ body .messages-page .chat-window .chat-input .icons i.send {
 }
 body .notifications-page {
   background: #fff;
-  border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -4142,7 +4074,6 @@ body .tabs .tab-btn {
   background: #f8f9fa;
   border: none;
   padding: 8px 16px;
-  border-radius: 10px;
   font-weight: 500;
   font-size: 0.9rem;
   cursor: pointer;
@@ -4181,7 +4112,6 @@ body .account-settings-page .account-settings {
 body .account-settings-page .account-settings .setting-card {
   background: #fff;
   border: 1px solid #dee2e6;
-  border-radius: 8px;
   padding: 1rem;
   transition: 0.2s;
 }
@@ -4207,7 +4137,6 @@ body .account-settings-page .account-settings .setting-card .setting-header .bad
   color: #fff;
   font-size: 0.75rem;
   padding: 8px 14px;
-  border-radius: 6px;
   margin-bottom: 4px;
   display: inline-block;
 }
@@ -4216,7 +4145,6 @@ body .account-settings-page .account-settings .setting-card .side-btn {
   color: #23254e;
   padding: 6px 14px;
   font-size: 0.875rem;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   transition: 0.2s;
@@ -4250,7 +4178,6 @@ body .account-settings-page .account-settings .setting-card .password-form .inpu
 body .account-settings-page .account-settings .setting-card .password-form .input-group input {
   width: 100%;
   border: 1px solid #ced4da;
-  border-radius: 6px;
   padding: 6px 10px;
   font-size: 0.9rem;
   outline: none;
@@ -4266,7 +4193,6 @@ body .account-settings-page .account-settings .setting-card .password-form .acti
 body .account-settings-page .account-settings .setting-card .password-form .actions .btn {
   padding: 4px 10px;
   font-size: 0.8rem;
-  border-radius: 6px;
 }
 body .account-settings-page .account-settings .danger-title {
   color: #ef4444;
@@ -4275,7 +4201,6 @@ body .account-settings-page .account-settings .danger-title {
 }
 body .account-settings-page .account-settings .danger-zone {
   border: 1px solid #ef4444;
-  border-radius: 8px;
   background: #fff5f5;
   padding: 1rem;
 }
@@ -4295,7 +4220,6 @@ body .account-settings-page .account-settings .danger-zone .setting-header small
 }
 body .quick-actions {
   background: #fff;
-  border-radius: 12px;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -4328,7 +4252,6 @@ body .quick-actions .actions-list .action-btn {
   gap: 0.6rem;
   background: #f9fafb;
   border: 1px solid #dee2e6;
-  border-radius: 8px;
   padding: 0.6rem 0.8rem;
   font-size: 0.9rem;
   cursor: pointer;
@@ -4347,7 +4270,6 @@ body .quick-actions .actions-list .action-btn:hover i {
 }
 body .sessions-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -4385,7 +4307,6 @@ body .sessions-card .footer .view-all {
   border: none;
   background: #f1f3f5;
   padding: 0.5rem 1.2rem;
-  border-radius: 8px;
   font-weight: 500;
   cursor: pointer;
   transition: 0.2s ease;
@@ -4396,7 +4317,6 @@ body .sessions-card .footer .view-all:hover {
 }
 body .internship-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -4418,9 +4338,9 @@ body .internship-card__header h5 {
 }
 body .internship-card__header .badge {
   padding: 0.35rem 0.7rem;
-  border-radius: 12px;
   font-size: 0.75rem;
   text-transform: capitalize;
+  border-radius: 0px;
 }
 body .internship-card__header .badge.full {
   background: rgba(46, 125, 50, 0.6352941176);
@@ -4441,7 +4361,6 @@ body .internship-card__company strong {
 }
 body .internship-card__company .funding {
   border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 0.15rem 0.5rem;
   font-size: 0.75rem;
 }
@@ -4475,7 +4394,6 @@ body .internship-card__skills .tags {
 }
 body .internship-card__skills .tags .tag {
   background: #f5f5f5;
-  border-radius: 8px;
   padding: 0.25rem 0.6rem;
   font-size: 0.8rem;
   color: #333;
@@ -4487,7 +4405,6 @@ body .internship-card__footer {
 }
 body .welcome-card {
   background-color: #F7FAFC;
-  border-radius: 16px;
   padding: 1rem;
   box-shadow: 0 2px 15px rgba(35, 37, 78, 0.13);
   margin: 2rem 0.5rem;
@@ -4509,7 +4426,6 @@ body .welcome-card .welcome-message {
 }
 body .empty-state-card {
   background: #fff;
-  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
   display: flex;
@@ -4563,7 +4479,6 @@ body .empty-state-card .empty-state .btn-outline {
   background: #50b04d;
   color: #fff;
   border: 1px solid #50b04d;
-  border-radius: 8px;
   padding: 0.4rem 0.8rem;
   font-size: 0.9rem;
   cursor: pointer;
@@ -4577,7 +4492,6 @@ body .empty-state-card .empty-state .btn-outline:hover {
 body .booked-session-card {
   background: #fff;
   border: 1px solid #eaeaea;
-  border-radius: 12px;
   padding: 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -4623,7 +4537,6 @@ body .booked-session-card .session-info .tags .status {
   background: rgba(80, 176, 77, 0.1);
   color: #50b04d;
   padding: 3px 10px;
-  border-radius: 8px;
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: capitalize;
@@ -4632,7 +4545,6 @@ body .booked-session-card .session-info .tags .type {
   background: rgba(35, 37, 78, 0.1);
   color: #23254e;
   padding: 3px 10px;
-  border-radius: 8px;
   font-size: 0.75rem;
   font-weight: 500;
 }
@@ -4660,7 +4572,6 @@ body .booked-session-card .actions {
 }
 body .booked-session-card .actions .btn {
   border: none;
-  border-radius: 8px;
   padding: 0.45rem 0.8rem;
   font-size: 0.9rem;
   cursor: pointer;
@@ -4742,7 +4653,6 @@ body .booked-session-card .actions .btn:hover {
   }
 }
 body .booked-internship-card {
-  border-radius: 16px;
   transition: 0.3s ease;
 }
 body .booked-internship-card:hover {
@@ -4756,11 +4666,9 @@ body .booked-internship-card h5 {
 body .booked-internship-card .badge {
   font-size: 0.8rem;
   padding: 0.4em 0.7em;
-  border-radius: 12px;
 }
 body .skeleton-card {
   background-color: #fff;
-  border-radius: 12px;
   overflow: hidden;
 }
 body .skeleton-card .skeleton-text {
@@ -4768,7 +4676,6 @@ body .skeleton-card .skeleton-text {
   background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
   background-size: 400% 100%;
   animation: shimmer 1.2s infinite;
-  border-radius: 6px;
   margin: 10px 0;
 }
 @keyframes shimmer {
@@ -4782,7 +4689,6 @@ body .skeleton-card .skeleton-text {
 body .mvp-card {
   background: #fff;
   border: 1px solid #e9ecef;
-  border-radius: 18px;
   padding: 1.5rem;
   transition: all 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -4803,7 +4709,6 @@ body .mvp-card .funding-tag {
   background: #e8f5e9;
   color: #50b04d;
   font-weight: 500;
-  border-radius: 12px;
   padding: 0.3em 0.8em;
   font-size: 0.85rem;
 }
@@ -4826,7 +4731,6 @@ body .mvp-card .btn-edit,
 body .mvp-card .btn-delete {
   padding: 0.45em 1.2em;
   font-size: 0.9rem;
-  border-radius: 10px;
   border: none;
   transition: 0.3s;
   display: flex;
@@ -4854,7 +4758,6 @@ body .session-empty-card {
   text-align: center;
   background: #fff;
   border: 1px solid #eee;
-  border-radius: 16px;
   padding: 3rem 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
@@ -4862,7 +4765,6 @@ body .session-empty-card .browse-btn {
   background: #50b04d;
   color: #fff;
   border: none;
-  border-radius: 8px;
   padding: 0.6rem 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -4879,7 +4781,6 @@ body .notification-empty-card {
   text-align: center;
   background: #f9fafb;
   border: 1px dashed #d1d5db;
-  border-radius: 12px;
   min-height: 250px;
   color: #6b7280;
 }
@@ -4898,7 +4799,6 @@ body .notification-card {
   align-items: flex-start;
   justify-content: space-between;
   border: 1px solid #e6e6e6;
-  border-radius: 10px;
   padding: 15px;
   margin-top: 15px;
   background: #fdfdfd;
@@ -4911,7 +4811,6 @@ body .notification-card:hover {
 body .notification-card .icon-box {
   width: 40px;
   height: 40px;
-  border-radius: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4961,7 +4860,6 @@ body .notification-card .content .message {
 body .notification-card .content .action-btn {
   background: #f8f9fa;
   border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 6px 14px;
   font-size: 0.85rem;
   margin-top: 10px;
@@ -4992,7 +4890,6 @@ body .session-item-card {
   align-items: center;
   justify-content: space-between;
   background: #f9fafb;
-  border-radius: 10px;
   padding: 0.75rem 1rem;
   transition: 0.2s ease;
   gap: 0.75rem;
@@ -5042,7 +4939,6 @@ body .session-item-card .time-info .duration {
 }
 body .session-item-card .time-info .status {
   padding: 2px 8px;
-  border-radius: 6px;
   font-size: 0.7rem;
   text-transform: capitalize;
   font-weight: 500;
@@ -5066,7 +4962,6 @@ body .session-item-card .actions .join-btn {
   border: 1px solid #dee2e6;
   background: #fff;
   padding: 0.25rem 0.6rem;
-  border-radius: 6px;
   font-size: 0.8rem;
   cursor: pointer;
   transition: 0.2s ease;
@@ -5127,7 +5022,6 @@ body .session-item-card .actions .join-btn:hover i {
 body .performance-card {
   padding: 1.5rem;
   background: #fff;
-  border-radius: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 body .performance-card .header {
@@ -5175,7 +5069,6 @@ body .performance-card .stats .stat-item .progress-bar-wrapper {
   width: 100%;
   height: 8px;
   background: #e9ecef;
-  border-radius: 6px;
   overflow: hidden;
 }
 body .performance-card .stats .stat-item .progress-bar-wrapper .progress-bar-fill {
@@ -5205,7 +5098,6 @@ body .performance-card .achievements .achievement p {
 body .recent-card, body .performance-page .performance-recommendations-card {
   padding: 1.5rem;
   background: #fff;
-  border-radius: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 @media (max-width: 992px) {
@@ -5239,7 +5131,6 @@ body .recent-card .activity-list, body .performance-page .performance-recommenda
 body .recent-card .activity-list .activity-item, body .performance-page .performance-recommendations-card .activity-list .activity-item {
   border-left: 3px solid #23254e;
   padding-left: 0.75rem;
-  border-radius: 8px;
   transition: all 0.3s ease;
   padding: 10px;
 }
@@ -5313,7 +5204,6 @@ body .search-bar .search-wrapper .search-box i {
 body .search-bar .search-wrapper .search-box input {
   width: 100%;
   padding: 0.6rem 0.8rem 0.6rem 2.2rem;
-  border-radius: 8px;
   font-size: 0.9rem;
   transition: all 0.2s ease;
 }
@@ -5327,7 +5217,6 @@ body .search-bar .search-wrapper .filter-btn {
   color: #fff;
   border: none;
   padding: 0.8rem 0.8rem;
-  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   display: flex;
@@ -5343,7 +5232,6 @@ body .search-bar .search-wrapper .filter-btn:hover {
 }
 body .client-card {
   background: #fff;
-  border-radius: 14px;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -5399,7 +5287,6 @@ body .client-card .client-header .view-btn {
   color: #fff;
   border: none;
   padding: 6px 14px;
-  border-radius: 8px;
   font-size: 0.8rem;
   cursor: pointer;
   transition: 0.2s ease;
@@ -5417,13 +5304,11 @@ body .client-card .progress-section .progress-info {
 body .client-card .progress-section .progress-bar {
   height: 10px;
   background: #e9ecef;
-  border-radius: 4px;
   overflow: hidden;
 }
 body .client-card .progress-section .progress-bar .fill {
   background: #23254e;
   height: 100%;
-  border-radius: 4px;
 }
 body .client-card .progress-section .stats {
   display: flex;
@@ -5456,7 +5341,6 @@ body .client-card .right-header {
 }
 body .client-card .right-header .status {
   padding: 4px 10px;
-  border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: capitalize;
@@ -5486,11 +5370,11 @@ body .client-card .right-header .badge {
   background: rgba(35, 37, 78, 0.08);
   color: #23254e;
   padding: 6px 12px;
-  border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: capitalize;
   border: 1px solid rgba(35, 37, 78, 0.2);
+  border-radius: 0px;
 }
 body .client-card .client-footer {
   display: flex;
@@ -5521,7 +5405,6 @@ body .client-card .client-footer .actions button {
   border: 1px solid #dee2e6;
   background: #fff;
   padding: 0.35rem 0.8rem;
-  border-radius: 6px;
   font-size: 0.8rem;
   cursor: pointer;
   transition: 0.2s ease;
@@ -5595,7 +5478,6 @@ body .client-details .client-header-bar .header-actions button {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  border-radius: 8px;
   padding: 0.6rem 1.1rem;
   font-size: 0.9rem;
   font-weight: 500;
@@ -5631,7 +5513,6 @@ body .client-details .client-header-bar .header-actions .schedule-btn:hover {
 }
 body .client-details .card-box {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: 0.2s ease-in-out;
@@ -5679,27 +5560,23 @@ body .client-details .card-box .contact-info .info-row p strong {
 body .client-details .card-box .progress {
   height: 8px;
   background: #e9ecef;
-  border-radius: 6px;
   overflow: hidden;
 }
 body .client-details .card-box .progress .progress-bar {
   width: var(--progress);
   height: 100%;
   background: #23254e;
-  border-radius: 6px;
   transition: width 0.3s ease;
 }
 body .client-details .card-box .badge-goal {
   background: #eef3ff;
   color: #23254e;
   padding: 4px 10px;
-  border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 500;
 }
 body .client-details .card-box .status-badge {
   padding: 4px 10px;
-  border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: capitalize;
@@ -5722,7 +5599,6 @@ body .client-details .notes-card .notes-list .note-item {
   background: #f4f7ff;
   border-left: 4px solid #23254e;
   padding: 0.6rem 0.8rem;
-  border-radius: 8px;
   margin-bottom: 0.6rem;
   display: flex;
   align-items: center;
@@ -5741,12 +5617,10 @@ body .client-details .notes-card .notes-list .note-item:hover {
 body .client-details .notes-card .notes-list .no-notes {
   background: #f8f9fa;
   padding: 0.6rem;
-  border-radius: 6px;
   text-align: center;
 }
 body .client-details .notes-card .add-note textarea {
   resize: none;
-  border-radius: 8px;
   border: 1px solid #dcdfe6;
   padding: 0.75rem;
   font-size: 0.9rem;
@@ -5757,7 +5631,6 @@ body .client-details .notes-card .add-note textarea:focus {
   box-shadow: 0 0 0 2px rgba(75, 107, 251, 0.15);
 }
 body .client-details .notes-card .add-note button {
-  border-radius: 8px;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5789,7 +5662,6 @@ body .client-details .quick-actions .actions-list .action-btn {
   background: #f4f5f7;
   border: none;
   padding: 0.75rem;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -5852,7 +5724,6 @@ body .client-details .achievements-list li::before {
 }
 body .progress-overview {
   background: #fff;
-  border-radius: 14px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -5909,14 +5780,12 @@ body .progress-overview .client-progress-card .client-header .progress-percentag
 body .progress-overview .client-progress-card .progress-bar {
   height: 8px;
   background: #e9ecef;
-  border-radius: 4px;
   overflow: hidden;
   margin-top: 8px;
 }
 body .progress-overview .client-progress-card .progress-bar .fill {
   background: #23254e;
   height: 100%;
-  border-radius: 4px;
   transition: width 0.4s ease;
 }
 body .progress-overview .client-progress-card .goal {
@@ -5926,7 +5795,6 @@ body .progress-overview .client-progress-card .goal {
 }
 body .overview-tab .monthly-earnings {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin: 0 1rem;
@@ -5942,7 +5810,6 @@ body .overview-tab .monthly-earnings .trend-grid {
 }
 body .overview-tab .monthly-earnings .trend-item {
   background: #f8f9fa;
-  border-radius: 10px;
   padding: 1rem;
   text-align: center;
   transition: all 0.3s ease;
@@ -5965,7 +5832,6 @@ body .overview-tab .monthly-earnings .trend-item .details {
 }
 body .earnings-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin: 0 1rem;
@@ -5983,13 +5849,11 @@ body .earnings-card .session-item .progress {
   flex: 1;
   height: 8px;
   background: #e9ecef;
-  border-radius: 4px;
   overflow: hidden;
 }
 body .earnings-card .session-item .progress-bar {
   height: 8px;
   background: #23254e;
-  border-radius: 4px;
   transition: width 0.4s ease;
 }
 body .earnings-card .session-item .percent-text {
@@ -6000,7 +5864,6 @@ body .earnings-card .session-item .percent-text {
 }
 body .recent-payments {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin: 0 1rem;
@@ -6016,7 +5879,6 @@ body .recent-payments .payment-card {
   align-items: flex-start;
   padding: 1rem;
   border: 1px solid #eee;
-  border-radius: 10px;
   transition: 0.2s ease;
 }
 body .recent-payments .payment-card:hover {
@@ -6046,7 +5908,6 @@ body .recent-payments .payment-card .payment-meta .date {
 body .recent-payments .payment-card .payment-meta .status {
   display: inline-block;
   padding: 3px 10px;
-  border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: capitalize;
@@ -6065,7 +5926,6 @@ body .recent-payments .payment-card .payment-meta .status.processing {
 }
 body .performance-metrics {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -6083,7 +5943,6 @@ body .performance-metrics .metric-item .metric-value {
 body .performance-metrics .metric-item .progress {
   height: 8px;
   background-color: #f1f3f5;
-  border-radius: 6px;
   overflow: hidden;
 }
 body .performance-metrics .metric-item .progress .progress-bar {
@@ -6093,12 +5952,10 @@ body .performance-metrics .metric-item .progress .progress-bar {
 }
 body .coaching-goals {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 body .coaching-goals .goal-item {
-  border-radius: 12px;
   padding: 1rem;
   transition: 0.3s ease;
 }
@@ -6119,14 +5976,12 @@ body .coaching-goals .goal-item .goal-icon {
 body .coaching-goals .goal-item .progress {
   height: 8px;
   background: #e9ecef;
-  border-radius: 4px;
   overflow: hidden;
   margin-top: 4px;
   flex-grow: 1;
 }
 body .coaching-goals .goal-item .progress .progress-bar {
   height: 100%;
-  border-radius: 4px;
   transition: width 0.4s ease;
   background-color: #23254e;
 }
@@ -6140,7 +5995,6 @@ body .coaching-goals .goal-item .percent-text {
 body .completed-session-card {
   background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -6176,7 +6030,6 @@ body .completed-session-card .header .left .info .tags {
 body .completed-session-card .header .left .info .tags span {
   font-size: 12px;
   padding: 2px 8px;
-  border-radius: 6px;
 }
 body .completed-session-card .header .left .info .tags span.completed {
   background: #e7f8ef;
@@ -6226,7 +6079,6 @@ body .completed-session-card .section p, body .completed-session-card .section u
 }
 body .completed-session-card .section.notes {
   background: #f9fafb;
-  border-radius: 8px;
   padding: 10px 15px;
 }
 body .completed-session-card .section.next-steps ul {
@@ -6244,7 +6096,6 @@ body .completed-session-card .section.next-steps ul li i {
 }
 body .completed-session-card .section.feedback {
   background: #f0f8ff;
-  border-radius: 8px;
   padding: 10px 15px;
 }
 body .completed-session-card .section.feedback .feedback-text {
@@ -6254,7 +6105,6 @@ body .completed-session-card .section.feedback .feedback-text {
 body .calendar-container {
   padding: 30px;
   background: #fff;
-  border-radius: 16px;
   margin-top: 30px;
 }
 body .calendar-container .calendar-title {
@@ -6264,12 +6114,10 @@ body .calendar-container .calendar-title {
   margin-bottom: 20px;
 }
 body .calendar-container .calendar-wrapper {
-  border-radius: 12px;
   overflow: hidden;
 }
 body .calendar-container .calendar-wrapper .custom-calendar {
   background-color: #fff;
-  border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   height: 600px;
 }
@@ -6281,7 +6129,6 @@ body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar {
   padding: 12px 20px;
   background-color: #f9fafb;
   border-bottom: 1px solid #e5e7eb;
-  border-radius: 12px 12px 0 0;
   gap: 10px;
 }
 body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group {
@@ -6292,7 +6139,6 @@ body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-bt
 body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-btn-group button {
   background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
   padding: 6px 14px;
   font-size: 14px;
   color: #23254e;
@@ -6315,7 +6161,6 @@ body .calendar-container .calendar-wrapper .custom-calendar .rbc-toolbar .rbc-to
   flex: 1;
 }
 body .calendar-container .calendar-wrapper .custom-calendar .rbc-event {
-  border-radius: 8px;
   font-size: 14px;
   padding: 4px 8px;
   font-weight: 600;
@@ -6343,7 +6188,6 @@ body .calendar-container .modal-backdrop {
 body .calendar-container .modal-content {
   background: #fff;
   padding: 24px 30px;
-  border-radius: 16px;
   width: 90%;
   max-width: 420px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -6364,7 +6208,6 @@ body .calendar-container .modal-content p {
 body .calendar-container .modal-content .status {
   display: inline-block;
   padding: 4px 10px;
-  border-radius: 10px;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -6384,7 +6227,6 @@ body .calendar-container .modal-content .close-btn {
   margin-top: 16px;
   padding: 8px 16px;
   border: none;
-  border-radius: 10px;
   background: #fff;
   color: #ef4444;
   border: 1px solid #ef4444;
@@ -6464,7 +6306,6 @@ body .calendar-container .rbc-current-time-indicator {
 }
 body .internships-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin: 1rem;
@@ -6515,7 +6356,6 @@ body .blog-filter .search-wrapper .search-icon {
 body .blog-filter .search-wrapper .search-input {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 2.5rem;
-  border-radius: 10px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
@@ -6533,7 +6373,6 @@ body .blog-filter .tabs .category-btn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border-radius: 10px;
   padding: 0.4rem 1.2rem;
   background-color: #f8f9fa;
   border: 1px solid #ced4da;
@@ -6577,7 +6416,6 @@ body .articles-list h2 {
 }
 body .article-card {
   background: #fff;
-  border-radius: 1rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   position: relative;
@@ -6614,7 +6452,6 @@ body .article-card .content .category-date {
 body .article-card .content .category-date .category {
   border: 1px solid #ccc;
   padding: 0.1rem 0.5rem;
-  border-radius: 0.5rem;
 }
 body .article-card .content .title {
   font-size: 1rem;
@@ -6649,7 +6486,6 @@ body .article-card .content .author-info .stats span {
 }
 body .newsletter-section {
   position: relative;
-  border-radius: 10px;
   overflow: hidden;
   padding: 3rem 0;
   margin: 2rem auto;
@@ -6703,11 +6539,11 @@ body .newsletter-section .newsletter-content .newsletter-form {
 }
 body .newsletter-section .newsletter-content .newsletter-form .email-input {
   width: 300px;
-  border-radius: 0.5rem;
   border: none;
   padding: 0.6rem 1rem;
   font-size: 0.9rem;
   color: #23254e;
+  border-radius: 0;
 }
 @media (max-width: 576px) {
   body .newsletter-section .newsletter-content .newsletter-form .email-input {
@@ -6721,7 +6557,6 @@ body .newsletter-section .newsletter-content .newsletter-form .btn-subscribe {
   background: #fff;
   color: #23254e;
   border: none;
-  border-radius: 0.5rem;
   padding: 0.6rem 1.2rem;
   font-weight: 600;
   transition: all 0.3s;
@@ -6765,7 +6600,6 @@ body .blog-details .back-btn {
   font-size: 1rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -6784,7 +6618,6 @@ body .blog-details .blog-image {
   width: 100%;
   max-height: 500px;
   overflow: hidden;
-  border-radius: 1rem;
   margin-bottom: 1rem;
 }
 body .blog-details .blog-image img {
@@ -6793,7 +6626,7 @@ body .blog-details .blog-image img {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-  border-radius: 1rem;
+  border-radius: 0;
 }
 body .blog-details .blog-meta {
   font-size: 0.9rem;
@@ -6803,7 +6636,6 @@ body .blog-details .blog-meta .category {
   border: 1px solid #50b04d;
   color: #50b04d;
   padding: 0.2rem 0.6rem;
-  border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -6857,7 +6689,6 @@ body .not-found-article {
 }
 body .internships-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -6892,7 +6723,6 @@ body .internships-card .internship-list .internship-item {
   justify-content: space-between;
   align-items: flex-start;
   padding: 1rem 1.5rem;
-  border-radius: 12px;
   border: 1px solid #ddd;
 }
 @media (max-width: 768px) {
@@ -6914,7 +6744,6 @@ body .internships-card .internship-list .internship-item .info-section {
 body .internships-card .internship-list .internship-item .info-section .icon {
   width: 40px;
   height: 40px;
-  border-radius: 20%;
   background-color: rgba(0, 123, 255, 0.05);
   display: flex;
   align-items: center;
@@ -6947,7 +6776,6 @@ body .internships-card .internship-list .internship-item .meta-section .status-b
   padding: 0.2rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
-  border-radius: 12px;
   color: #fff;
   text-transform: capitalize;
   width: -moz-max-content;
@@ -6970,7 +6798,6 @@ body .internships-card .internship-list .internship-item .meta-section .posted {
 body .recent-applications {
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 12px;
   padding: 1.5rem;
 }
 body .recent-applications .header {
@@ -7003,7 +6830,6 @@ body .recent-applications .applications-list .application-item {
   align-items: center;
   justify-content: space-between;
   padding: 0.8rem 1rem;
-  border-radius: 10px;
   background: rgba(228, 229, 230, 0.1647058824);
 }
 body .recent-applications .applications-list .application-item .avatar {
@@ -7043,7 +6869,6 @@ body .recent-applications .applications-list .application-item .rating-status .s
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.2rem 0.5rem;
-  border-radius: 12px;
   text-transform: capitalize;
 }
 body .recent-applications .applications-list .application-item .rating-status .status-badge.new {
@@ -7071,13 +6896,11 @@ body .recent-applications .footer .view-all-btn {
   background: #23254e;
   color: #fff;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
 }
 body .current-interns-card {
   padding: 1.5rem;
   background: #fff;
-  border-radius: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 @media (max-width: 768px) {
@@ -7115,7 +6938,6 @@ body .current-interns-card .interns-list .intern-item {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-radius: 12px;
   border: 1px solid #e4e5e6;
 }
 @media (max-width: 768px) {
@@ -7181,7 +7003,6 @@ body .current-interns-card .interns-list .intern-item .progress-wrapper .progres
 body .budget-card {
   padding: 1.5rem;
   background: #fff;
-  border-radius: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 body .budget-card .header {
@@ -7221,7 +7042,6 @@ body .budget-card .progress-bar-wrapper {
   width: 100%;
   height: 10px;
   background: #e9ecef;
-  border-radius: 6px;
   overflow: hidden;
 }
 body .budget-card .progress-bar-wrapper .progress-bar-fill {
@@ -7238,7 +7058,6 @@ body .empty-card {
   text-align: center;
   padding: 40px;
   border: 1px solid #ddd;
-  border-radius: 12px;
   width: 100%;
   background-color: #f8f9fa;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -7266,7 +7085,6 @@ body .active-sessions {
 body .active-sessions .active-internship-card {
   background: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
   padding: 1rem 1.2rem;
   margin-top: 20px;
 }
@@ -7307,7 +7125,6 @@ body .active-sessions .active-internship-card .card-header .left .info .badges .
   padding: 0.2rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
-  border-radius: 12px;
   text-transform: capitalize;
 }
 body .active-sessions .active-internship-card .card-header .left .info .badges .status-badge.active {
@@ -7327,7 +7144,6 @@ body .active-sessions .active-internship-card .card-header .left .info .badges .
   font-size: 0.75rem;
   background: #f1f3f5;
   color: #495057;
-  border-radius: 12px;
 }
 body .active-sessions .active-internship-card .card-header .actions {
   display: flex;
@@ -7343,7 +7159,6 @@ body .active-sessions .active-internship-card .card-header .actions .view-btn {
   color: #23254e;
   font-size: 0.9rem;
   font-weight: 500;
-  border-radius: 6px;
   padding: 6px 12px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -7430,7 +7245,6 @@ body .active-sessions .active-internship-card .stats .stat span {
 body .draft-internship-card {
   background: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
   padding: 1rem 1.2rem;
   margin-top: 20px;
   transition: all 0.3s ease;
@@ -7464,7 +7278,6 @@ body .draft-internship-card .card-header .badges .status-badge {
   padding: 0.2rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
-  border-radius: 12px;
   text-transform: capitalize;
 }
 body .draft-internship-card .card-header .badges .status-badge.draft {
@@ -7476,7 +7289,6 @@ body .draft-internship-card .card-header .badges .type-badge {
   font-size: 0.75rem;
   background: #f1f3f5;
   color: #495057;
-  border-radius: 12px;
 }
 body .draft-internship-card .card-header .actions {
   display: flex;
@@ -7499,7 +7311,6 @@ body .draft-internship-card .card-header .actions button:hover {
 }
 body .draft-internship-card .card-header .actions .edit-btn {
   background-color: rgba(150, 202, 148, 0.2549019608);
-  border-radius: 6px;
   padding: 6px 12px;
   color: #50b04d;
   font-weight: 500;
@@ -7546,7 +7357,6 @@ body .draft-internship-card .stats .stat span {
 body .closed-internship-card {
   background: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
   padding: 1rem 1.2rem;
   margin-top: 20px;
   transition: all 0.3s ease;
@@ -7580,7 +7390,6 @@ body .closed-internship-card .card-header .badges .status-badge {
   padding: 0.2rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
-  border-radius: 12px;
   text-transform: capitalize;
 }
 body .closed-internship-card .card-header .badges .status-badge.closed {
@@ -7592,7 +7401,6 @@ body .closed-internship-card .card-header .badges .type-badge {
   font-size: 0.75rem;
   background: #f1f3f5;
   color: #495057;
-  border-radius: 12px;
 }
 body .closed-internship-card .card-header .actions {
   display: flex;
@@ -7654,7 +7462,6 @@ body .internship-details .details-header .header-actions button:hover {
 body .internship-details .card-box {
   background: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   /* Skills badges */
@@ -7686,7 +7493,6 @@ body .internship-details .card-box .details span {
 body .internship-details .card-box .details span .status-badge {
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
-  border-radius: 12px;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -7728,7 +7534,6 @@ body .internship-details .card-box .badges {
 body .internship-details .card-box .badges .skill-badge {
   padding: 0.25rem 0.6rem;
   background: #f1f3f5;
-  border-radius: 12px;
   font-size: 0.8rem;
   color: #495057;
   margin-bottom: 0.3rem;
@@ -7748,7 +7553,6 @@ body .internship-details .card-box .metrics .metric-card {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  border-radius: 12px;
   font-weight: 600;
   text-align: center;
 }
@@ -7785,7 +7589,6 @@ body .internship-details .card-box .metrics .metric-card.hired {
 body .create-internship {
   background: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
   padding: 1rem 1.2rem;
   margin-top: 20px;
 }
@@ -7799,7 +7602,6 @@ body .pipeline-view .stage-column {
   transition: all 0.2s ease;
   background-color: #fff;
   padding: 1rem;
-  border-radius: 12px;
   min-height: 100%;
 }
 body .pipeline-view .stage-column h6 {
@@ -7813,11 +7615,11 @@ body .pipeline-view .stage-column .badge {
   font-size: 0.8rem;
   padding: 0.4rem 0.6rem;
   background-color: #50b04d;
+  border-radius: 0;
 }
 body .pipeline-view .candidate-card {
   background-color: #F9F9F9;
   padding: 1rem;
-  border-radius: 12px;
 }
 body .pipeline-view .candidate-card .candidate-header {
   display: flex;
@@ -7861,7 +7663,7 @@ body .pipeline-view .candidate-card .candidate-info p .badge {
   color: #212529;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: 0;
 }
 body .pipeline-view .candidate-card .candidate-info p .text-warning {
   color: #f7b500;
@@ -7891,7 +7693,6 @@ body .applications-header .search-candidates .search-input input {
   width: 100%;
   padding: 0.5rem 0.75rem 0.5rem 2.5rem;
   border: 1px solid #ccc;
-  border-radius: 14px;
   font-size: 0.9rem;
   transition: border-color 0.2s;
 }
@@ -7910,7 +7711,6 @@ body .applications-header .filter-status select {
   width: 100%;
   padding: 0.5rem 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 14px;
   font-size: 0.9rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -7931,7 +7731,6 @@ body .application-card {
   justify-content: space-between;
   background: #fff;
   border: 1px solid #eee;
-  border-radius: 14px;
   padding: 1rem 1.25rem;
   transition: all 0.3s ease;
   width: 100%;
@@ -7983,7 +7782,6 @@ body .application-card .application-main .application-details .top .name {
 body .application-card .application-main .application-details .top .status-badge {
   font-size: 0.75rem;
   padding: 2px 8px;
-  border-radius: 6px;
   text-transform: capitalize;
 }
 body .application-card .application-main .application-details .top .status-badge.interview {
@@ -8031,13 +7829,11 @@ body .application-card .application-main .application-details .skills .skill {
   background: #f1f3f4;
   color: #333;
   padding: 3px 8px;
-  border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 500;
 }
 body .application-card .application-actions .btn {
   border: 1px solid #ddd;
-  border-radius: 6px;
   padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
   display: flex;
@@ -8087,7 +7883,6 @@ body .interviews-page .interview-card {
   justify-content: space-between;
   background: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 12px;
   padding: 10px 16px;
   transition: 0.3s;
   /* Responsive */
@@ -8141,7 +7936,6 @@ body .interviews-page .interview-card .actions .btn {
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 0.85rem;
   cursor: pointer;
@@ -8213,7 +8007,6 @@ body .recruitment-page {
 }
 body .recruitment-page .candidate-quality {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -8256,17 +8049,14 @@ body .recruitment-page .candidate-quality .university-item .header .rating .apps
 body .recruitment-page .candidate-quality .university-item .progress-bar {
   background: #eaeaea;
   height: 6px;
-  border-radius: 6px;
   overflow: hidden;
 }
 body .recruitment-page .candidate-quality .university-item .progress-bar .fill {
   background: #23254e;
   height: 100%;
-  border-radius: 6px;
 }
 body .recruitment-page .time-to-hire {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -8290,7 +8080,6 @@ body .recruitment-page .time-to-hire .position-item {
   justify-content: space-between;
   align-items: center;
   background: #f9f9f9;
-  border-radius: 10px;
   padding: 0.8rem 1rem;
   margin-bottom: 0.8rem;
   transition: 0.3s;
@@ -8330,7 +8119,6 @@ body .recruitment-page .time-to-hire .position-item .trend.stable {
 }
 body .recruitment-page .response-rate-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -8359,7 +8147,6 @@ body .recruitment-page .response-rate-card .metrics .metric-card {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  border-radius: 12px;
   font-weight: 600;
   text-align: center;
 }
@@ -8390,7 +8177,6 @@ body .recruitment-page .response-rate-card .metrics .metric-card:nth-child(3) {
 }
 body .recruitment-page .monthly-applications-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -8423,7 +8209,6 @@ body .recruitment-page .monthly-applications-card .trend-item .metrics .metric-c
   flex-direction: column;
   align-items: center;
   padding: 0.6rem 0.8rem;
-  border-radius: 12px;
   font-weight: 600;
   text-align: center;
 }
@@ -8457,7 +8242,6 @@ body .recruitment-page .monthly-applications-card .trend-item hr {
 }
 body .performance-page .recruitment-goals-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -8479,7 +8263,6 @@ body .performance-page .recruitment-goals-card .goals-wrapper {
 body .performance-page .recruitment-goals-card .goals-wrapper .goal-card {
   flex: 1;
   min-width: 200px;
-  border-radius: 12px;
   padding: 1rem;
   color: #333;
 }
@@ -8513,12 +8296,10 @@ body .performance-page .recruitment-goals-card .goals-wrapper .goal-card .goal-i
 body .performance-page .recruitment-goals-card .goals-wrapper .goal-card .progress-bar {
   background: #fff;
   height: 8px;
-  border-radius: 6px;
   overflow: hidden;
 }
 body .performance-page .recruitment-goals-card .goals-wrapper .goal-card .progress-bar .fill {
   height: 100%;
-  border-radius: 6px;
   background: #23254e;
 }
 body .performance-page .recruitment-goals-card .goals-wrapper .goal-card.monthly-hire {
@@ -8549,7 +8330,6 @@ body .performance-page .recruitment-goals-card .goals-wrapper .goal-card.quality
 }
 body .performance-page .hiring-team-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -8572,7 +8352,6 @@ body .performance-page .hiring-team-card .team-wrapper .member-card {
   flex: 1;
   min-width: 220px;
   background: #fff;
-  border-radius: 12px;
   border: 1px solid #ddd;
   padding: 1rem;
   display: flex;
@@ -8632,7 +8411,6 @@ body .performance-page .hiring-team-card .team-wrapper .member-card .member-metr
 }
 body .performance-page .bottleneck-analysis-card {
   background: #fff;
-  border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -8656,7 +8434,6 @@ body .performance-page .bottleneck-analysis-card .stages-wrapper .stage-card {
   min-width: 180px;
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 12px;
   padding: 1rem;
   text-align: center;
 }
@@ -8674,7 +8451,6 @@ body .performance-page .bottleneck-analysis-card .stages-wrapper .stage-card .av
 body .performance-page .bottleneck-analysis-card .stages-wrapper .stage-card .status-badge {
   display: inline-block;
   padding: 0.3rem 0.6rem;
-  border-radius: 12px;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: capitalize;
@@ -8697,7 +8473,6 @@ body .performance-page .bottleneck-analysis-card .stages-wrapper .stage-card .st
 }
 body .performance-page .performance-recommendations-card .activity-list .activity-item {
   border-left-width: 3px;
-  border-radius: 8px;
   padding: 10px;
   transition: all 0.3s ease;
 }
@@ -8734,12 +8509,11 @@ body.en {
   direction: ltr;
 }
 body.en .form_ui .input-field .pass-group input {
-  border-radius: 12px 0 0 12px !important;
   border-right: 0 !important;
   border-left: 1px solid #f4f4f4 !important;
+  border-radius: 0;
 }
 body.en .form_ui .input-field .pass-group .show-pass {
-  border-radius: 0 12px 12px 0 !important;
   border-left: 0 !important;
   border-right: 1px solid #f4f4f4 !important;
 }

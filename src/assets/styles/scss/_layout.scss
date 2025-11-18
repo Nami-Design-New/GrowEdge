@@ -6,6 +6,8 @@ header {
   z-index: 1000;
   backdrop-filter: blur(20px);
   transition: $transition;
+background-color: $white;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
   nav {
     display: flex;
@@ -14,6 +16,7 @@ header {
     gap: 20px;
     padding: 0.9rem 2rem;
     transition: $transition;
+background-color: $white;
 
     @media screen and (max-width: 992px) {
       border-radius: 0;
@@ -123,7 +126,7 @@ header {
         gap: 6px;
         color: $black;
         transition: $transition;
-
+border-radius: 0;
         &:hover {
           color: $main;
         }
@@ -134,7 +137,7 @@ header {
         color: $white;
         font-size: 14px;
         padding: 8px 20px;
-        border-radius: $border-radius;
+        // border-radius: $border-radius;
         transition: $transition;
         white-space: nowrap;
 
@@ -168,7 +171,7 @@ header.sticky {
 }
 .user_dropdown {
   background: $main2 !important;
-  border-radius: $border-radius;
+  // border-radius: $border-radius;
   padding: 8px 14px;
   display: flex;
   align-items: center;
@@ -196,18 +199,19 @@ header.sticky {
   min-width: 260px;
   max-width: 320px;
   padding: 12px;
-  border-radius: 12px;
+  // border-radius: 12px;
   background: linear-gradient(180deg, #ffffff, #fbfbff);
   box-shadow: 0 8px 30px rgba(3, 10, 24, 0.12);
   border: 1px solid $input_hint;
   color: #0b1320;
+border-radius: 0;
 
   .dd-header {
     display: flex;
     gap: 12px;
     align-items: center;
     padding: 8px 6px 12px 6px;
-    border-radius: 10px;
+    // border-radius: 10px;
 
     .avatar {
       width: 44px;
@@ -246,7 +250,7 @@ header.sticky {
         display: inline-block;
         margin-top: 8px;
         padding: 4px 8px;
-        border-radius: 999px;
+        // border-radius: 999px;
         font-size: 11px;
         font-weight: 700;
         background: $bg;
@@ -258,7 +262,7 @@ header.sticky {
     height: 1px;
     background: $input_hint;
     margin: 10px 0;
-    border-radius: 2px;
+    // border-radius: 2px;
   }
 
   // ===== menu links =====
@@ -272,7 +276,7 @@ header.sticky {
       align-items: center;
       gap: 10px;
       padding: 8px 10px;
-      border-radius: 8px;
+      // border-radius: 8px;
       color: #071026;
       font-weight: 600;
       font-size: 14px;
@@ -310,7 +314,7 @@ header.sticky {
       align-items: center;
       gap: 10px;
       padding: 8px;
-      border-radius: 10px;
+      // border-radius: 10px;
       cursor: pointer;
       transition: background 0.18s ease;
 
@@ -349,7 +353,7 @@ header.sticky {
         color: $white;
         padding: 6px 10px;
         font-size: 12px;
-        border-radius: 999px;
+        // border-radius: 999px;
         font-weight: 700;
       }
     }
@@ -362,7 +366,7 @@ header.sticky {
     align-items: center;
     gap: 10px;
     padding: 10px;
-    border-radius: 10px;
+    // border-radius: 10px;
     color: $danger;
     font-weight: 700;
     cursor: pointer;
@@ -391,7 +395,7 @@ header.sticky {
   .dropdown-item {
     margin-bottom: 4px;
     padding: 8px 12px 8px 16px;
-    border-radius: 4px;
+    // border-radius: 4px;
     display: flex !important;
     align-items: center !important;
     gap: 8px !important;
@@ -521,7 +525,7 @@ header.sticky {
           align-items: center;
           justify-content: center;
           border: 1px solid #2a2f3f;
-          border-radius: 8px;
+          // border-radius: 8px;
           color: #cfd2dc;
           transition: all 0.3s ease;
 

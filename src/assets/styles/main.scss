@@ -34,12 +34,14 @@ button, a {
 
     .form_ui .input-field .pass-group {
       input {
-        border-radius: 12px 0 0 12px !important;
+        // border-radius: 12px 0 0 12px !important;
         border-right: 0 !important;
         border-left: 1px solid $input_stroke !important;
+        border-radius: 0;
+
       }
       .show-pass {
-        border-radius: 0 12px 12px 0 !important;
+        // border-radius: 0 12px 12px 0 !important;
         border-left: 0 !important;
         border-right: 1px solid $input_stroke !important;
       }

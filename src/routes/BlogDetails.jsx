@@ -59,7 +59,7 @@ const latestArticles = [
       </button>
 
       <div className="blog-image">
-        <img src={article.image} alt={article.title} className="img-fluid rounded-4" />
+        <img src={article.image} alt={article.title} className="img-fluid" />
       </div>
 
       <div className="blog-meta mt-3 d-flex gap-3 flex-wrap">
