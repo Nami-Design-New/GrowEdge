@@ -131,7 +131,7 @@
         .bullet.active {
           background: #fff;
           width: 18px;
-          // border-radius: 12px;
+          border-radius: 12px;
         }
 
         &.hide {
@@ -183,17 +183,17 @@
   min-height: 100vh;
   padding: 100px 0px;
   background-color: #f3f6fb;
-  background-image: url('/images/body-bg.png');
-  background-repeat: repeat; 
-  background-position: top left; 
-  background-size: 20px 20px; 
+  background-image: url("/images/body-bg.png");
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: 20px 20px;
   display: flex;
   justify-content: center;
   position: relative;
 
- @media (max-width: 576px) {
-  padding-top: 100px ;
-       }
+  @media (max-width: 576px) {
+    padding-top: 100px;
+  }
   .hero-inner {
     width: 100%;
     display: flex;
@@ -224,7 +224,6 @@
     align-items: center;
     gap: 40px;
     width: 100%;
-    
   }
 
   .big-title {
@@ -232,9 +231,9 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-   @media (max-width: 576px) {
-    gap:0px;
-      }
+    @media (max-width: 576px) {
+      gap: 0px;
+    }
     .title-row {
       display: flex;
       align-items: center;
@@ -244,10 +243,10 @@
       .small-title {
         text-align: center;
         font-family: "Times New Roman", serif;
-      @media (max-width: 576px) {
-        width: 100%;
-        text-align: start;
-      }
+        @media (max-width: 576px) {
+          width: 100%;
+          text-align: start;
+        }
         p {
           font-size: 25px;
           margin-bottom: 5px;
@@ -274,10 +273,10 @@
           width: 100%;
           height: 10px;
           object-fit: contain;
-            @media (max-width: 576px) {
-        width: auto;
-        text-align: start;
-      }
+          @media (max-width: 576px) {
+            width: auto;
+            text-align: start;
+          }
         }
       }
 
@@ -386,8 +385,8 @@
             font-size: 24px;
             color: #fff;
             z-index: 2;
-              @media (max-width: 576px) {
-               font-size: 15px;
+            @media (max-width: 576px) {
+              font-size: 15px;
             }
           }
 
@@ -426,9 +425,9 @@
     align-items: center;
     gap: 80px;
     flex-wrap: wrap;
- @media (max-width: 576px) {
-    gap: 0px;
-            }
+    @media (max-width: 576px) {
+      gap: 0px;
+    }
     .desc {
       max-width: 400px;
       font-size: 15px;
@@ -531,7 +530,7 @@
       repeat;
     z-index: 0;
   }
- 
+
   .about-inner {
     margin: 0 auto;
     gap: 2rem;
@@ -578,7 +577,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
       }
 
       &:hover {
@@ -634,33 +632,31 @@
         // }
       }
 
-&-large-circle {
-  position: absolute;
-  bottom: -10%;
-  left: 0%;
-  width: 250px;
-  height: 210px;
-  overflow: visible;
-  clip-path: polygon(
-    25% 0%,
-    75% 0%,
-    100% 50%,
-    75% 100%,
-    25% 100%,
-    0% 50%
-  );
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
-  z-index: 1;
+      &-large-circle {
+        position: absolute;
+        bottom: -10%;
+        left: 0%;
+        width: 250px;
+        height: 210px;
+        overflow: visible;
+        clip-path: polygon(
+          25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%
+        );
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+        z-index: 1;
 
-  @media (max-width: 768px) {
-    bottom: -20%;
-    width: 120px;
-    height: 120px;
-  }
-}
-
-
-}
+        @media (max-width: 768px) {
+          bottom: -20%;
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
 
     &__badge {
       position: absolute;
@@ -810,18 +806,18 @@
           box-shadow: 0 14px 30px rgba(37, 99, 235, 0.1);
         }
 
-      .check-icon {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: url("../images/Asset 4.svg") center/contain no-repeat; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $white;
-  font-size: 14px;
-}
+        .check-icon {
+          flex-shrink: 0;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: url("../images/Asset 4.svg") center/contain no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $white;
+          font-size: 14px;
+        }
         strong {
           color: #0f172a;
           font-size: 1rem;
@@ -1109,7 +1105,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       z-index: 4;
-border-radius: 0;
+      border-radius: 0;
       &:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
@@ -1190,7 +1186,7 @@ border-radius: 0;
         // font-weight: 600;
         cursor: pointer;
         transition: background 0.3s ease;
-border-radius: 0;
+        border-radius: 0;
         &:hover {
           opacity: 0.8;
         }
@@ -1237,19 +1233,18 @@ border-radius: 0;
     top: -6%;
     left: -3%;
     width: 150px;
-    height:150px;
+    height: 150px;
     background: url("../images/shap.svg") no-repeat;
     background-size: contain;
     z-index: 1;
     opacity: 1;
 
-
     @media (max-width: 768px) {
-
-        top: -2%;
-    left: -5%;
-    width: 80px;
-    height: 80px;}
+      top: -2%;
+      left: -5%;
+      width: 80px;
+      height: 80px;
+    }
   }
   .pattern-bottom {
     content: "";
@@ -1468,7 +1463,9 @@ border-radius: 0;
       height: 100%;
       z-index: 1;
       pointer-events: none;
-      // padding-right:40% ;
+      @media (max-width: 698px) {
+        padding-right: 10%;
+      }
     }
 
     .hw-step {
@@ -1493,7 +1490,7 @@ border-radius: 0;
         left: 75%;
         @media (max-width: 698px) {
           top: 40%;
-          left: 20%;
+          left: 15%;
         }
       }
 
@@ -1502,7 +1499,7 @@ border-radius: 0;
         left: 40%;
         @media (max-width: 698px) {
           top: 85%;
-          left: 40%;
+          left: 30%;
         }
       }
 
@@ -1688,7 +1685,7 @@ border-radius: 0;
       .swiper-pagination-bullet-active {
         background: $main;
         width: 22px;
-        // border-radius: 8px;
+        border-radius: 8px;
       }
     }
   }

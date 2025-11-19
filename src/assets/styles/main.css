@@ -1217,6 +1217,7 @@ body .hero__panel .hero__overlay .hero__bullets .bullet {
 body .hero__panel .hero__overlay .hero__bullets .bullet.active {
   background: #fff;
   width: 18px;
+  border-radius: 12px;
 }
 body .hero__panel .hero__overlay .hero__bullets.hide {
   opacity: 0;
@@ -2346,6 +2347,11 @@ body .howitwork-section .howitwork-timeline .timeline-svg {
   z-index: 1;
   pointer-events: none;
 }
+@media (max-width: 698px) {
+  body .howitwork-section .howitwork-timeline .timeline-svg {
+    padding-right: 10%;
+  }
+}
 body .howitwork-section .howitwork-timeline .hw-step {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -2371,7 +2377,7 @@ body .howitwork-section .howitwork-timeline .hw-step--2 {
 @media (max-width: 698px) {
   body .howitwork-section .howitwork-timeline .hw-step--2 {
     top: 40%;
-    left: 20%;
+    left: 15%;
   }
 }
 body .howitwork-section .howitwork-timeline .hw-step--3 {
@@ -2381,7 +2387,7 @@ body .howitwork-section .howitwork-timeline .hw-step--3 {
 @media (max-width: 698px) {
   body .howitwork-section .howitwork-timeline .hw-step--3 {
     top: 85%;
-    left: 40%;
+    left: 30%;
   }
 }
 @media (max-width: 698px) {
@@ -2551,6 +2557,7 @@ body .success-section .controls-row .custom-pagination .swiper-pagination-bullet
 body .success-section .controls-row .custom-pagination .swiper-pagination-bullet-active {
   background: #23254e;
   width: 22px;
+  border-radius: 8px;
 }
 body .success-section .section-subtitle {
   color: #6b7280;
@@ -2984,6 +2991,10 @@ body .career-coaching .session-card .details .desc {
   font-size: 0.8rem;
   color: #555;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 body .career-coaching .session-card .tags {
   margin-top: 0.8rem;
@@ -3436,6 +3447,7 @@ body .statistics-section .stat-card {
   align-items: center;
   transition: box-shadow 0.3s;
   border: 1px solid #eee;
+  min-height: 100%;
 }
 body .statistics-section .stat-card:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -4392,6 +4404,10 @@ body .internship-card__desc {
   font-size: 0.95rem;
   color: #444;
   margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 body .internship-card__skills h6 {
   font-size: 0.9rem;

@@ -115,10 +115,10 @@ export default function InternshipCard({
         </p>
 
         <div className="btn-group">
-          <button className="btn-outline" onClick={() => setShowDetailsModal(true)}>
-            <i className="fa-regular fa-eye"></i>{t("startupInternships.details_btn")} 
+          <button className="btn-dark"onClick={() => setShowDetailsModal(true)}>
+            <i className="fa-regular fa-eye"></i> {t("startupInternships.details_btn")} 
           </button>
-          <button className="btn-dark" onClick={() => setShowApplyModal(true)}>
+          <button className="btn-outline"  onClick={() => setShowApplyModal(true)}>
             {t("startupInternships.apply_btn")} 
           </button>
         </div>
